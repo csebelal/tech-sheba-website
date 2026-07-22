@@ -26,7 +26,7 @@ export default function HomePage() {
       {/* ==================== SECTION 1: HERO ==================== */}
       <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
         {/* Animated gradient background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#eff6ff] via-white to-[#f0f4ff]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#eff6ff] via-white to-[#f0f4ff] dark:from-[#0f172a] dark:via-[#0f172a] dark:to-[#1e293b]" />
         <div
           className="absolute inset-0 opacity-30 animate-gradient"
           style={{
@@ -45,25 +45,25 @@ export default function HomePage() {
           }}
         />
         {/* Floating shapes */}
-        <div className="absolute top-32 left-[10%] w-16 h-16 rounded-2xl bg-[#001F60]/5 border border-[#001F60]/10 animate-float" />
-        <div className="absolute top-48 right-[15%] w-24 h-24 rounded-full bg-[#4DA3FF]/5 border border-[#4DA3FF]/10 animate-float" style={{ animationDelay: '1s' }} />
-        <div className="absolute bottom-32 left-[20%] w-12 h-12 rounded-xl bg-[#0775FF]/5 border border-[#0775FF]/10 animate-float" style={{ animationDelay: '2s' }} />
-        <div className="absolute bottom-48 right-[25%] w-20 h-20 rounded-full bg-[#001F60]/5 border border-[#001F60]/10 animate-float" style={{ animationDelay: '3s' }} />
-        <div className="absolute top-64 left-[40%] w-8 h-8 rounded-lg bg-[#4DA3FF]/8 border border-[#4DA3FF]/10 animate-float" style={{ animationDelay: '1.5s' }} />
+        <div className="absolute top-32 left-[10%] w-16 h-16 rounded-2xl bg-[#001F60]/5 border border-[#001F60]/10 dark:bg-[#93c5fd]/10 dark:border-[#93c5fd]/15 animate-float" />
+        <div className="absolute top-48 right-[15%] w-24 h-24 rounded-full bg-[#4DA3FF]/5 border border-[#4DA3FF]/10 dark:bg-[#60a5fa]/10 dark:border-[#60a5fa]/15 animate-float" style={{ animationDelay: '1s' }} />
+        <div className="absolute bottom-32 left-[20%] w-12 h-12 rounded-xl bg-[#0775FF]/5 border border-[#0775FF]/10 dark:bg-[#60a5fa]/10 dark:border-[#60a5fa]/15 animate-float" style={{ animationDelay: '2s' }} />
+        <div className="absolute bottom-48 right-[25%] w-20 h-20 rounded-full bg-[#001F60]/5 border border-[#001F60]/10 dark:bg-[#93c5fd]/10 dark:border-[#93c5fd]/15 animate-float" style={{ animationDelay: '3s' }} />
+        <div className="absolute top-64 left-[40%] w-8 h-8 rounded-lg bg-[#4DA3FF]/8 border border-[#4DA3FF]/10 dark:bg-[#60a5fa]/15 dark:border-[#60a5fa]/15 animate-float" style={{ animationDelay: '1.5s' }} />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Left content */}
             <div>
               <FadeIn direction="up" delay={0}>
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#001F60]/8 border border-[#001F60]/15 mb-8">
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#001F60]/8 border border-[#001F60]/15 dark:bg-[#1e3a5f] dark:border-[#1e3a5f] mb-8">
                   <div className="w-2 h-2 rounded-full bg-[#4DA3FF] animate-pulse" />
-                  <span className="text-sm font-medium text-[#001F60]">Trusted IT Partner in Bangladesh</span>
+                  <span className="text-sm font-medium text-[#001F60] dark:text-[#93c5fd]">Trusted IT Partner in Bangladesh</span>
                 </div>
               </FadeIn>
 
               <FadeIn direction="up" delay={0.1}>
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#1e293b] leading-[1.1] tracking-tight mb-6">
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#1e293b] dark:text-[#e2e8f0] leading-[1.1] tracking-tight mb-6">
                   Reliable IT Solutions{' '}
                   <span className="text-gradient-green">for Growing</span>{' '}
                   Businesses
@@ -71,7 +71,7 @@ export default function HomePage() {
               </FadeIn>
 
               <FadeIn direction="up" delay={0.2}>
-                <p className="text-lg sm:text-xl text-[#475569] leading-relaxed mb-10 max-w-xl">
+                <p className="text-lg sm:text-xl text-[#475569] dark:text-[#94a3b8] leading-relaxed mb-10 max-w-xl">
                   From office networks to cybersecurity, Tech Sheba handles the technology behind
                   your business â€” so you can focus on running it.
                 </p>
@@ -89,7 +89,7 @@ export default function HomePage() {
                   </Button>
                   <button
                     onClick={() => navigate('services')}
-                    className="flex items-center gap-2 text-[#001F60] font-semibold hover:text-[#001440] transition-colors duration-300 group py-6"
+                    className="flex items-center gap-2 text-[#001F60] dark:text-[#93c5fd] font-semibold hover:text-[#001440] transition-colors duration-300 group py-6"
                   >
                     See what we handle
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
@@ -98,20 +98,20 @@ export default function HomePage() {
               </FadeIn>
 
               <FadeIn direction="up" delay={0.4}>
-                <div className="flex items-center gap-8 mt-12 pt-8 border-t border-[#e2e8f0]/60">
+                <div className="flex items-center gap-8 mt-12 pt-8 border-t border-[#e2e8f0] dark:border-[#334155]/60">
                   <div>
-                    <div className="text-2xl font-bold text-[#1e293b]"><CountUp end={150} suffix="+" /></div>
-                    <div className="text-sm text-[#64748b]">Projects Delivered</div>
+                    <div className="text-2xl font-bold text-[#1e293b] dark:text-[#e2e8f0]"><CountUp end={150} suffix="+" /></div>
+                    <div className="text-sm text-[#64748b] dark:text-[#94a3b8]">Projects Delivered</div>
                   </div>
-                  <div className="w-px h-10 bg-[#e2e8f0]" />
+                  <div className="w-px h-10 bg-[#e2e8f0] dark:bg-[#334155]" />
                   <div>
-                    <div className="text-2xl font-bold text-[#1e293b]"><CountUp end={98} suffix="%" /></div>
-                    <div className="text-sm text-[#64748b]">Client Satisfaction</div>
+                    <div className="text-2xl font-bold text-[#1e293b] dark:text-[#e2e8f0]"><CountUp end={98} suffix="%" /></div>
+                    <div className="text-sm text-[#64748b] dark:text-[#94a3b8]">Client Satisfaction</div>
                   </div>
-                  <div className="w-px h-10 bg-[#e2e8f0]" />
+                  <div className="w-px h-10 bg-[#e2e8f0] dark:bg-[#334155]" />
                   <div>
-                    <div className="text-2xl font-bold text-[#1e293b]"><CountUp end={24} />/7</div>
-                    <div className="text-sm text-[#64748b]">IT Support</div>
+                    <div className="text-2xl font-bold text-[#1e293b] dark:text-[#e2e8f0]"><CountUp end={24} />/7</div>
+                    <div className="text-sm text-[#64748b] dark:text-[#94a3b8]">IT Support</div>
                   </div>
                 </div>
               </FadeIn>
@@ -138,8 +138,8 @@ export default function HomePage() {
                     className={`absolute animate-float`}
                     style={{ top: node.top, left: node.left, right: node.right, bottom: node.bottom, animationDelay: node.delay }}
                   >
-                    <div className="w-14 h-14 rounded-xl bg-white shadow-lg shadow-blue-500/10 border border-[#e2e8f0]/60 flex items-center justify-center">
-                      <node.icon className="w-6 h-6 text-[#001F60]" />
+                    <div className="w-14 h-14 rounded-xl bg-white dark:bg-[#1e293b] shadow-lg shadow-blue-500/10 border border-[#e2e8f0] dark:border-[#334155]/60 flex items-center justify-center">
+                      <node.icon className="w-6 h-6 text-[#001F60] dark:text-[#93c5fd]" />
                     </div>
                   </div>
                 ))}
@@ -162,10 +162,10 @@ export default function HomePage() {
       </section>
 
       {/* ==================== SECTION 2: TRUSTED BY ==================== */}
-      <section className="py-16 bg-white border-y border-[#e2e8f0]/60">
+      <section className="py-16 bg-white dark:bg-[#0f172a] border-y border-[#e2e8f0] dark:border-[#334155]/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
-            <p className="text-center text-sm font-medium text-[#64748b] tracking-wide uppercase mb-10">
+            <p className="text-center text-sm font-medium text-[#64748b] dark:text-[#94a3b8] tracking-wide uppercase mb-10">
               Trusted by leading businesses across Bangladesh
             </p>
           </FadeIn>
@@ -174,9 +174,9 @@ export default function HomePage() {
               {trustedCompanies.map((company) => (
                 <div
                   key={company}
-                  className="flex items-center justify-center px-8 py-4 rounded-xl bg-[#f8fafc] border border-[#e2e8f0]/60 hover:border-[#dbeafe] hover:bg-[#f0f4ff] transition-all duration-300 group cursor-default"
+                  className="flex items-center justify-center px-8 py-4 rounded-xl bg-[#f8fafc] dark:bg-[#1e293b] border border-[#e2e8f0] dark:border-[#334155]/60 hover:border-[#dbeafe] dark:hover:border-[#1e3a5f] hover:bg-[#f0f4ff] dark:hover:bg-[#1e3a5f] transition-all duration-300 group cursor-default"
                 >
-                  <span className="text-lg font-bold text-[#94a3b8] group-hover:text-[#001F60] transition-colors duration-300 whitespace-nowrap">
+                  <span className="text-lg font-bold text-[#94a3b8] group-hover:text-[#001F60] dark:hover:text-[#93c5fd] dark:text-[#93c5fd] transition-colors duration-300 whitespace-nowrap">
                     {company}
                   </span>
                 </div>
@@ -187,17 +187,17 @@ export default function HomePage() {
       </section>
 
       {/* ==================== SECTION 3: THREE PILLARS ==================== */}
-      <section className="py-24 bg-[#f8fafc]">
+      <section className="py-24 bg-[#f8fafc] dark:bg-[#1e293b]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <span className="inline-block text-sm font-semibold text-[#001F60] tracking-wide uppercase mb-3">
+              <span className="inline-block text-sm font-semibold text-[#001F60] dark:text-[#93c5fd] tracking-wide uppercase mb-3">
                 Why Tech Sheba
               </span>
-              <h2 className="text-3xl sm:text-4xl font-bold text-[#1e293b] mb-5">
+              <h2 className="text-3xl sm:text-4xl font-bold text-[#1e293b] dark:text-[#e2e8f0] mb-5">
                 Your Partner in Business Stability
               </h2>
-              <p className="text-lg text-[#475569] leading-relaxed">
+              <p className="text-lg text-[#475569] dark:text-[#94a3b8] leading-relaxed">
                 We built Tech Sheba around three core principles that every growing business
                 in Bangladesh deserves from their IT partner. These pillars guide every decision,
                 every solution, and every client interaction.
@@ -227,13 +227,13 @@ export default function HomePage() {
                 <motion.div
                   whileHover={{ y: -6, scale: 1.02 }}
                   transition={{ duration: 0.3 }}
-                  className="bg-white rounded-2xl p-8 green-glow border border-[#e2e8f0]/60 h-full"
+                  className="bg-white dark:bg-[#1e293b] rounded-2xl p-8 green-glow border border-[#e2e8f0] dark:border-[#334155]/60 h-full"
                 >
-                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#001F60]/10 to-[#4DA3FF]/10 flex items-center justify-center mb-6">
-                    <pillar.icon className="w-7 h-7 text-[#001F60]" />
+                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#001F60]/10 to-[#4DA3FF]/10 dark:from-[#93c5fd]/15 dark:to-[#60a5fa]/15 flex items-center justify-center mb-6">
+                    <pillar.icon className="w-7 h-7 text-[#001F60] dark:text-[#93c5fd]" />
                   </div>
-                  <h3 className="text-xl font-bold text-[#1e293b] mb-4">{pillar.title}</h3>
-                  <p className="text-[#475569] leading-relaxed">{pillar.desc}</p>
+                  <h3 className="text-xl font-bold text-[#1e293b] dark:text-[#e2e8f0] mb-4">{pillar.title}</h3>
+                  <p className="text-[#475569] dark:text-[#94a3b8] leading-relaxed">{pillar.desc}</p>
                 </motion.div>
               </StaggerItem>
             ))}
@@ -242,17 +242,17 @@ export default function HomePage() {
       </section>
 
       {/* ==================== SECTION 4: MISSION & VISION ==================== */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-white dark:bg-[#0f172a]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <span className="inline-block text-sm font-semibold text-[#001F60] tracking-wide uppercase mb-3">
+              <span className="inline-block text-sm font-semibold text-[#001F60] dark:text-[#93c5fd] tracking-wide uppercase mb-3">
                 Our Purpose
               </span>
-              <h2 className="text-3xl sm:text-4xl font-bold text-[#1e293b] mb-5">
+              <h2 className="text-3xl sm:text-4xl font-bold text-[#1e293b] dark:text-[#e2e8f0] mb-5">
                 Driving Bangladesh&apos;s Digital Future
               </h2>
-              <p className="text-lg text-[#475569] leading-relaxed">
+              <p className="text-lg text-[#475569] dark:text-[#94a3b8] leading-relaxed">
                 Every great company is guided by a clear sense of purpose. Here is what drives
                 us forward each day at Tech Sheba.
               </p>
@@ -261,15 +261,15 @@ export default function HomePage() {
 
           <div className="grid md:grid-cols-2 gap-8">
             <FadeIn direction="left" delay={0.1}>
-              <div className="relative bg-gradient-to-br from-[#eff6ff] to-white rounded-2xl p-8 lg:p-10 border border-[#dbeafe]/60 h-full overflow-hidden">
+              <div className="relative bg-gradient-to-br from-[#eff6ff] to-white dark:from-[#1e293b] dark:to-[#0f172a] rounded-2xl p-8 lg:p-10 border border-[#dbeafe]/60 dark:border-[#1e3a5f]/60 h-full overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 rounded-full bg-[#001F60]/5 -translate-y-1/2 translate-x-1/2" />
                 <div className="absolute bottom-0 left-0 w-20 h-20 rounded-full bg-[#4DA3FF]/5 translate-y-1/2 -translate-x-1/2" />
                 <div className="relative">
                   <div className="w-12 h-12 rounded-xl bg-[#001F60] flex items-center justify-center mb-6">
                     <Target className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-[#1e293b] mb-4">Our Mission</h3>
-                  <p className="text-[#475569] leading-relaxed text-lg">
+                  <h3 className="text-2xl font-bold text-[#1e293b] dark:text-[#e2e8f0] mb-4">Our Mission</h3>
+                  <p className="text-[#475569] dark:text-[#94a3b8] leading-relaxed text-lg">
                     To deliver simple, secure, and smart IT solutions that allow businesses to
                     focus on their growth. We believe technology should empower, not complicate.
                     Our mission is to bridge the gap between complex IT infrastructure and
@@ -281,15 +281,15 @@ export default function HomePage() {
             </FadeIn>
 
             <FadeIn direction="right" delay={0.2}>
-              <div className="relative bg-gradient-to-br from-white to-[#f0f4ff] rounded-2xl p-8 lg:p-10 border border-[#dbeafe]/60 h-full overflow-hidden">
+              <div className="relative bg-gradient-to-br from-white to-[#f0f4ff] dark:from-[#0f172a] dark:to-[#1e293b] rounded-2xl p-8 lg:p-10 border border-[#dbeafe]/60 dark:border-[#1e3a5f]/60 h-full overflow-hidden">
                 <div className="absolute top-0 left-0 w-32 h-32 rounded-full bg-[#4DA3FF]/5 -translate-y-1/2 -translate-x-1/2" />
                 <div className="absolute bottom-0 right-0 w-20 h-20 rounded-full bg-[#001F60]/5 translate-y-1/2 translate-x-1/2" />
                 <div className="relative">
                   <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#001F60] to-[#4DA3FF] flex items-center justify-center mb-6">
                     <Eye className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-[#1e293b] mb-4">Our Vision</h3>
-                  <p className="text-[#475569] leading-relaxed text-lg">
+                  <h3 className="text-2xl font-bold text-[#1e293b] dark:text-[#e2e8f0] mb-4">Our Vision</h3>
+                  <p className="text-[#475569] dark:text-[#94a3b8] leading-relaxed text-lg">
                     To become the most trusted IT partner in Bangladesh for modern enterprises.
                     We envision a future where every business, from a small shop in Dhaka to a
                     growing corporate office, has access to reliable and professional IT
@@ -304,17 +304,17 @@ export default function HomePage() {
       </section>
 
       {/* ==================== SECTION 5: SERVICE ECOSYSTEM ==================== */}
-      <section className="py-24 bg-[#f8fafc]">
+      <section className="py-24 bg-[#f8fafc] dark:bg-[#1e293b]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <span className="inline-block text-sm font-semibold text-[#001F60] tracking-wide uppercase mb-3">
+              <span className="inline-block text-sm font-semibold text-[#001F60] dark:text-[#93c5fd] tracking-wide uppercase mb-3">
                 What We Offer
               </span>
-              <h2 className="text-3xl sm:text-4xl font-bold text-[#1e293b] mb-5">
+              <h2 className="text-3xl sm:text-4xl font-bold text-[#1e293b] dark:text-[#e2e8f0] mb-5">
                 A Holistic Ecosystem
               </h2>
-              <p className="text-lg text-[#475569] leading-relaxed">
+              <p className="text-lg text-[#475569] dark:text-[#94a3b8] leading-relaxed">
                 Tech Sheba provides a comprehensive suite of IT services designed to work
                 together seamlessly. Whether you need to connect your office, secure your
                 premises, or establish your digital presence â€” we have you covered under one roof.
@@ -347,22 +347,22 @@ export default function HomePage() {
                 <motion.div
                   whileHover={{ y: -6 }}
                   transition={{ duration: 0.3 }}
-                  className="relative bg-white rounded-2xl p-8 border-2 border-transparent hover:border-[#001F60]/20 transition-all duration-300 h-full group cursor-pointer"
+                  className="relative bg-white dark:bg-[#1e293b] rounded-2xl p-8 border-2 border-transparent hover:border-[#001F60]/20 transition-all duration-300 h-full group cursor-pointer"
                   onClick={() => navigate('service-detail', { slug: cat.link })}
                   style={{
                     background: 'linear-gradient(135deg, rgba(0,31,96,0.02), rgba(7,117,255,0.02))',
                   }}
                 >
                   <div className="absolute inset-0 rounded-2xl p-[2px] bg-gradient-to-br from-[#001F60]/0 via-[#4DA3FF]/0 to-[#001F60]/0 group-hover:from-[#001F60]/30 group-hover:via-[#4DA3FF]/20 group-hover:to-[#001F60]/30 transition-all duration-500">
-                    <div className="w-full h-full rounded-2xl bg-white" />
+                    <div className="w-full h-full rounded-2xl bg-white dark:bg-[#1e293b]" />
                   </div>
                   <div className="relative">
                     <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#001F60] to-[#4DA3FF] flex items-center justify-center mb-6 shadow-lg shadow-blue-500/20">
                       <cat.icon className="w-7 h-7 text-white" />
                     </div>
-                    <h3 className="text-xl font-bold text-[#1e293b] mb-3">{cat.title}</h3>
-                    <p className="text-[#475569] leading-relaxed mb-5">{cat.desc}</p>
-                    <span className="inline-flex items-center gap-1.5 text-[#001F60] font-semibold text-sm group-hover:gap-3 transition-all duration-300">
+                    <h3 className="text-xl font-bold text-[#1e293b] dark:text-[#e2e8f0] mb-3">{cat.title}</h3>
+                    <p className="text-[#475569] dark:text-[#94a3b8] leading-relaxed mb-5">{cat.desc}</p>
+                    <span className="inline-flex items-center gap-1.5 text-[#001F60] dark:text-[#93c5fd] font-semibold text-sm group-hover:gap-3 transition-all duration-300">
                       Explore <ChevronRight className="w-4 h-4" />
                     </span>
                   </div>
@@ -374,17 +374,17 @@ export default function HomePage() {
       </section>
 
       {/* ==================== SECTION 6: CORE INFRASTRUCTURE SERVICES ==================== */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-white dark:bg-[#0f172a]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <span className="inline-block text-sm font-semibold text-[#001F60] tracking-wide uppercase mb-3">
+              <span className="inline-block text-sm font-semibold text-[#001F60] dark:text-[#93c5fd] tracking-wide uppercase mb-3">
                 Infrastructure Services
               </span>
-              <h2 className="text-3xl sm:text-4xl font-bold text-[#1e293b] mb-5">
+              <h2 className="text-3xl sm:text-4xl font-bold text-[#1e293b] dark:text-[#e2e8f0] mb-5">
                 Core Infrastructure Services
               </h2>
-              <p className="text-lg text-[#475569] leading-relaxed">
+              <p className="text-lg text-[#475569] dark:text-[#94a3b8] leading-relaxed">
                 A strong IT infrastructure is the backbone of every successful business. Our core
                 services ensure your team stays connected, your communications are crystal clear,
                 and your systems run without interruption.
@@ -417,17 +417,17 @@ export default function HomePage() {
                 <motion.div
                   whileHover={{ y: -6, scale: 1.01 }}
                   transition={{ duration: 0.3 }}
-                  className="bg-white rounded-2xl p-8 green-glow border border-[#e2e8f0]/60 h-full flex flex-col"
+                  className="bg-white dark:bg-[#1e293b] rounded-2xl p-8 green-glow border border-[#e2e8f0] dark:border-[#334155]/60 h-full flex flex-col"
                 >
-                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#001F60]/10 to-[#4DA3FF]/10 flex items-center justify-center mb-6">
-                    <service.icon className="w-7 h-7 text-[#001F60]" />
+                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#001F60]/10 to-[#4DA3FF]/10 dark:from-[#93c5fd]/15 dark:to-[#60a5fa]/15 flex items-center justify-center mb-6">
+                    <service.icon className="w-7 h-7 text-[#001F60] dark:text-[#93c5fd]" />
                   </div>
-                  <h3 className="text-xl font-bold text-[#1e293b] mb-3">{service.title}</h3>
-                  <p className="text-[#475569] leading-relaxed mb-6 flex-grow">{service.desc}</p>
+                  <h3 className="text-xl font-bold text-[#1e293b] dark:text-[#e2e8f0] mb-3">{service.title}</h3>
+                  <p className="text-[#475569] dark:text-[#94a3b8] leading-relaxed mb-6 flex-grow">{service.desc}</p>
                   <ul className="space-y-2.5 mb-6">
                     {service.features.map((f) => (
-                      <li key={f} className="flex items-start gap-2.5 text-sm text-[#475569]">
-                        <CheckCircle2 className="w-4 h-4 text-[#4DA3FF] mt-0.5 flex-shrink-0" />
+                      <li key={f} className="flex items-start gap-2.5 text-sm text-[#475569] dark:text-[#94a3b8]">
+                        <CheckCircle2 className="w-4 h-4 text-[#4DA3FF] dark:text-[#60a5fa] mt-0.5 flex-shrink-0" />
                         {f}
                       </li>
                     ))}
@@ -435,7 +435,7 @@ export default function HomePage() {
                   <Button
                     variant="outline"
                     onClick={() => navigate('service-detail', { slug: 'network-connectivity' })}
-                    className="w-full border-[#001F60]/20 text-[#001F60] hover:bg-[#001F60] hover:text-white rounded-xl transition-all duration-300 group"
+                    className="w-full border-[#001F60]/20 dark:border-[#93c5fd]/20 text-[#001F60] dark:text-[#93c5fd] hover:bg-[#001F60] hover:text-white rounded-xl transition-all duration-300 group"
                   >
                     Learn More
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
@@ -448,17 +448,17 @@ export default function HomePage() {
       </section>
 
       {/* ==================== SECTION 7: SECURITY SERVICES ==================== */}
-      <section className="py-24 bg-[#f8fafc]">
+      <section className="py-24 bg-[#f8fafc] dark:bg-[#1e293b]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <span className="inline-block text-sm font-semibold text-[#001F60] tracking-wide uppercase mb-3">
+              <span className="inline-block text-sm font-semibold text-[#001F60] dark:text-[#93c5fd] tracking-wide uppercase mb-3">
                 Security Solutions
               </span>
-              <h2 className="text-3xl sm:text-4xl font-bold text-[#1e293b] mb-5">
+              <h2 className="text-3xl sm:text-4xl font-bold text-[#1e293b] dark:text-[#e2e8f0] mb-5">
                 One Partner, Both Sides of Security
               </h2>
-              <p className="text-lg text-[#475569] leading-relaxed">
+              <p className="text-lg text-[#475569] dark:text-[#94a3b8] leading-relaxed">
                 True business security means protecting both your physical premises and your
                 digital assets. Tech Sheba delivers comprehensive security solutions that cover
                 every vulnerability, giving you complete peace of mind.
@@ -491,17 +491,17 @@ export default function HomePage() {
                 <motion.div
                   whileHover={{ y: -6, scale: 1.01 }}
                   transition={{ duration: 0.3 }}
-                  className="bg-white rounded-2xl p-8 green-glow border border-[#e2e8f0]/60 h-full flex flex-col"
+                  className="bg-white dark:bg-[#1e293b] rounded-2xl p-8 green-glow border border-[#e2e8f0] dark:border-[#334155]/60 h-full flex flex-col"
                 >
-                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#001F60]/10 to-[#4DA3FF]/10 flex items-center justify-center mb-6">
-                    <service.icon className="w-7 h-7 text-[#001F60]" />
+                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#001F60]/10 to-[#4DA3FF]/10 dark:from-[#93c5fd]/15 dark:to-[#60a5fa]/15 flex items-center justify-center mb-6">
+                    <service.icon className="w-7 h-7 text-[#001F60] dark:text-[#93c5fd]" />
                   </div>
-                  <h3 className="text-xl font-bold text-[#1e293b] mb-3">{service.title}</h3>
-                  <p className="text-[#475569] leading-relaxed mb-6 flex-grow">{service.desc}</p>
+                  <h3 className="text-xl font-bold text-[#1e293b] dark:text-[#e2e8f0] mb-3">{service.title}</h3>
+                  <p className="text-[#475569] dark:text-[#94a3b8] leading-relaxed mb-6 flex-grow">{service.desc}</p>
                   <ul className="space-y-2.5 mb-6">
                     {service.features.map((f) => (
-                      <li key={f} className="flex items-start gap-2.5 text-sm text-[#475569]">
-                        <CheckCircle2 className="w-4 h-4 text-[#4DA3FF] mt-0.5 flex-shrink-0" />
+                      <li key={f} className="flex items-start gap-2.5 text-sm text-[#475569] dark:text-[#94a3b8]">
+                        <CheckCircle2 className="w-4 h-4 text-[#4DA3FF] dark:text-[#60a5fa] mt-0.5 flex-shrink-0" />
                         {f}
                       </li>
                     ))}
@@ -509,7 +509,7 @@ export default function HomePage() {
                   <Button
                     variant="outline"
                     onClick={() => navigate('service-detail', { slug: 'security-systems' })}
-                    className="w-full border-[#001F60]/20 text-[#001F60] hover:bg-[#001F60] hover:text-white rounded-xl transition-all duration-300 group"
+                    className="w-full border-[#001F60]/20 dark:border-[#93c5fd]/20 text-[#001F60] dark:text-[#93c5fd] hover:bg-[#001F60] hover:text-white rounded-xl transition-all duration-300 group"
                   >
                     Learn More
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
@@ -522,17 +522,17 @@ export default function HomePage() {
       </section>
 
       {/* ==================== SECTION 8: DIGITAL SERVICES ==================== */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-white dark:bg-[#0f172a]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <span className="inline-block text-sm font-semibold text-[#001F60] tracking-wide uppercase mb-3">
+              <span className="inline-block text-sm font-semibold text-[#001F60] dark:text-[#93c5fd] tracking-wide uppercase mb-3">
                 Digital Services
               </span>
-              <h2 className="text-3xl sm:text-4xl font-bold text-[#1e293b] mb-5">
+              <h2 className="text-3xl sm:text-4xl font-bold text-[#1e293b] dark:text-[#e2e8f0] mb-5">
                 Grow Your Digital Presence
               </h2>
-              <p className="text-lg text-[#475569] leading-relaxed">
+              <p className="text-lg text-[#475569] dark:text-[#94a3b8] leading-relaxed">
                 In today&apos;s connected world, your digital presence is often the first impression
                 customers have of your business. Our digital services help you establish a
                 professional online identity and make strategic technology investments.
@@ -559,17 +559,17 @@ export default function HomePage() {
                 <motion.div
                   whileHover={{ y: -6, scale: 1.01 }}
                   transition={{ duration: 0.3 }}
-                  className="bg-gradient-to-br from-white to-[#f8fafc] rounded-2xl p-8 lg:p-10 green-glow border border-[#e2e8f0]/60 h-full flex flex-col"
+                  className="bg-gradient-to-br from-white to-[#f8fafc] dark:from-[#1e293b] dark:to-[#0f172a] rounded-2xl p-8 lg:p-10 green-glow border border-[#e2e8f0] dark:border-[#334155]/60 h-full flex flex-col"
                 >
                   <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#001F60] to-[#4DA3FF] flex items-center justify-center mb-6 shadow-lg shadow-blue-500/20">
                     <service.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-[#1e293b] mb-4">{service.title}</h3>
-                  <p className="text-[#475569] leading-relaxed mb-6 flex-grow">{service.desc}</p>
+                  <h3 className="text-2xl font-bold text-[#1e293b] dark:text-[#e2e8f0] mb-4">{service.title}</h3>
+                  <p className="text-[#475569] dark:text-[#94a3b8] leading-relaxed mb-6 flex-grow">{service.desc}</p>
                   <ul className="space-y-2.5 mb-8">
                     {service.features.map((f) => (
-                      <li key={f} className="flex items-start gap-2.5 text-sm text-[#475569]">
-                        <CheckCircle2 className="w-4 h-4 text-[#4DA3FF] mt-0.5 flex-shrink-0" />
+                      <li key={f} className="flex items-start gap-2.5 text-sm text-[#475569] dark:text-[#94a3b8]">
+                        <CheckCircle2 className="w-4 h-4 text-[#4DA3FF] dark:text-[#60a5fa] mt-0.5 flex-shrink-0" />
                         {f}
                       </li>
                     ))}
@@ -589,17 +589,17 @@ export default function HomePage() {
       </section>
 
       {/* ==================== SECTION 9: INDUSTRIES SERVED ==================== */}
-      <section className="py-24 bg-[#f8fafc]">
+      <section className="py-24 bg-[#f8fafc] dark:bg-[#1e293b]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <span className="inline-block text-sm font-semibold text-[#001F60] tracking-wide uppercase mb-3">
+              <span className="inline-block text-sm font-semibold text-[#001F60] dark:text-[#93c5fd] tracking-wide uppercase mb-3">
                 Industries
               </span>
-              <h2 className="text-3xl sm:text-4xl font-bold text-[#1e293b] mb-5">
+              <h2 className="text-3xl sm:text-4xl font-bold text-[#1e293b] dark:text-[#e2e8f0] mb-5">
                 Tailored Solutions for Every Sector
               </h2>
-              <p className="text-lg text-[#475569] leading-relaxed">
+              <p className="text-lg text-[#475569] dark:text-[#94a3b8] leading-relaxed">
                 Every industry faces unique technology challenges. Tech Sheba delivers
                 customized IT solutions that address the specific pain points and operational
                 requirements of each business sector we serve across Bangladesh.
@@ -634,16 +634,16 @@ export default function HomePage() {
                 <motion.div
                   whileHover={{ y: -6 }}
                   transition={{ duration: 0.3 }}
-                  className="bg-white rounded-2xl p-6 green-glow border border-[#e2e8f0]/60 h-full cursor-pointer group"
+                  className="bg-white dark:bg-[#1e293b] rounded-2xl p-6 green-glow border border-[#e2e8f0] dark:border-[#334155]/60 h-full cursor-pointer group"
                   onClick={() => navigate('industries')}
                 >
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#001F60]/10 to-[#4DA3FF]/10 flex items-center justify-center mb-5">
-                    <ind.icon className="w-6 h-6 text-[#001F60]" />
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#001F60]/10 to-[#4DA3FF]/10 dark:from-[#93c5fd]/15 dark:to-[#60a5fa]/15 flex items-center justify-center mb-5">
+                    <ind.icon className="w-6 h-6 text-[#001F60] dark:text-[#93c5fd]" />
                   </div>
-                  <h3 className="text-lg font-bold text-[#1e293b] mb-3">{ind.title}</h3>
-                  <p className="text-sm text-[#475569] leading-relaxed">{ind.desc}</p>
-                  <div className="mt-4 pt-4 border-t border-[#e2e8f0]/60">
-                    <span className="inline-flex items-center gap-1 text-sm text-[#001F60] font-medium group-hover:gap-2 transition-all duration-300">
+                  <h3 className="text-lg font-bold text-[#1e293b] dark:text-[#e2e8f0] mb-3">{ind.title}</h3>
+                  <p className="text-sm text-[#475569] dark:text-[#94a3b8] leading-relaxed">{ind.desc}</p>
+                  <div className="mt-4 pt-4 border-t border-[#e2e8f0] dark:border-[#334155]/60">
+                    <span className="inline-flex items-center gap-1 text-sm text-[#001F60] dark:text-[#93c5fd] font-medium group-hover:gap-2 transition-all duration-300">
                       Learn more <ChevronRight className="w-3.5 h-3.5" />
                     </span>
                   </div>
@@ -655,18 +655,18 @@ export default function HomePage() {
       </section>
 
       {/* ==================== SECTION 10: TECH SHEBA ADVANTAGE ==================== */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-white dark:bg-[#0f172a]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             <FadeIn direction="left">
               <div className="sticky top-32">
-                <span className="inline-block text-sm font-semibold text-[#001F60] tracking-wide uppercase mb-3">
+                <span className="inline-block text-sm font-semibold text-[#001F60] dark:text-[#93c5fd] tracking-wide uppercase mb-3">
                   The Tech Sheba Difference
                 </span>
-                <h2 className="text-3xl sm:text-4xl font-bold text-[#1e293b] mb-5">
+                <h2 className="text-3xl sm:text-4xl font-bold text-[#1e293b] dark:text-[#e2e8f0] mb-5">
                   Why Businesses Choose Us
                 </h2>
-                <p className="text-lg text-[#475569] leading-relaxed mb-8">
+                <p className="text-lg text-[#475569] dark:text-[#94a3b8] leading-relaxed mb-8">
                   In a market crowded with IT service providers, Tech Sheba stands apart through
                   our unwavering commitment to reliability, transparency, and client success.
                   Here are the five reasons why growing businesses across Bangladesh trust us
@@ -714,14 +714,14 @@ export default function HomePage() {
                   <motion.div
                     whileHover={{ x: 4 }}
                     transition={{ duration: 0.2 }}
-                    className="flex gap-5 p-5 rounded-2xl bg-[#f8fafc] border border-[#e2e8f0]/60 hover:bg-[#f0f4ff] hover:border-[#dbeafe] transition-all duration-300"
+                    className="flex gap-5 p-5 rounded-2xl bg-[#f8fafc] dark:bg-[#1e293b] border border-[#e2e8f0] dark:border-[#334155]/60 hover:bg-[#f0f4ff] dark:hover:bg-[#1e3a5f] hover:border-[#dbeafe] dark:hover:border-[#1e3a5f] transition-all duration-300"
                   >
-                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#001F60]/10 to-[#4DA3FF]/10 flex items-center justify-center flex-shrink-0">
-                      <item.icon className="w-6 h-6 text-[#001F60]" />
+                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#001F60]/10 to-[#4DA3FF]/10 dark:from-[#93c5fd]/15 dark:to-[#60a5fa]/15 flex items-center justify-center flex-shrink-0">
+                      <item.icon className="w-6 h-6 text-[#001F60] dark:text-[#93c5fd]" />
                     </div>
                     <div>
-                      <h4 className="text-lg font-semibold text-[#1e293b] mb-2">{item.title}</h4>
-                      <p className="text-sm text-[#475569] leading-relaxed">{item.desc}</p>
+                      <h4 className="text-lg font-semibold text-[#1e293b] dark:text-[#e2e8f0] mb-2">{item.title}</h4>
+                      <p className="text-sm text-[#475569] dark:text-[#94a3b8] leading-relaxed">{item.desc}</p>
                     </div>
                   </motion.div>
                 </StaggerItem>
@@ -732,17 +732,17 @@ export default function HomePage() {
       </section>
 
       {/* ==================== SECTION 11: ENGAGEMENT LIFECYCLE ==================== */}
-      <section className="py-24 bg-gradient-to-b from-[#f8fafc] to-white">
+      <section className="py-24 bg-gradient-to-b from-[#f8fafc] to-white dark:from-[#1e293b] dark:to-[#0f172a]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <span className="inline-block text-sm font-semibold text-[#001F60] tracking-wide uppercase mb-3">
+              <span className="inline-block text-sm font-semibold text-[#001F60] dark:text-[#93c5fd] tracking-wide uppercase mb-3">
                 Our Process
               </span>
-              <h2 className="text-3xl sm:text-4xl font-bold text-[#1e293b] mb-5">
+              <h2 className="text-3xl sm:text-4xl font-bold text-[#1e293b] dark:text-[#e2e8f0] mb-5">
                 How We Work With You
               </h2>
-              <p className="text-lg text-[#475569] leading-relaxed">
+              <p className="text-lg text-[#475569] dark:text-[#94a3b8] leading-relaxed">
                 Every successful IT engagement follows a proven methodology. Our structured
                 approach ensures that we understand your needs thoroughly, deliver precisely
                 what you require, and continue supporting you long after implementation.
@@ -753,7 +753,7 @@ export default function HomePage() {
           <FadeIn delay={0.2}>
             <div className="relative">
               {/* Connecting line (desktop) */}
-              <div className="hidden md:block absolute top-10 left-[10%] right-[10%] h-[2px] bg-gradient-to-r from-[#dbeafe] via-[#001F60]/20 to-[#dbeafe]" />
+              <div className="hidden md:block absolute top-10 left-[10%] right-[10%] h-[2px] bg-gradient-to-r from-[#dbeafe] dark:from-[#334155] via-[#001F60]/20 to-[#dbeafe] dark:to-[#334155]" />
 
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8 md:gap-4">
                 {[
@@ -793,12 +793,12 @@ export default function HomePage() {
                       <div className="relative z-10 w-20 h-20 rounded-full bg-gradient-to-br from-[#001F60] to-[#4DA3FF] flex items-center justify-center shadow-lg shadow-blue-500/25 mb-5">
                         <phase.icon className="w-8 h-8 text-white" />
                       </div>
-                      <div className="absolute -top-2 -right-2 z-20 w-8 h-8 rounded-full bg-white shadow-md border-2 border-[#001F60] flex items-center justify-center">
-                        <span className="text-xs font-bold text-[#001F60]">{phase.step}</span>
+                      <div className="absolute -top-2 -right-2 z-20 w-8 h-8 rounded-full bg-white dark:bg-[#1e293b] shadow-md border-2 border-[#001F60] dark:border-[#93c5fd] flex items-center justify-center">
+                        <span className="text-xs font-bold text-[#001F60] dark:text-[#93c5fd]">{phase.step}</span>
                       </div>
                     </div>
-                    <h4 className="text-base font-bold text-[#1e293b] mb-2">{phase.title}</h4>
-                    <p className="text-sm text-[#475569] leading-relaxed max-w-[200px] mx-auto">{phase.desc}</p>
+                    <h4 className="text-base font-bold text-[#1e293b] dark:text-[#e2e8f0] mb-2">{phase.title}</h4>
+                    <p className="text-sm text-[#475569] dark:text-[#94a3b8] leading-relaxed max-w-[200px] mx-auto">{phase.desc}</p>
                   </div>
                 ))}
               </div>
@@ -808,17 +808,17 @@ export default function HomePage() {
       </section>
 
       {/* ==================== SECTION 12: TESTIMONIALS ==================== */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-white dark:bg-[#0f172a]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <span className="inline-block text-sm font-semibold text-[#001F60] tracking-wide uppercase mb-3">
+              <span className="inline-block text-sm font-semibold text-[#001F60] dark:text-[#93c5fd] tracking-wide uppercase mb-3">
                 Client Testimonials
               </span>
-              <h2 className="text-3xl sm:text-4xl font-bold text-[#1e293b] mb-5">
+              <h2 className="text-3xl sm:text-4xl font-bold text-[#1e293b] dark:text-[#e2e8f0] mb-5">
                 What Our Clients Say
               </h2>
-              <p className="text-lg text-[#475569] leading-relaxed">
+              <p className="text-lg text-[#475569] dark:text-[#94a3b8] leading-relaxed">
                 Do not just take our word for it. Hear from the businesses we have helped
                 transform with reliable, professional IT solutions across Bangladesh.
               </p>
@@ -850,20 +850,20 @@ export default function HomePage() {
                 <motion.div
                   whileHover={{ y: -6 }}
                   transition={{ duration: 0.3 }}
-                  className="bg-white rounded-2xl p-8 green-glow border border-[#e2e8f0]/60 h-full flex flex-col"
+                  className="bg-white dark:bg-[#1e293b] rounded-2xl p-8 green-glow border border-[#e2e8f0] dark:border-[#334155]/60 h-full flex flex-col"
                 >
-                  <Quote className="w-10 h-10 text-[#4DA3FF]/30 mb-5" />
-                  <p className="text-[#475569] leading-relaxed mb-8 flex-grow">
+                  <Quote className="w-10 h-10 text-[#4DA3FF]/30 dark:text-[#60a5fa]/30 mb-5" />
+                  <p className="text-[#475569] dark:text-[#94a3b8] leading-relaxed mb-8 flex-grow">
                     &ldquo;{testimonial.quote}&rdquo;
                   </p>
-                  <div className="flex items-center gap-4 pt-6 border-t border-[#e2e8f0]/60">
+                  <div className="flex items-center gap-4 pt-6 border-t border-[#e2e8f0] dark:border-[#334155]/60">
                     <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#001F60] to-[#4DA3FF] flex items-center justify-center text-white font-bold text-lg">
                       {testimonial.name.charAt(0)}
                     </div>
                     <div>
-                      <p className="font-semibold text-[#1e293b]">{testimonial.name}</p>
-                      <p className="text-sm text-[#64748b]">{testimonial.title}</p>
-                      <p className="text-xs text-[#94a3b8] mt-0.5">{testimonial.company}</p>
+                      <p className="font-semibold text-[#1e293b] dark:text-[#e2e8f0]">{testimonial.name}</p>
+                      <p className="text-sm text-[#64748b] dark:text-[#94a3b8]">{testimonial.title}</p>
+                      <p className="text-xs text-[#94a3b8] dark:text-[#cbd5e1] mt-0.5">{testimonial.company}</p>
                     </div>
                   </div>
                 </motion.div>

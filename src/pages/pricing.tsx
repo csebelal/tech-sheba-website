@@ -204,7 +204,7 @@ export default function PricingPage() {
   return (
     <div className="overflow-hidden">
       {/* ==================== SECTION 1: PAGE HEADER ==================== */}
-      <section className="relative pt-32 pb-20 bg-gradient-to-br from-[#eff6ff] via-white to-[#f0f4ff] overflow-hidden">
+      <section className="relative pt-32 pb-20 bg-gradient-to-br from-[#eff6ff] via-white to-[#f0f4ff] dark:from-[#0f172a] dark:via-[#0f172a] dark:to-[#1e293b] overflow-hidden">
         <div
           className="absolute inset-0 opacity-[0.03]"
           style={{
@@ -212,26 +212,26 @@ export default function PricingPage() {
             backgroundSize: '32px 32px',
           }}
         />
-        <div className="absolute top-20 right-[10%] w-32 h-32 rounded-full bg-[#001F60]/5 animate-float" />
-        <div className="absolute bottom-10 left-[15%] w-24 h-24 rounded-2xl bg-[#4DA3FF]/5 animate-float" style={{ animationDelay: '1.5s' }} />
+        <div className="absolute top-20 right-[10%] w-32 h-32 rounded-full bg-[#001F60]/5 animate-float dark:bg-[#93c5fd]/10" />
+        <div className="absolute bottom-10 left-[15%] w-24 h-24 rounded-2xl bg-[#4DA3FF]/5 animate-float dark:bg-[#60a5fa]/10" style={{ animationDelay: '1.5s' }} />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
-            <nav className="flex items-center gap-2 text-sm text-[#64748b] mb-6">
+            <nav className="flex items-center gap-2 text-sm text-[#64748b] dark:text-[#94a3b8] mb-6">
               <button
                 onClick={() => navigate('home')}
-                className="hover:text-[#001F60] transition-colors duration-200"
+                className="hover:text-[#001F60] dark:hover:text-[#93c5fd] dark:text-[#93c5fd] transition-colors duration-200"
               >
                 Home
               </button>
               <ChevronRight className="w-4 h-4" />
-              <span className="text-[#001F60] font-medium">Pricing</span>
+              <span className="text-[#001F60] dark:text-[#93c5fd] font-medium">Pricing</span>
             </nav>
 
-            <h1 className="text-4xl sm:text-5xl font-bold text-[#1e293b] mb-5">
+            <h1 className="text-4xl sm:text-5xl font-bold text-[#1e293b] dark:text-[#e2e8f0] mb-5">
               Pricing & <span className="text-gradient-green">Packages</span>
             </h1>
-            <p className="text-lg text-[#475569] leading-relaxed max-w-3xl">
+            <p className="text-lg text-[#475569] dark:text-[#94a3b8] leading-relaxed max-w-3xl">
               Transparent, competitive pricing built for the Bangladeshi market. All plans are
               fully customizable â€” get exactly what you need, nothing more, nothing less.
             </p>
@@ -240,18 +240,18 @@ export default function PricingPage() {
       </section>
 
       {/* ==================== SECTION 2: PRICING PHILOSOPHY ==================== */}
-      <section className="py-20 lg:py-24 bg-white">
+      <section className="py-20 lg:py-24 bg-white dark:bg-[#0f172a]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <Badge className="mb-4 bg-[#eff6ff] text-[#001F60] border-[#dbeafe] hover:bg-[#dbeafe]">
+              <Badge className="mb-4 bg-[#eff6ff] dark:bg-[#1e293b] text-[#001F60] dark:text-[#93c5fd] border-[#dbeafe] dark:border-[#1e3a5f] hover:bg-[#dbeafe] dark:hover:bg-[#1e3a5f]">
                 Our Approach
               </Badge>
-              <h2 className="text-3xl sm:text-4xl font-bold text-[#1e293b] mb-4">
+              <h2 className="text-3xl sm:text-4xl font-bold text-[#1e293b] dark:text-[#e2e8f0] mb-4">
                 Transparent, Competitive Rates Built for the{' '}
                 <span className="text-gradient-green">Bangladeshi Market</span>
               </h2>
-              <p className="text-[#475569] leading-relaxed">
+              <p className="text-[#475569] dark:text-[#94a3b8] leading-relaxed">
                 We know that every business is different â€” that&apos;s why we don&apos;t believe
                 in rigid pricing. Our packages serve as starting points, and we tailor every
                 quote to match your specific requirements. No hidden fees, no surprise charges.
@@ -266,8 +266,8 @@ export default function PricingPage() {
                 <Card
                   className={`relative h-full flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${
                     pkg.recommended
-                      ? 'border-2 border-[#001F60] shadow-lg ring-1 ring-[#001F60]/10'
-                      : 'border border-[#e2e8f0] shadow-sm'
+                      ? 'border-2 border-[#001F60] dark:border-[#93c5fd] shadow-lg ring-1 ring-[#001F60]/10 dark:ring-[#93c5fd]/20'
+                      : 'border border-[#e2e8f0] dark:border-[#334155] shadow-sm'
                   }`}
                 >
                   {pkg.recommended && (
@@ -280,8 +280,8 @@ export default function PricingPage() {
                   )}
 
                   <CardHeader className="text-center pb-2 pt-8">
-                    <h3 className="text-xl font-bold text-[#1e293b]">{pkg.name}</h3>
-                    <p className="text-sm text-[#64748b]">{pkg.subtitle}</p>
+                    <h3 className="text-xl font-bold text-[#1e293b] dark:text-[#e2e8f0]">{pkg.name}</h3>
+                    <p className="text-sm text-[#64748b] dark:text-[#94a3b8]">{pkg.subtitle}</p>
                   </CardHeader>
 
                   <CardContent className="flex flex-col flex-1 pt-2 pb-6">
@@ -289,7 +289,7 @@ export default function PricingPage() {
                     <div className="text-center mb-6">
                       <p
                         className={`text-3xl sm:text-4xl font-bold mb-1 ${
-                          pkg.recommended ? 'text-[#001F60]' : 'text-[#1e293b]'
+                          pkg.recommended ? 'text-[#001F60] dark:text-[#93c5fd]' : 'text-[#1e293b] dark:text-[#e2e8f0]'
                         }`}
                       >
                         {pkg.name === 'Essential' ? (
@@ -300,11 +300,11 @@ export default function PricingPage() {
                           <span className="text-2xl">Custom</span>
                         )}
                       </p>
-                      <p className="text-sm text-[#64748b]">{pkg.priceNote}</p>
+                      <p className="text-sm text-[#64748b] dark:text-[#94a3b8]">{pkg.priceNote}</p>
                     </div>
 
                     {/* Description */}
-                    <p className="text-sm text-[#475569] text-center leading-relaxed mb-6">
+                    <p className="text-sm text-[#475569] dark:text-[#94a3b8] text-center leading-relaxed mb-6">
                       {pkg.description}
                     </p>
 
@@ -313,13 +313,13 @@ export default function PricingPage() {
                       {pkg.features.map((feature) => (
                         <li key={feature.label} className="flex items-start gap-3 text-sm">
                           {feature.included ? (
-                            <Check className="w-4 h-4 text-[#001F60] mt-0.5 shrink-0" />
+                            <Check className="w-4 h-4 text-[#001F60] dark:text-[#93c5fd] mt-0.5 shrink-0" />
                           ) : (
-                            <X className="w-4 h-4 text-[#cbd5e1] mt-0.5 shrink-0" />
+                            <X className="w-4 h-4 text-[#cbd5e1] dark:text-[#475569] mt-0.5 shrink-0" />
                           )}
                           <span
                             className={
-                              feature.included ? 'text-[#475569]' : 'text-[#94a3b8]'
+                              feature.included ? 'text-[#475569] dark:text-[#94a3b8]' : 'text-[#94a3b8] dark:text-[#64748b]'
                             }
                           >
                             {feature.label}
@@ -334,7 +334,7 @@ export default function PricingPage() {
                       className={`w-full font-semibold ${
                         pkg.recommended
                           ? 'bg-[#001F60] hover:bg-[#001440] text-white'
-                          : 'bg-white border-2 border-[#001F60] text-[#001F60] hover:bg-[#eff6ff]'
+                          : 'bg-white dark:bg-[#1e293b] border-2 border-[#001F60] dark:border-[#93c5fd] text-[#001F60] dark:text-[#93c5fd] hover:bg-[#eff6ff] dark:hover:bg-[#1e3a5f]'
                       }`}
                     >
                       {pkg.cta}
@@ -349,17 +349,17 @@ export default function PricingPage() {
       </section>
 
       {/* ==================== SECTION 4: ADD-ON SERVICES ==================== */}
-      <section className="py-20 lg:py-24 bg-[#f0f4ff]">
+      <section className="py-20 lg:py-24 bg-[#f0f4ff] dark:bg-[#1e3a5f]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <div className="text-center max-w-3xl mx-auto mb-14">
-              <Badge className="mb-4 bg-white text-[#001F60] border-[#dbeafe] hover:bg-[#eff6ff]">
+              <Badge className="mb-4 bg-white dark:bg-[#1e293b] text-[#001F60] dark:text-[#93c5fd] border-[#dbeafe] dark:border-[#1e3a5f] hover:bg-[#eff6ff] dark:hover:bg-[#1e3a5f]">
                 Extra Services
               </Badge>
-              <h2 className="text-3xl sm:text-4xl font-bold text-[#1e293b] mb-4">
+              <h2 className="text-3xl sm:text-4xl font-bold text-[#1e293b] dark:text-[#e2e8f0] mb-4">
                 Need Something <span className="text-gradient-green">Extra?</span>
               </h2>
-              <p className="text-[#475569] leading-relaxed">
+              <p className="text-[#475569] dark:text-[#94a3b8] leading-relaxed">
                 Enhance any package with our add-on services. Mix and match to build the perfect
                 IT solution for your business.
               </p>
@@ -371,18 +371,18 @@ export default function PricingPage() {
               const AddonIcon = addon.icon;
               return (
                 <StaggerItem key={addon.title}>
-                  <Card className="h-full border border-white bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+                      <Card className="h-full border border-white dark:border-[#334155] bg-white dark:bg-[#1e293b] shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
                     <CardContent className="p-5">
-                      <div className="w-10 h-10 rounded-xl bg-[#eff6ff] border border-[#dbeafe] flex items-center justify-center mb-3">
-                        <AddonIcon className="w-5 h-5 text-[#001F60]" />
+                      <div className="w-10 h-10 rounded-xl bg-[#eff6ff] dark:bg-[#1e3a5f] border border-[#dbeafe] dark:border-[#1e3a5f] flex items-center justify-center mb-3">
+                        <AddonIcon className="w-5 h-5 text-[#001F60] dark:text-[#93c5fd]" />
                       </div>
-                      <h3 className="text-sm font-semibold text-[#1e293b] mb-2">
+                      <h3 className="text-sm font-semibold text-[#1e293b] dark:text-[#e2e8f0] mb-2">
                         {addon.title}
                       </h3>
-                      <p className="text-xs text-[#64748b] leading-relaxed mb-3">
+                      <p className="text-xs text-[#64748b] dark:text-[#94a3b8] leading-relaxed mb-3">
                         {addon.description}
                       </p>
-                      <p className="text-xs font-bold text-[#001F60]">{addon.price}</p>
+                      <p className="text-xs font-bold text-[#001F60] dark:text-[#93c5fd]">{addon.price}</p>
                     </CardContent>
                   </Card>
                 </StaggerItem>
@@ -393,41 +393,41 @@ export default function PricingPage() {
       </section>
 
       {/* ==================== SECTION 5: COMPARISON TABLE ==================== */}
-      <section className="py-20 lg:py-24 bg-white">
+      <section className="py-20 lg:py-24 bg-white dark:bg-[#0f172a]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <div className="text-center max-w-3xl mx-auto mb-14">
-              <Badge className="mb-4 bg-[#eff6ff] text-[#001F60] border-[#dbeafe] hover:bg-[#dbeafe]">
+              <Badge className="mb-4 bg-[#eff6ff] dark:bg-[#1e293b] text-[#001F60] dark:text-[#93c5fd] border-[#dbeafe] dark:border-[#1e3a5f] hover:bg-[#dbeafe] dark:hover:bg-[#1e3a5f]">
                 Side by Side
               </Badge>
-              <h2 className="text-3xl sm:text-4xl font-bold text-[#1e293b] mb-4">
+              <h2 className="text-3xl sm:text-4xl font-bold text-[#1e293b] dark:text-[#e2e8f0] mb-4">
                 Package <span className="text-gradient-green">Comparison</span>
               </h2>
-              <p className="text-[#475569] leading-relaxed">
+              <p className="text-[#475569] dark:text-[#94a3b8] leading-relaxed">
                 See exactly what&apos;s included in each tier at a glance.
               </p>
             </div>
           </FadeIn>
 
           <FadeIn delay={0.1}>
-            <Card className="border border-[#e2e8f0] shadow-sm overflow-hidden">
+            <Card className="border border-[#e2e8f0] dark:border-[#334155] shadow-sm overflow-hidden">
               <div className="overflow-x-auto">
                 <Table>
                   <TableHeader>
-                    <TableRow className="bg-[#f0f4ff] hover:bg-[#f0f4ff]">
-                      <TableHead className="font-semibold text-[#1e293b] min-w-[200px]">
+                    <TableRow className="bg-[#f0f4ff] dark:bg-[#1e3a5f] hover:bg-[#f0f4ff] dark:hover:bg-[#1e3a5f]">
+                      <TableHead className="font-semibold text-[#1e293b] dark:text-[#e2e8f0] min-w-[200px]">
                         Feature
                       </TableHead>
-                      <TableHead className="font-semibold text-[#1e293b] text-center min-w-[140px]">
+                      <TableHead className="font-semibold text-[#1e293b] dark:text-[#e2e8f0] text-center min-w-[140px]">
                         Essential
                       </TableHead>
-                      <TableHead className="font-semibold text-[#001F60] text-center min-w-[140px] bg-[#eff6ff]">
+                      <TableHead className="font-semibold text-[#001F60] dark:text-[#93c5fd] text-center min-w-[140px] bg-[#eff6ff] dark:bg-[#1e3a5f]">
                         <div className="flex items-center justify-center gap-1">
                           Professional
-                          <Star className="w-3.5 h-3.5 fill-[#001F60]" />
+                          <Star className="w-3.5 h-3.5 fill-[#001F60] dark:fill-[#93c5fd]" />
                         </div>
                       </TableHead>
-                      <TableHead className="font-semibold text-[#1e293b] text-center min-w-[140px]">
+                      <TableHead className="font-semibold text-[#1e293b] dark:text-[#e2e8f0] text-center min-w-[140px]">
                         Enterprise
                       </TableHead>
                     </TableRow>
@@ -435,20 +435,20 @@ export default function PricingPage() {
                   <TableBody>
                     {comparisonFeatures.map((row) => (
                       <TableRow key={row.feature}>
-                        <TableCell className="font-medium text-[#475569] text-sm py-3">
+                        <TableCell className="font-medium text-[#475569] dark:text-[#94a3b8] text-sm py-3">
                           {row.feature}
                         </TableCell>
-                        <TableCell className="text-center text-sm text-[#64748b] py-3">
+                        <TableCell className="text-center text-sm text-[#64748b] dark:text-[#94a3b8] py-3">
                           {row.essential === 'â€”' ? (
-                            <span className="text-[#cbd5e1]">â€”</span>
+                            <span className="text-[#cbd5e1] dark:text-[#475569]">â€”</span>
                           ) : (
                             row.essential
                           )}
                         </TableCell>
-                        <TableCell className="text-center text-sm text-[#001F60] font-medium py-3 bg-[#fafffe]">
+                        <TableCell className="text-center text-sm text-[#001F60] dark:text-[#93c5fd] font-medium py-3 bg-[#fafffe] dark:bg-[#1e293b]">
                           {row.professional}
                         </TableCell>
-                        <TableCell className="text-center text-sm text-[#475569] py-3">
+                        <TableCell className="text-center text-sm text-[#475569] dark:text-[#94a3b8] py-3">
                           {row.enterprise}
                         </TableCell>
                       </TableRow>
@@ -462,17 +462,17 @@ export default function PricingPage() {
       </section>
 
       {/* ==================== SECTION 6: FAQ ==================== */}
-      <section className="py-20 lg:py-24 bg-[#f0f4ff]">
+      <section className="py-20 lg:py-24 bg-[#f0f4ff] dark:bg-[#1e3a5f]">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <div className="text-center mb-14">
-              <Badge className="mb-4 bg-white text-[#001F60] border-[#dbeafe] hover:bg-[#eff6ff]">
+              <Badge className="mb-4 bg-white dark:bg-[#1e293b] text-[#001F60] dark:text-[#93c5fd] border-[#dbeafe] dark:border-[#1e3a5f] hover:bg-[#eff6ff] dark:hover:bg-[#1e3a5f]">
                 Common Questions
               </Badge>
-              <h2 className="text-3xl sm:text-4xl font-bold text-[#1e293b] mb-4">
+              <h2 className="text-3xl sm:text-4xl font-bold text-[#1e293b] dark:text-[#e2e8f0] mb-4">
                 Pricing <span className="text-gradient-green">FAQ</span>
               </h2>
-              <p className="text-[#475569] leading-relaxed">
+              <p className="text-[#475569] dark:text-[#94a3b8] leading-relaxed">
                 Got questions about our pricing? Here are the answers to the most common ones.
               </p>
             </div>
@@ -484,12 +484,12 @@ export default function PricingPage() {
                 <AccordionItem
                   key={index}
                   value={`faq-${index}`}
-                  className="bg-white border border-[#dbeafe] rounded-xl px-6 data-[state=open]:shadow-sm"
+                  className="bg-white dark:bg-[#1e293b] border border-[#dbeafe] dark:border-[#1e3a5f] rounded-xl px-6 data-[state=open]:shadow-sm"
                 >
-                  <AccordionTrigger className="text-[#1e293b] font-semibold hover:no-underline text-left text-sm sm:text-base py-5">
+                  <AccordionTrigger className="text-[#1e293b] dark:text-[#e2e8f0] font-semibold hover:no-underline text-left text-sm sm:text-base py-5">
                     {faq.question}
                   </AccordionTrigger>
-                  <AccordionContent className="text-[#475569] text-sm leading-relaxed pb-5">
+                  <AccordionContent className="text-[#475569] dark:text-[#94a3b8] text-sm leading-relaxed pb-5">
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>
@@ -500,7 +500,7 @@ export default function PricingPage() {
       </section>
 
       {/* ==================== SECTION 7: CTA ==================== */}
-      <section className="py-20 lg:py-24 bg-white">
+      <section className="py-20 lg:py-24 bg-white dark:bg-[#0f172a]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#001F60] to-[#001440] p-10 sm:p-16 text-center">
@@ -524,7 +524,7 @@ export default function PricingPage() {
                   <Button
                     size="lg"
                     onClick={() => navigate('contact')}
-                    className="bg-white text-[#001F60] hover:bg-[#eff6ff] font-semibold px-8"
+                    className="bg-white dark:bg-[#1e293b] text-[#001F60] dark:text-[#93c5fd] hover:bg-[#eff6ff] dark:hover:bg-[#1e3a5f] font-semibold px-8"
                   >
                     Request a Free Quote
                     <ArrowRight className="w-4 h-4 ml-2" />

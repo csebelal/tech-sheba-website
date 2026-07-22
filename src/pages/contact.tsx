@@ -117,7 +117,7 @@ export default function ContactPage() {
   return (
     <div className="overflow-hidden">
       {/* ==================== SECTION 1: PAGE HEADER ==================== */}
-      <section className="relative pt-32 pb-20 bg-gradient-to-br from-[#eff6ff] via-white to-[#f0f4ff] overflow-hidden">
+      <section className="relative pt-32 pb-20 bg-gradient-to-br from-[#eff6ff] via-white to-[#f0f4ff] dark:from-[#0f172a] dark:via-[#0f172a] dark:to-[#1e293b] overflow-hidden">
         <div
           className="absolute inset-0 opacity-[0.03]"
           style={{
@@ -126,41 +126,41 @@ export default function ContactPage() {
             backgroundSize: '32px 32px',
           }}
         />
-        <div className="absolute top-20 right-[10%] w-32 h-32 rounded-full bg-[#001F60]/5 animate-float" />
+        <div className="absolute top-20 right-[10%] w-32 h-32 rounded-full bg-[#001F60]/5 dark:bg-white/5 animate-float" />
         <div
-          className="absolute bottom-10 left-[15%] w-24 h-24 rounded-2xl bg-[#4DA3FF]/5 animate-float"
+          className="absolute bottom-10 left-[15%] w-24 h-24 rounded-2xl bg-[#4DA3FF]/5 dark:bg-white/5 animate-float"
           style={{ animationDelay: '1.5s' }}
         />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
-            <nav className="flex items-center gap-2 text-sm text-[#64748b] mb-6">
+            <nav className="flex items-center gap-2 text-sm text-[#64748b] dark:text-[#94a3b8] mb-6">
               <button
                 onClick={() => navigate('home')}
-                className="hover:text-[#001F60] transition-colors"
+                className="hover:text-[#001F60] dark:hover:text-[#93c5fd] transition-colors"
               >
                 Home
               </button>
               <ChevronRight className="w-4 h-4" />
-              <span className="text-[#001F60] font-medium">Contact</span>
+              <span className="text-[#001F60] dark:text-[#93c5fd] font-medium">Contact</span>
             </nav>
           </FadeIn>
 
           <FadeIn delay={0.1}>
-            <Badge className="mb-4 bg-[#001F60]/10 text-[#001F60] hover:bg-[#001F60]/20 border-0 text-sm px-4 py-1">
+            <Badge className="mb-4 bg-[#001F60]/10 text-[#001F60] dark:bg-[#93c5fd]/10 dark:text-[#93c5fd] dark:hover:bg-[#93c5fd]/20 hover:bg-[#001F60]/20 border-0 text-sm px-4 py-1">
               Contact Us
             </Badge>
           </FadeIn>
 
           <FadeIn delay={0.2}>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#1e293b] mb-4 tracking-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#1e293b] dark:text-[#e2e8f0] mb-4 tracking-tight">
               Get in{' '}
-              <span className="text-[#001F60]">Touch</span>
+              <span className="text-[#001F60] dark:text-[#93c5fd]">Touch</span>
             </h1>
           </FadeIn>
 
           <FadeIn delay={0.3}>
-            <p className="text-lg md:text-xl text-[#475569] max-w-2xl leading-relaxed">
+            <p className="text-lg md:text-xl text-[#475569] dark:text-[#94a3b8] max-w-2xl leading-relaxed">
               Ready to transform your business technology? We&apos;re here to help.
               Reach out to our team for a free consultation and assessment.
             </p>
@@ -169,17 +169,17 @@ export default function ContactPage() {
       </section>
 
       {/* ==================== SECTION 2: CONTACT FORM + INFO ==================== */}
-      <section className="py-20 lg:py-24 bg-white">
+      <section className="py-20 lg:py-24 bg-white dark:bg-[#0f172a]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-5 gap-12 lg:gap-16">
             {/* Left: Contact Form */}
             <div className="lg:col-span-3">
               <FadeIn>
                 <div className="mb-8">
-                  <h2 className="text-2xl md:text-3xl font-bold text-[#1e293b] mb-2">
+                  <h2 className="text-2xl md:text-3xl font-bold text-[#1e293b] dark:text-[#e2e8f0] mb-2">
                     Send Us a Message
                   </h2>
-                  <p className="text-[#475569]">
+                  <p className="text-[#475569] dark:text-[#94a3b8]">
                     Fill out the form below and our team will get back to you within 24 hours.
                   </p>
                 </div>
@@ -187,18 +187,18 @@ export default function ContactPage() {
 
               {isSubmitted ? (
                 <FadeIn>
-                  <Card className="border-[#dbeafe] bg-[#eff6ff]/50">
+                  <Card className="border-[#dbeafe] dark:border-[#1e3a5f] bg-[#eff6ff]/50 dark:bg-[#1e293b]/50">
                     <CardContent className="p-8 md:p-12 text-center">
-                      <div className="w-20 h-20 rounded-full bg-[#001F60]/10 flex items-center justify-center mx-auto mb-6">
-                        <CheckCircle2 className="w-10 h-10 text-[#001F60]" />
+                      <div className="w-20 h-20 rounded-full bg-[#001F60]/10 dark:bg-[#93c5fd]/10 flex items-center justify-center mx-auto mb-6">
+                        <CheckCircle2 className="w-10 h-10 text-[#001F60] dark:text-[#93c5fd]" />
                       </div>
-                      <h3 className="text-2xl font-bold text-[#1e293b] mb-3">
+                      <h3 className="text-2xl font-bold text-[#1e293b] dark:text-[#e2e8f0] mb-3">
                         Thank You!
                       </h3>
-                      <p className="text-[#475569] mb-2 text-lg">
+                      <p className="text-[#475569] dark:text-[#94a3b8] mb-2 text-lg">
                         Your message has been received successfully.
                       </p>
-                      <p className="text-[#64748b] mb-8">
+                      <p className="text-[#64748b] dark:text-[#94a3b8] mb-8">
                         Our team will review your request and get back to you within 24 hours.
                         We look forward to helping you with your IT needs.
                       </p>
@@ -218,7 +218,7 @@ export default function ContactPage() {
                       <div className="space-y-2">
                         <Label
                           htmlFor="name"
-                          className="text-sm font-medium text-[#1e293b]"
+                          className="text-sm font-medium text-[#1e293b] dark:text-[#e2e8f0]"
                         >
                           Full Name <span className="text-red-500">*</span>
                         </Label>
@@ -229,13 +229,13 @@ export default function ContactPage() {
                           value={formData.name}
                           onChange={handleChange}
                           required
-                          className="h-12 border-[#e2e8f0] focus:border-[#001F60] focus:ring-[#001F60]/20 rounded-lg bg-white text-[#1e293b] placeholder:text-[#94a3b8] transition-all duration-200"
+                          className="h-12 border-[#e2e8f0] dark:border-[#334155] focus:border-[#001F60] focus:ring-[#001F60]/20 rounded-lg bg-white dark:bg-[#0f172a] text-[#1e293b] dark:text-[#e2e8f0] placeholder:text-[#94a3b8] transition-all duration-200"
                         />
                       </div>
                       <div className="space-y-2">
                         <Label
                           htmlFor="email"
-                          className="text-sm font-medium text-[#1e293b]"
+                          className="text-sm font-medium text-[#1e293b] dark:text-[#e2e8f0]"
                         >
                           Email Address <span className="text-red-500">*</span>
                         </Label>
@@ -247,7 +247,7 @@ export default function ContactPage() {
                           value={formData.email}
                           onChange={handleChange}
                           required
-                          className="h-12 border-[#e2e8f0] focus:border-[#001F60] focus:ring-[#001F60]/20 rounded-lg bg-white text-[#1e293b] placeholder:text-[#94a3b8] transition-all duration-200"
+                          className="h-12 border-[#e2e8f0] dark:border-[#334155] focus:border-[#001F60] focus:ring-[#001F60]/20 rounded-lg bg-white dark:bg-[#0f172a] text-[#1e293b] dark:text-[#e2e8f0] placeholder:text-[#94a3b8] transition-all duration-200"
                         />
                       </div>
                     </div>
@@ -256,7 +256,7 @@ export default function ContactPage() {
                       <div className="space-y-2">
                         <Label
                           htmlFor="phone"
-                          className="text-sm font-medium text-[#1e293b]"
+                          className="text-sm font-medium text-[#1e293b] dark:text-[#e2e8f0]"
                         >
                           Phone Number
                         </Label>
@@ -267,13 +267,13 @@ export default function ContactPage() {
                           placeholder="01XXXXXXXXX"
                           value={formData.phone}
                           onChange={handleChange}
-                          className="h-12 border-[#e2e8f0] focus:border-[#001F60] focus:ring-[#001F60]/20 rounded-lg bg-white text-[#1e293b] placeholder:text-[#94a3b8] transition-all duration-200"
+                          className="h-12 border-[#e2e8f0] dark:border-[#334155] focus:border-[#001F60] focus:ring-[#001F60]/20 rounded-lg bg-white dark:bg-[#0f172a] text-[#1e293b] dark:text-[#e2e8f0] placeholder:text-[#94a3b8] transition-all duration-200"
                         />
                       </div>
                       <div className="space-y-2">
                         <Label
                           htmlFor="company"
-                          className="text-sm font-medium text-[#1e293b]"
+                          className="text-sm font-medium text-[#1e293b] dark:text-[#e2e8f0]"
                         >
                           Company Name
                         </Label>
@@ -283,13 +283,13 @@ export default function ContactPage() {
                           placeholder="Your company name"
                           value={formData.company}
                           onChange={handleChange}
-                          className="h-12 border-[#e2e8f0] focus:border-[#001F60] focus:ring-[#001F60]/20 rounded-lg bg-white text-[#1e293b] placeholder:text-[#94a3b8] transition-all duration-200"
+                          className="h-12 border-[#e2e8f0] dark:border-[#334155] focus:border-[#001F60] focus:ring-[#001F60]/20 rounded-lg bg-white dark:bg-[#0f172a] text-[#1e293b] dark:text-[#e2e8f0] placeholder:text-[#94a3b8] transition-all duration-200"
                         />
                       </div>
                     </div>
 
                     <div className="space-y-2">
-                      <Label className="text-sm font-medium text-[#1e293b]">
+                      <Label className="text-sm font-medium text-[#1e293b] dark:text-[#e2e8f0]">
                         Service Interest <span className="text-red-500">*</span>
                       </Label>
                       <Select
@@ -299,15 +299,15 @@ export default function ContactPage() {
                         }
                         required
                       >
-                        <SelectTrigger className="h-12 w-full border-[#e2e8f0] focus:border-[#001F60] focus:ring-[#001F60]/20 rounded-lg bg-white text-[#1e293b] transition-all duration-200">
+                        <SelectTrigger className="h-12 w-full border-[#e2e8f0] dark:border-[#334155] focus:border-[#001F60] focus:ring-[#001F60]/20 rounded-lg bg-white dark:bg-[#0f172a] text-[#1e293b] dark:text-[#e2e8f0] transition-all duration-200">
                           <SelectValue placeholder="Select a service you're interested in" />
                         </SelectTrigger>
-                        <SelectContent className="rounded-lg border-[#e2e8f0]">
+                        <SelectContent className="rounded-lg border-[#e2e8f0] dark:border-[#334155] dark:bg-[#1e293b]">
                           {serviceOptions.map((service) => (
                             <SelectItem
                               key={service}
                               value={service}
-                              className="text-[#1e293b] focus:bg-[#eff6ff] focus:text-[#001F60]"
+                              className="text-[#1e293b] dark:text-[#e2e8f0] focus:bg-[#eff6ff] focus:text-[#001F60] dark:focus:bg-[#1e293b] dark:focus:text-[#93c5fd]"
                             >
                               {service}
                             </SelectItem>
@@ -319,7 +319,7 @@ export default function ContactPage() {
                     <div className="space-y-2">
                       <Label
                         htmlFor="message"
-                        className="text-sm font-medium text-[#1e293b]"
+                        className="text-sm font-medium text-[#1e293b] dark:text-[#e2e8f0]"
                       >
                         Message <span className="text-red-500">*</span>
                       </Label>
@@ -331,7 +331,7 @@ export default function ContactPage() {
                         onChange={handleChange}
                         required
                         rows={5}
-                        className="border-[#e2e8f0] focus:border-[#001F60] focus:ring-[#001F60]/20 rounded-lg bg-white text-[#1e293b] placeholder:text-[#94a3b8] resize-none transition-all duration-200"
+                        className="border-[#e2e8f0] dark:border-[#334155] focus:border-[#001F60] focus:ring-[#001F60]/20 rounded-lg bg-white dark:bg-[#0f172a] text-[#1e293b] dark:text-[#e2e8f0] placeholder:text-[#94a3b8] resize-none transition-all duration-200"
                       />
                     </div>
 
@@ -352,10 +352,10 @@ export default function ContactPage() {
             <div className="lg:col-span-2">
               <FadeIn delay={0.2}>
                 <div className="mb-8">
-                  <h2 className="text-2xl md:text-3xl font-bold text-[#1e293b] mb-2">
+                  <h2 className="text-2xl md:text-3xl font-bold text-[#1e293b] dark:text-[#e2e8f0] mb-2">
                     Contact Information
                   </h2>
-                  <p className="text-[#475569]">
+                  <p className="text-[#475569] dark:text-[#94a3b8]">
                     Reach out directly through any of the channels below.
                   </p>
                 </div>
@@ -373,7 +373,7 @@ export default function ContactPage() {
                           rel={info.href.startsWith('http') ? 'noopener noreferrer' : undefined}
                           className="block"
                         >
-                          <Card className="group border-[#e2e8f0] hover:border-[#001F60]/30 hover:shadow-lg hover:shadow-[#001F60]/5 transition-all duration-300 cursor-pointer bg-white">
+                          <Card className="group border-[#e2e8f0] dark:border-[#334155] hover:border-[#001F60]/30 hover:shadow-lg hover:shadow-[#001F60]/5 transition-all duration-300 cursor-pointer bg-white dark:bg-[#1e293b]">
                             <CardContent className="p-4 flex items-center gap-4">
                               <div
                                 className={`w-12 h-12 rounded-xl ${info.color} flex items-center justify-center shrink-0 shadow-md group-hover:scale-110 transition-transform duration-300`}
@@ -381,19 +381,19 @@ export default function ContactPage() {
                                 <Icon className="w-5 h-5 text-white" />
                               </div>
                               <div>
-                                <p className="text-xs font-medium text-[#64748b] uppercase tracking-wider">
+                                <p className="text-xs font-medium text-[#64748b] dark:text-[#94a3b8] uppercase tracking-wider">
                                   {info.label}
                                 </p>
-                                <p className="text-[#1e293b] font-medium group-hover:text-[#001F60] transition-colors">
+                                <p className="text-[#1e293b] dark:text-[#e2e8f0] font-medium group-hover:text-[#001F60] dark:group-hover:text-[#93c5fd] transition-colors">
                                   {info.value}
                                 </p>
                               </div>
-                              <ArrowRight className="w-4 h-4 text-[#94a3b8] ml-auto opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                              <ArrowRight className="w-4 h-4 text-[#94a3b8] dark:text-[#64748b] ml-auto opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                             </CardContent>
                           </Card>
                         </a>
                       ) : (
-                        <Card className="border-[#e2e8f0] bg-white">
+                        <Card className="border-[#e2e8f0] dark:border-[#334155] bg-white dark:bg-[#1e293b]">
                           <CardContent className="p-4 flex items-center gap-4">
                             <div
                               className={`w-12 h-12 rounded-xl ${info.color} flex items-center justify-center shrink-0 shadow-md`}
@@ -401,10 +401,10 @@ export default function ContactPage() {
                               <Icon className="w-5 h-5 text-white" />
                             </div>
                             <div>
-                              <p className="text-xs font-medium text-[#64748b] uppercase tracking-wider">
+                              <p className="text-xs font-medium text-[#64748b] dark:text-[#94a3b8] uppercase tracking-wider">
                                 {info.label}
                               </p>
-                              <p className="text-[#1e293b] font-medium">
+                              <p className="text-[#1e293b] dark:text-[#e2e8f0] font-medium">
                                 {info.value}
                               </p>
                             </div>
@@ -418,17 +418,17 @@ export default function ContactPage() {
 
               {/* Quick Response Promise */}
               <FadeIn delay={0.6}>
-                <Card className="mt-6 bg-gradient-to-br from-[#eff6ff] to-[#f0f4ff] border-[#dbeafe]">
+                <Card className="mt-6 bg-gradient-to-br from-[#eff6ff] to-[#f0f4ff] dark:from-[#1e293b] dark:to-[#1e293b] border-[#dbeafe] dark:border-[#1e3a5f]">
                   <CardContent className="p-6">
                     <div className="flex items-start gap-3">
-                      <div className="w-10 h-10 rounded-lg bg-[#001F60]/10 flex items-center justify-center shrink-0 mt-0.5">
-                        <Clock className="w-5 h-5 text-[#001F60]" />
+                      <div className="w-10 h-10 rounded-lg bg-[#001F60]/10 dark:bg-[#93c5fd]/10 flex items-center justify-center shrink-0 mt-0.5">
+                        <Clock className="w-5 h-5 text-[#001F60] dark:text-[#93c5fd]" />
                       </div>
                       <div>
-                        <p className="font-semibold text-[#1e293b] text-sm mb-1">
+                        <p className="font-semibold text-[#1e293b] dark:text-[#e2e8f0] text-sm mb-1">
                           Quick Response Promise
                         </p>
-                        <p className="text-[#475569] text-sm leading-relaxed">
+                        <p className="text-[#475569] dark:text-[#94a3b8] text-sm leading-relaxed">
                           We respond to all inquiries within 24 hours during business
                           days. For urgent matters, call us directly for immediate
                           assistance.
@@ -444,14 +444,14 @@ export default function ContactPage() {
       </section>
 
       {/* ==================== SECTION 3: MAP PLACEHOLDER ==================== */}
-      <section className="py-20 lg:py-24 bg-[#f8fafc]">
+      <section className="py-20 lg:py-24 bg-[#f8fafc] dark:bg-[#1e293b]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <div className="text-center mb-10">
-              <h2 className="text-2xl md:text-3xl font-bold text-[#1e293b] mb-3">
+              <h2 className="text-2xl md:text-3xl font-bold text-[#1e293b] dark:text-[#e2e8f0] mb-3">
                 Our Location
               </h2>
-              <p className="text-[#475569] max-w-xl mx-auto">
+              <p className="text-[#475569] dark:text-[#94a3b8] max-w-xl mx-auto">
                 Visit our office in Dhaka or we can come to you â€” we serve
                 businesses across all of Bangladesh.
               </p>
@@ -459,9 +459,9 @@ export default function ContactPage() {
           </FadeIn>
 
           <FadeIn delay={0.1}>
-            <div className="relative rounded-2xl overflow-hidden border border-[#e2e8f0] shadow-lg">
+            <div className="relative rounded-2xl overflow-hidden border border-[#e2e8f0] dark:border-[#334155] shadow-lg">
               {/* Map Placeholder */}
-              <div className="w-full h-80 md:h-96 bg-gradient-to-br from-[#eff6ff] via-[#f0f4ff] to-[#dbeafe] flex flex-col items-center justify-center relative">
+              <div className="w-full h-80 md:h-96 bg-gradient-to-br from-[#eff6ff] via-[#f0f4ff] to-[#dbeafe] dark:from-[#1e293b] dark:via-[#1e293b] dark:to-[#334155] flex flex-col items-center justify-center relative">
                 {/* Grid pattern */}
                 <div
                   className="absolute inset-0 opacity-[0.06]"
@@ -473,29 +473,29 @@ export default function ContactPage() {
                 />
                 {/* Road-like lines */}
                 <div className="absolute inset-0 opacity-[0.08]">
-                  <div className="absolute top-1/2 left-0 right-0 h-1 bg-[#001F60] -translate-y-1/2" />
-                  <div className="absolute top-0 bottom-0 left-1/2 w-1 bg-[#001F60] -translate-x-1/2" />
-                  <div className="absolute top-1/4 left-0 right-0 h-0.5 bg-[#001F60]" />
-                  <div className="absolute top-3/4 left-0 right-0 h-0.5 bg-[#001F60]" />
-                  <div className="absolute top-0 bottom-0 left-1/4 w-0.5 bg-[#001F60]" />
-                  <div className="absolute top-0 bottom-0 left-3/4 w-0.5 bg-[#001F60]" />
+                  <div className="absolute top-1/2 left-0 right-0 h-1 bg-[#001F60] dark:bg-[#93c5fd] -translate-y-1/2" />
+                  <div className="absolute top-0 bottom-0 left-1/2 w-1 bg-[#001F60] dark:bg-[#93c5fd] -translate-x-1/2" />
+                  <div className="absolute top-1/4 left-0 right-0 h-0.5 bg-[#001F60] dark:bg-[#93c5fd]" />
+                  <div className="absolute top-3/4 left-0 right-0 h-0.5 bg-[#001F60] dark:bg-[#93c5fd]" />
+                  <div className="absolute top-0 bottom-0 left-1/4 w-0.5 bg-[#001F60] dark:bg-[#93c5fd]" />
+                  <div className="absolute top-0 bottom-0 left-3/4 w-0.5 bg-[#001F60] dark:bg-[#93c5fd]" />
                 </div>
 
                 <div className="relative z-10 flex flex-col items-center gap-4">
-                  <div className="w-16 h-16 rounded-full bg-[#001F60] flex items-center justify-center shadow-xl shadow-[#001F60]/30 animate-bounce">
-                    <MapPin className="w-8 h-8 text-white" />
+                  <div className="w-16 h-16 rounded-full bg-[#001F60] dark:bg-[#93c5fd] flex items-center justify-center shadow-xl shadow-[#001F60]/30 dark:shadow-[#93c5fd]/30 animate-bounce">
+                    <MapPin className="w-8 h-8 text-white dark:text-[#0f172a]" />
                   </div>
                   <div className="text-center">
-                    <h3 className="text-xl font-bold text-[#1e293b] mb-1">
+                    <h3 className="text-xl font-bold text-[#1e293b] dark:text-[#e2e8f0] mb-1">
                       Dhaka, Bangladesh
                     </h3>
-                    <p className="text-[#475569] text-sm">
+                    <p className="text-[#475569] dark:text-[#94a3b8] text-sm">
                       Tech Sheba Head Office
                     </p>
                   </div>
                   <Badge
                     variant="outline"
-                    className="border-[#001F60]/20 text-[#001F60] bg-white/80 backdrop-blur-sm px-4 py-1.5 text-sm"
+                    className="border-[#001F60]/20 dark:border-[#93c5fd]/20 text-[#001F60] dark:text-[#93c5fd] bg-white/80 dark:bg-[#1e293b]/80 backdrop-blur-sm px-4 py-1.5 text-sm"
                   >
                     <MapPin className="w-3.5 h-3.5 mr-1.5" />
                     23.8103Â° N, 90.4125Â° E
@@ -508,7 +508,7 @@ export default function ContactPage() {
       </section>
 
       {/* ==================== SECTION 4: ALTERNATIVE CONTACT ==================== */}
-      <section className="py-20 lg:py-24 bg-white">
+      <section className="py-20 lg:py-24 bg-white dark:bg-[#0f172a]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <div className="relative rounded-3xl overflow-hidden bg-gradient-to-r from-[#001F60] via-[#0775FF] to-[#4DA3FF] p-10 md:p-16">
@@ -569,25 +569,25 @@ export default function ContactPage() {
       </section>
 
       {/* ==================== SECTION 5: OFFICE LOCATION DETAILS ==================== */}
-      <section className="py-20 lg:py-24 bg-[#f8fafc]">
+      <section className="py-20 lg:py-24 bg-[#f8fafc] dark:bg-[#1e293b]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <FadeIn direction="right">
               <div>
-                <Badge className="mb-4 bg-[#001F60]/10 text-[#001F60] hover:bg-[#001F60]/20 border-0 text-sm px-4 py-1">
+            <Badge className="mb-4 bg-[#001F60]/10 text-[#001F60] dark:bg-[#93c5fd]/10 dark:text-[#93c5fd] hover:bg-[#001F60]/20 dark:hover:bg-[#93c5fd]/20 border-0 text-sm px-4 py-1">
                   Our Coverage
                 </Badge>
-                <h2 className="text-3xl md:text-4xl font-bold text-[#1e293b] mb-6 leading-tight">
+                <h2 className="text-3xl md:text-4xl font-bold text-[#1e293b] dark:text-[#e2e8f0] mb-6 leading-tight">
                   Based in Dhaka,{' '}
-                  <span className="text-[#001F60]">Serving All of Bangladesh</span>
+                  <span className="text-[#001F60] dark:text-[#93c5fd]">Serving All of Bangladesh</span>
                 </h2>
-                <p className="text-[#475569] leading-relaxed mb-6">
+                <p className="text-[#475569] dark:text-[#94a3b8] leading-relaxed mb-6">
                   Tech Sheba is headquartered in Dhaka, the vibrant capital and
                   business hub of Bangladesh. From our central location, we provide
                   comprehensive IT solutions to businesses of all sizes across the
                   entire country.
                 </p>
-                <p className="text-[#475569] leading-relaxed mb-8">
+                <p className="text-[#475569] dark:text-[#94a3b8] leading-relaxed mb-8">
                   Whether your office is in Gulshan, Motijheel, Dhanmondi, Uttara, or
                   any other area in Bangladesh, our team is ready to visit your
                   premises for on-site assessments, installations, and support. We
@@ -603,10 +603,10 @@ export default function ContactPage() {
                     'Same-day Service in Dhaka',
                   ].map((item, idx) => (
                     <div key={idx} className="flex items-center gap-3">
-                      <div className="w-6 h-6 rounded-full bg-[#001F60]/10 flex items-center justify-center shrink-0">
-                        <CheckCircle2 className="w-4 h-4 text-[#001F60]" />
+                      <div className="w-6 h-6 rounded-full bg-[#001F60]/10 dark:bg-[#93c5fd]/10 flex items-center justify-center shrink-0">
+                        <CheckCircle2 className="w-4 h-4 text-[#001F60] dark:text-[#93c5fd]" />
                       </div>
-                      <span className="text-[#475569] font-medium">{item}</span>
+                      <span className="text-[#475569] dark:text-[#94a3b8] font-medium">{item}</span>
                     </div>
                   ))}
                 </div>
@@ -615,7 +615,7 @@ export default function ContactPage() {
 
             <FadeIn direction="left" delay={0.2}>
               <div className="relative">
-                <div className="rounded-2xl overflow-hidden bg-gradient-to-br from-[#eff6ff] via-[#f0f4ff] to-[#dbeafe] p-8 md:p-10">
+                <div className="rounded-2xl overflow-hidden bg-gradient-to-br from-[#eff6ff] via-[#f0f4ff] to-[#dbeafe] dark:from-[#1e293b] dark:via-[#1e293b] dark:to-[#334155] p-8 md:p-10">
                   <div
                     className="absolute inset-0 opacity-[0.04]"
                     style={{
@@ -626,36 +626,36 @@ export default function ContactPage() {
                   />
                   <div className="relative space-y-6">
                     <div className="flex items-center gap-4">
-                      <div className="w-12 h-12 rounded-xl bg-[#001F60] flex items-center justify-center shadow-lg shadow-[#001F60]/20">
-                        <Building2 className="w-6 h-6 text-white" />
+                      <div className="w-12 h-12 rounded-xl bg-[#001F60] dark:bg-[#93c5fd] flex items-center justify-center shadow-lg shadow-[#001F60]/20 dark:shadow-[#93c5fd]/20">
+                        <Building2 className="w-6 h-6 text-white dark:text-[#0f172a]" />
                       </div>
                       <div>
-                        <h4 className="font-bold text-[#1e293b]">Head Office</h4>
-                        <p className="text-[#475569] text-sm">Dhaka, Bangladesh</p>
+                        <h4 className="font-bold text-[#1e293b] dark:text-[#e2e8f0]">Head Office</h4>
+                        <p className="text-[#475569] dark:text-[#94a3b8] text-sm">Dhaka, Bangladesh</p>
                       </div>
                     </div>
-                    <div className="h-px bg-[#001F60]/10" />
+                    <div className="h-px bg-[#001F60]/10 dark:bg-white/10" />
                     <div className="grid grid-cols-2 gap-4">
-                      <div className="bg-white/70 backdrop-blur-sm rounded-xl p-4 text-center">
-                        <p className="text-2xl font-bold text-[#001F60]">500+</p>
-                        <p className="text-xs text-[#64748b] mt-1">Clients Served</p>
+                      <div className="bg-white/70 dark:bg-[#1e293b]/70 backdrop-blur-sm rounded-xl p-4 text-center">
+                        <p className="text-2xl font-bold text-[#001F60] dark:text-[#93c5fd]">500+</p>
+                        <p className="text-xs text-[#64748b] dark:text-[#94a3b8] mt-1">Clients Served</p>
                       </div>
-                      <div className="bg-white/70 backdrop-blur-sm rounded-xl p-4 text-center">
-                        <p className="text-2xl font-bold text-[#001F60]">8+</p>
-                        <p className="text-xs text-[#64748b] mt-1">Years Experience</p>
+                      <div className="bg-white/70 dark:bg-[#1e293b]/70 backdrop-blur-sm rounded-xl p-4 text-center">
+                        <p className="text-2xl font-bold text-[#001F60] dark:text-[#93c5fd]">8+</p>
+                        <p className="text-xs text-[#64748b] dark:text-[#94a3b8] mt-1">Years Experience</p>
                       </div>
-                      <div className="bg-white/70 backdrop-blur-sm rounded-xl p-4 text-center">
-                        <p className="text-2xl font-bold text-[#001F60]">50+</p>
-                        <p className="text-xs text-[#64748b] mt-1">Team Members</p>
+                      <div className="bg-white/70 dark:bg-[#1e293b]/70 backdrop-blur-sm rounded-xl p-4 text-center">
+                        <p className="text-2xl font-bold text-[#001F60] dark:text-[#93c5fd]">50+</p>
+                        <p className="text-xs text-[#64748b] dark:text-[#94a3b8] mt-1">Team Members</p>
                       </div>
-                      <div className="bg-white/70 backdrop-blur-sm rounded-xl p-4 text-center">
-                        <p className="text-2xl font-bold text-[#001F60]">99%</p>
-                        <p className="text-xs text-[#64748b] mt-1">Satisfaction Rate</p>
+                      <div className="bg-white/70 dark:bg-[#1e293b]/70 backdrop-blur-sm rounded-xl p-4 text-center">
+                        <p className="text-2xl font-bold text-[#001F60] dark:text-[#93c5fd]">99%</p>
+                        <p className="text-xs text-[#64748b] dark:text-[#94a3b8] mt-1">Satisfaction Rate</p>
                       </div>
                     </div>
-                    <div className="h-px bg-[#001F60]/10" />
-                    <div className="flex items-center gap-3 text-[#475569] text-sm">
-                      <Clock className="w-4 h-4 text-[#001F60] shrink-0" />
+                    <div className="h-px bg-[#001F60]/10 dark:bg-white/10" />
+                    <div className="flex items-center gap-3 text-[#475569] dark:text-[#94a3b8] text-sm">
+                      <Clock className="w-4 h-4 text-[#001F60] dark:text-[#93c5fd] shrink-0" />
                       <span>
                         Open Saturday to Thursday, 9:00 AM to 6:00 PM
                       </span>

@@ -378,8 +378,8 @@ export default function ServiceDetailPage() {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-2xl font-bold text-[#1e293b] mb-4">Service Not Found</h1>
-          <p className="text-[#475569] mb-6">The service you are looking for does not exist.</p>
+          <h1 className="text-2xl font-bold text-[#1e293b] dark:text-[#e2e8f0] mb-4">Service Not Found</h1>
+          <p className="text-[#475569] dark:text-[#94a3b8] mb-6">The service you are looking for does not exist.</p>
           <Button onClick={() => navigate('services')} className="bg-[#001F60] hover:bg-[#001440] text-white">
             Back to Services
           </Button>
@@ -396,7 +396,7 @@ export default function ServiceDetailPage() {
     <div className="overflow-hidden">
       {/* ==================== SECTION 1: PAGE HEADER ==================== */}
       <section className="relative pt-32 pb-16 lg:pt-36 lg:pb-20">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#eff6ff] via-white to-[#f0f4ff]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#eff6ff] via-white to-[#f0f4ff] dark:from-[#1e293b] dark:via-[#0f172a] dark:to-[#0f172a]" />
         <div className="absolute inset-0 opacity-20" style={{
           backgroundImage: `radial-gradient(circle at 15% 30%, rgba(0,31,96,0.08) 0%, transparent 50%),
                            radial-gradient(circle at 85% 70%, rgba(7,117,255,0.06) 0%, transparent 50%)`,
@@ -404,39 +404,39 @@ export default function ServiceDetailPage() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
             {/* Breadcrumb */}
-            <nav className="flex items-center gap-2 text-sm text-[#64748b] mb-8 flex-wrap">
+            <nav className="flex items-center gap-2 text-sm text-[#64748b] dark:text-[#94a3b8] mb-8 flex-wrap">
               <button
                 onClick={() => navigate('home')}
-                className="hover:text-[#001F60] transition-colors"
+                className="hover:text-[#001F60] dark:hover:text-[#93c5fd] transition-colors"
               >
                 Home
               </button>
               <ChevronRight className="h-4 w-4" />
               <button
                 onClick={() => navigate('services')}
-                className="hover:text-[#001F60] transition-colors"
+                className="hover:text-[#001F60] dark:hover:text-[#93c5fd] transition-colors"
               >
                 Services
               </button>
               <ChevronRight className="h-4 w-4" />
-              <span className="text-[#1e293b] font-medium">{data.title}</span>
+              <span className="text-[#1e293b] dark:text-[#e2e8f0] font-medium">{data.title}</span>
             </nav>
 
             <div className="flex items-center gap-3 mb-4">
-              <Badge className="bg-[#eff6ff] text-[#001F60] border-[#dbeafe] hover:bg-[#dbeafe]">
+              <Badge className="bg-[#eff6ff] dark:bg-[#1e293b] text-[#001F60] dark:text-[#93c5fd] border-[#dbeafe] dark:border-[#1e3a5f] hover:bg-[#dbeafe] dark:hover:bg-[#1e3a5f]">
                 {data.category}
               </Badge>
             </div>
 
             <div className="flex items-start gap-5 mb-6">
-              <div className="hidden sm:flex w-14 h-14 rounded-2xl bg-[#dbeafe] items-center justify-center shrink-0 mt-1">
-                <PageIcon className="h-7 w-7 text-[#001F60]" />
+              <div className="hidden sm:flex w-14 h-14 rounded-2xl bg-[#dbeafe] dark:bg-[#1e3a5f] items-center justify-center shrink-0 mt-1">
+                <PageIcon className="h-7 w-7 text-[#001F60] dark:text-[#93c5fd]" />
               </div>
               <div>
-                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1e293b] tracking-tight mb-4">
+                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1e293b] dark:text-[#e2e8f0] tracking-tight mb-4">
                   {data.title}
                 </h1>
-                <p className="text-lg text-[#475569] leading-relaxed max-w-3xl">
+                <p className="text-lg text-[#475569] dark:text-[#94a3b8] leading-relaxed max-w-3xl">
                   {data.subtitle}
                 </p>
               </div>
@@ -446,19 +446,19 @@ export default function ServiceDetailPage() {
       </section>
 
       {/* ==================== SECTION 2: HERO DESCRIPTION ==================== */}
-      <section className="py-12 lg:py-16 bg-white">
+      <section className="py-12 lg:py-16 bg-white dark:bg-[#0f172a]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
-            <div className="bg-gradient-to-br from-[#eff6ff] via-[#f0f4ff] to-[#dbeafe] rounded-2xl p-8 sm:p-10 lg:p-12 border border-[#dbeafe]">
+            <div className="bg-gradient-to-br from-[#eff6ff] via-[#f0f4ff] to-[#dbeafe] dark:from-[#1e293b] dark:via-[#1e293b] dark:to-[#334155] rounded-2xl p-8 sm:p-10 lg:p-12 border border-[#dbeafe] dark:border-[#1e3a5f]">
               <div className="flex items-start gap-4 mb-4">
-                <div className="w-10 h-10 rounded-xl bg-[#001F60] flex items-center justify-center shrink-0">
-                  <PageIcon className="h-5 w-5 text-white" />
+                <div className="w-10 h-10 rounded-xl bg-[#001F60] dark:bg-[#93c5fd] flex items-center justify-center shrink-0">
+                  <PageIcon className="h-5 w-5 text-white dark:text-[#0f172a]" />
                 </div>
                 <div>
-                  <h2 className="text-xl font-bold text-[#1e293b]">About This Service</h2>
+                  <h2 className="text-xl font-bold text-[#1e293b] dark:text-[#e2e8f0]">About This Service</h2>
                 </div>
               </div>
-              <p className="text-[#475569] text-base sm:text-lg leading-relaxed">
+              <p className="text-[#475569] dark:text-[#94a3b8] text-base sm:text-lg leading-relaxed">
                 {data.heroDescription}
               </p>
             </div>
@@ -467,17 +467,17 @@ export default function ServiceDetailPage() {
       </section>
 
       {/* ==================== SECTION 3: INDIVIDUAL SERVICES ==================== */}
-      <section className="py-20 lg:py-24 bg-[#f8fafc]">
+      <section className="py-20 lg:py-24 bg-[#f8fafc] dark:bg-[#1e293b]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <div className="max-w-2xl mb-16">
-              <p className="text-sm font-semibold text-[#001F60] uppercase tracking-wider mb-3">
+              <p className="text-sm font-semibold text-[#001F60] dark:text-[#93c5fd] uppercase tracking-wider mb-3">
                 Our Offerings
               </p>
-              <h2 className="text-3xl sm:text-4xl font-bold text-[#1e293b] mb-4">
+              <h2 className="text-3xl sm:text-4xl font-bold text-[#1e293b] dark:text-[#e2e8f0] mb-4">
                 What&apos;s Included
               </h2>
-              <p className="text-[#475569] text-lg">
+              <p className="text-[#475569] dark:text-[#94a3b8] text-lg">
                 Detailed breakdown of each service within {data.category.toLowerCase()}.
               </p>
             </div>
@@ -488,35 +488,35 @@ export default function ServiceDetailPage() {
               const ServiceIcon = iconMap[service.icon] || Cpu;
               return (
                 <StaggerItem key={service.title}>
-                  <Card className="border border-gray-100 bg-white shadow-sm hover:shadow-lg transition-all duration-300">
+                  <Card className="border border-gray-100 dark:border-[#334155] bg-white dark:bg-[#1e293b] shadow-sm hover:shadow-lg transition-all duration-300">
                     <CardContent className="p-6 sm:p-8 lg:p-10">
                       <div className="flex flex-col lg:flex-row gap-8">
                         {/* Left: Icon + Title + Description */}
                         <div className="flex-1">
                           <div className="flex items-center gap-4 mb-4">
-                            <div className="w-12 h-12 rounded-xl bg-[#eff6ff] flex items-center justify-center shrink-0">
-                              <ServiceIcon className="h-6 w-6 text-[#001F60]" />
+                            <div className="w-12 h-12 rounded-xl bg-[#eff6ff] dark:bg-[#1e3a5f] flex items-center justify-center shrink-0">
+                              <ServiceIcon className="h-6 w-6 text-[#001F60] dark:text-[#93c5fd]" />
                             </div>
-                            <h3 className="text-xl sm:text-2xl font-bold text-[#1e293b]">
+                            <h3 className="text-xl sm:text-2xl font-bold text-[#1e293b] dark:text-[#e2e8f0]">
                               {service.title}
                             </h3>
                           </div>
-                          <p className="text-[#475569] leading-relaxed">
+                          <p className="text-[#475569] dark:text-[#94a3b8] leading-relaxed">
                             {service.description}
                           </p>
                         </div>
 
                         {/* Right: Features */}
                         <div className="lg:w-80 shrink-0">
-                          <div className="bg-[#f8fafc] rounded-xl p-5 border border-gray-100">
-                            <h4 className="text-sm font-semibold text-[#1e293b] uppercase tracking-wider mb-4">
+                          <div className="bg-[#f8fafc] dark:bg-[#0f172a] rounded-xl p-5 border border-gray-100 dark:border-[#334155]">
+                            <h4 className="text-sm font-semibold text-[#1e293b] dark:text-[#e2e8f0] uppercase tracking-wider mb-4">
                               Key Features
                             </h4>
                             <ul className="space-y-3">
                               {service.features.map((feature) => (
                                 <li key={feature} className="flex items-start gap-2.5">
-                                  <CheckCircle2 className="h-4 w-4 text-[#4DA3FF] mt-0.5 shrink-0" />
-                                  <span className="text-sm text-[#475569] leading-relaxed">{feature}</span>
+                                  <CheckCircle2 className="h-4 w-4 text-[#4DA3FF] dark:text-[#60a5fa] mt-0.5 shrink-0" />
+                                  <span className="text-sm text-[#475569] dark:text-[#94a3b8] leading-relaxed">{feature}</span>
                                 </li>
                               ))}
                             </ul>
@@ -533,17 +533,17 @@ export default function ServiceDetailPage() {
       </section>
 
       {/* ==================== SECTION 4: BENEFITS ==================== */}
-      <section className="py-20 lg:py-24 bg-white">
+      <section className="py-20 lg:py-24 bg-white dark:bg-[#0f172a]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <div className="text-center max-w-2xl mx-auto mb-16">
-              <p className="text-sm font-semibold text-[#001F60] uppercase tracking-wider mb-3">
+              <p className="text-sm font-semibold text-[#001F60] dark:text-[#93c5fd] uppercase tracking-wider mb-3">
                 Why Choose Tech Sheba
               </p>
-              <h2 className="text-3xl sm:text-4xl font-bold text-[#1e293b] mb-4">
+              <h2 className="text-3xl sm:text-4xl font-bold text-[#1e293b] dark:text-[#e2e8f0] mb-4">
                 Benefits You Can Count On
               </h2>
-              <p className="text-[#475569] text-lg">
+              <p className="text-[#475569] dark:text-[#94a3b8] text-lg">
                 Every engagement is backed by our commitment to quality, reliability, and long-term partnership.
               </p>
             </div>
@@ -552,11 +552,11 @@ export default function ServiceDetailPage() {
           <StaggerContainer className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {data.benefits.map((benefit, index) => (
               <StaggerItem key={benefit}>
-                <div className="flex items-start gap-3.5 p-5 rounded-xl bg-[#f8fafc] border border-gray-100 hover:border-[#dbeafe] transition-colors duration-300">
-                  <div className="w-8 h-8 rounded-lg bg-[#eff6ff] flex items-center justify-center shrink-0 mt-0.5">
-                    <CheckCircle2 className="h-4 w-4 text-[#001F60]" />
+                <div className="flex items-start gap-3.5 p-5 rounded-xl bg-[#f8fafc] dark:bg-[#1e293b] border border-gray-100 dark:border-[#334155] hover:border-[#dbeafe] dark:hover:border-[#1e3a5f] transition-colors duration-300">
+                  <div className="w-8 h-8 rounded-lg bg-[#eff6ff] dark:bg-[#1e3a5f] flex items-center justify-center shrink-0 mt-0.5">
+                    <CheckCircle2 className="h-4 w-4 text-[#001F60] dark:text-[#93c5fd]" />
                   </div>
-                  <p className="text-[#475569] text-sm leading-relaxed font-medium">{benefit}</p>
+                  <p className="text-[#475569] dark:text-[#94a3b8] text-sm leading-relaxed font-medium">{benefit}</p>
                 </div>
               </StaggerItem>
             ))}
@@ -565,17 +565,17 @@ export default function ServiceDetailPage() {
       </section>
 
       {/* ==================== SECTION 5: FAQs ==================== */}
-      <section className="py-20 lg:py-24 bg-[#f8fafc]">
+      <section className="py-20 lg:py-24 bg-[#f8fafc] dark:bg-[#1e293b]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <div className="text-center max-w-2xl mx-auto mb-16">
-              <p className="text-sm font-semibold text-[#001F60] uppercase tracking-wider mb-3">
+              <p className="text-sm font-semibold text-[#001F60] dark:text-[#93c5fd] uppercase tracking-wider mb-3">
                 Frequently Asked Questions
               </p>
-              <h2 className="text-3xl sm:text-4xl font-bold text-[#1e293b] mb-4">
+              <h2 className="text-3xl sm:text-4xl font-bold text-[#1e293b] dark:text-[#e2e8f0] mb-4">
                 Common Questions
               </h2>
-              <p className="text-[#475569] text-lg">
+              <p className="text-[#475569] dark:text-[#94a3b8] text-lg">
                 Find answers to the most common questions about our {data.category.toLowerCase()} services.
               </p>
             </div>
@@ -588,12 +588,12 @@ export default function ServiceDetailPage() {
                   <AccordionItem
                     key={index}
                     value={`faq-${index}`}
-                    className="border-gray-200 bg-white rounded-xl px-6 mb-3 shadow-sm"
+                    className="border-gray-200 dark:border-[#334155] bg-white dark:bg-[#1e293b] rounded-xl px-6 mb-3 shadow-sm"
                   >
-                    <AccordionTrigger className="text-left text-[#1e293b] font-semibold hover:no-underline py-5">
+                    <AccordionTrigger className="text-left text-[#1e293b] dark:text-[#e2e8f0] font-semibold hover:no-underline py-5">
                       {faq.q}
                     </AccordionTrigger>
-                    <AccordionContent className="text-[#475569] leading-relaxed text-sm">
+                    <AccordionContent className="text-[#475569] dark:text-[#94a3b8] leading-relaxed text-sm">
                       {faq.a}
                     </AccordionContent>
                   </AccordionItem>
@@ -605,7 +605,7 @@ export default function ServiceDetailPage() {
       </section>
 
       {/* ==================== SECTION 6: CTA ==================== */}
-      <section className="py-20 lg:py-24 bg-white">
+      <section className="py-20 lg:py-24 bg-white dark:bg-[#0f172a]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#001F60] via-[#0775FF] to-[#001440] px-8 py-16 sm:px-12 sm:py-20 text-center">
@@ -648,17 +648,17 @@ export default function ServiceDetailPage() {
       </section>
 
       {/* ==================== SECTION 7: OTHER SERVICES ==================== */}
-      <section className="py-20 lg:py-24 bg-[#f8fafc]">
+      <section className="py-20 lg:py-24 bg-[#f8fafc] dark:bg-[#1e293b]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <div className="text-center max-w-2xl mx-auto mb-16">
-              <p className="text-sm font-semibold text-[#001F60] uppercase tracking-wider mb-3">
+              <p className="text-sm font-semibold text-[#001F60] dark:text-[#93c5fd] uppercase tracking-wider mb-3">
                 Explore More
               </p>
-              <h2 className="text-3xl sm:text-4xl font-bold text-[#1e293b] mb-4">
+              <h2 className="text-3xl sm:text-4xl font-bold text-[#1e293b] dark:text-[#e2e8f0] mb-4">
                 Our Other Services
               </h2>
-              <p className="text-[#475569] text-lg">
+              <p className="text-[#475569] dark:text-[#94a3b8] text-lg">
                 Discover the full range of IT solutions Tech Sheba offers for businesses across Bangladesh.
               </p>
             </div>
@@ -671,23 +671,23 @@ export default function ServiceDetailPage() {
               return (
                 <StaggerItem key={s}>
                   <Card
-                    className="h-full border border-gray-100 bg-white cursor-pointer group transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+                    className="h-full border border-gray-100 dark:border-[#334155] bg-white dark:bg-[#1e293b] cursor-pointer group transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
                     onClick={() => navigate('service-detail', { slug: s })}
                   >
                     <CardContent className="p-6">
-                      <div className="w-12 h-12 rounded-lg bg-[#eff6ff] flex items-center justify-center mb-4 transition-transform duration-300 group-hover:scale-110">
-                        <SvcIcon className="h-6 w-6 text-[#001F60]" />
+                      <div className="w-12 h-12 rounded-lg bg-[#eff6ff] dark:bg-[#1e3a5f] flex items-center justify-center mb-4 transition-transform duration-300 group-hover:scale-110">
+                        <SvcIcon className="h-6 w-6 text-[#001F60] dark:text-[#93c5fd]" />
                       </div>
-                      <Badge variant="outline" className="mb-3 border-[#dbeafe] text-[#001F60] text-xs">
+                      <Badge variant="outline" className="mb-3 border-[#dbeafe] dark:border-[#1e3a5f] text-[#001F60] dark:text-[#93c5fd] text-xs">
                         {svc.category}
                       </Badge>
-                      <h3 className="text-lg font-bold text-[#1e293b] mb-2 group-hover:text-[#001F60] transition-colors">
+                      <h3 className="text-lg font-bold text-[#1e293b] dark:text-[#e2e8f0] mb-2 group-hover:text-[#001F60] dark:group-hover:text-[#93c5fd] transition-colors">
                         {svc.title}
                       </h3>
-                      <p className="text-[#475569] text-sm leading-relaxed mb-4 line-clamp-2">
+                      <p className="text-[#475569] dark:text-[#94a3b8] text-sm leading-relaxed mb-4 line-clamp-2">
                         {svc.subtitle}
                       </p>
-                      <div className="flex items-center gap-1.5 text-[#001F60] font-semibold text-sm group-hover:gap-2.5 transition-all">
+                      <div className="flex items-center gap-1.5 text-[#001F60] dark:text-[#93c5fd] font-semibold text-sm group-hover:gap-2.5 transition-all">
                         Learn More
                         <ArrowRight className="h-4 w-4" />
                       </div>

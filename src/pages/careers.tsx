@@ -199,7 +199,7 @@ export default function CareersPage() {
     <div className="overflow-hidden">
       {/* ==================== SECTION 1: PAGE HEADER ==================== */}
       <section className="relative pt-32 pb-16 lg:pt-40 lg:pb-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#eff6ff] via-white to-[#f0f4ff]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#eff6ff] via-white to-[#f0f4ff] dark:from-[#0f172a] dark:via-[#0f172a] dark:to-[#1e293b]" />
         <div
           className="absolute inset-0 opacity-20"
           style={{
@@ -210,34 +210,34 @@ export default function CareersPage() {
         />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
-            <div className="flex items-center gap-2 text-sm text-[#64748b] mb-6">
+            <div className="flex items-center gap-2 text-sm text-[#64748b] dark:text-[#94a3b8] mb-6">
               <button
                 onClick={() => navigate('home')}
-                className="hover:text-[#001F60] transition-colors"
+                className="hover:text-[#001F60] dark:hover:text-[#93c5fd] transition-colors"
               >
                 Home
               </button>
               <ChevronRight className="h-4 w-4" />
-              <span className="text-[#001F60] font-medium">Careers</span>
+              <span className="text-[#001F60] dark:text-[#93c5fd] font-medium">Careers</span>
             </div>
           </FadeIn>
           <FadeIn delay={0.1}>
             <div className="flex items-center gap-3 mb-4">
-              <div className="h-1 w-12 bg-[#001F60] rounded-full" />
-              <Badge className="bg-[#eff6ff] text-[#001F60] border-[#dbeafe] hover:bg-[#dbeafe]">
+              <div className="h-1 w-12 bg-[#001F60] dark:bg-[#93c5fd] rounded-full" />
+              <Badge className="bg-[#eff6ff] dark:bg-[#0f172a] text-[#001F60] dark:text-[#93c5fd] border-[#dbeafe] dark:border-[#1e3a5f] hover:bg-[#dbeafe] dark:hover:bg-[#1e3a5f]">
                 <Briefcase className="h-3.5 w-3.5 mr-1.5" />
                 We&apos;re Hiring
               </Badge>
             </div>
           </FadeIn>
           <FadeIn delay={0.2}>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#1e293b] mb-6 tracking-tight">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#1e293b] dark:text-[#e2e8f0] mb-6 tracking-tight">
               Join Our{' '}
-              <span className="text-[#001F60]">Team</span>
+              <span className="text-[#001F60] dark:text-[#93c5fd]">Team</span>
             </h1>
           </FadeIn>
           <FadeIn delay={0.3}>
-            <p className="text-lg sm:text-xl text-[#475569] max-w-3xl leading-relaxed">
+            <p className="text-lg sm:text-xl text-[#475569] dark:text-[#94a3b8] max-w-3xl leading-relaxed">
               Be part of building Bangladesh&apos;s IT future. At Tech Sheba, you&apos;ll work on
               meaningful projects that transform businesses, collaborate with passionate professionals,
               and grow your career in a supportive, innovation-driven environment.
@@ -245,31 +245,31 @@ export default function CareersPage() {
           </FadeIn>
           <FadeIn delay={0.4}>
             <div className="flex flex-wrap gap-6 mt-10">
-              <div className="flex items-center gap-2 text-[#475569]">
-                <div className="h-10 w-10 rounded-full bg-[#eff6ff] flex items-center justify-center">
-                  <Users className="h-5 w-5 text-[#001F60]" />
+              <div className="flex items-center gap-2 text-[#475569] dark:text-[#94a3b8]">
+                <div className="h-10 w-10 rounded-full bg-[#eff6ff] dark:bg-[#0f172a] flex items-center justify-center">
+                  <Users className="h-5 w-5 text-[#001F60] dark:text-[#93c5fd]" />
                 </div>
                 <div>
-                  <div className="font-semibold text-[#1e293b]">30+</div>
-                  <div className="text-xs text-[#64748b]">Team Members</div>
+                  <div className="font-semibold text-[#1e293b] dark:text-[#e2e8f0]">30+</div>
+                  <div className="text-xs text-[#64748b] dark:text-[#94a3b8]">Team Members</div>
                 </div>
               </div>
-              <div className="flex items-center gap-2 text-[#475569]">
-                <div className="h-10 w-10 rounded-full bg-[#eff6ff] flex items-center justify-center">
-                  <Clock className="h-5 w-5 text-[#001F60]" />
+              <div className="flex items-center gap-2 text-[#475569] dark:text-[#94a3b8]">
+                <div className="h-10 w-10 rounded-full bg-[#eff6ff] dark:bg-[#0f172a] flex items-center justify-center">
+                  <Clock className="h-5 w-5 text-[#001F60] dark:text-[#93c5fd]" />
                 </div>
                 <div>
-                  <div className="font-semibold text-[#1e293b]">5+</div>
-                  <div className="text-xs text-[#64748b]">Years Growing</div>
+                  <div className="font-semibold text-[#1e293b] dark:text-[#e2e8f0]">5+</div>
+                  <div className="text-xs text-[#64748b] dark:text-[#94a3b8]">Years Growing</div>
                 </div>
               </div>
-              <div className="flex items-center gap-2 text-[#475569]">
-                <div className="h-10 w-10 rounded-full bg-[#eff6ff] flex items-center justify-center">
-                  <Sparkles className="h-5 w-5 text-[#001F60]" />
+              <div className="flex items-center gap-2 text-[#475569] dark:text-[#94a3b8]">
+                <div className="h-10 w-10 rounded-full bg-[#eff6ff] dark:bg-[#0f172a] flex items-center justify-center">
+                  <Sparkles className="h-5 w-5 text-[#001F60] dark:text-[#93c5fd]" />
                 </div>
                 <div>
-                  <div className="font-semibold text-[#1e293b]">200+</div>
-                  <div className="text-xs text-[#64748b]">Projects Delivered</div>
+                  <div className="font-semibold text-[#1e293b] dark:text-[#e2e8f0]">200+</div>
+                  <div className="text-xs text-[#64748b] dark:text-[#94a3b8]">Projects Delivered</div>
                 </div>
               </div>
             </div>
@@ -278,17 +278,17 @@ export default function CareersPage() {
       </section>
 
       {/* ==================== SECTION 2: WHY WORK AT TECH SHEBA ==================== */}
-      <section className="py-20 lg:py-24 bg-white">
+      <section className="py-20 lg:py-24 bg-white dark:bg-[#0f172a]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <div className="text-center mb-16">
-              <Badge className="bg-[#eff6ff] text-[#001F60] border-[#dbeafe] mb-4">
+              <Badge className="bg-[#eff6ff] dark:bg-[#0f172a] text-[#001F60] dark:text-[#93c5fd] border-[#dbeafe] dark:border-[#1e3a5f] mb-4">
                 Why Tech Sheba
               </Badge>
-              <h2 className="text-3xl sm:text-4xl font-bold text-[#1e293b] mb-4">
-                Why Work at <span className="text-[#001F60]">Tech Sheba</span>
+              <h2 className="text-3xl sm:text-4xl font-bold text-[#1e293b] dark:text-[#e2e8f0] mb-4">
+                Why Work at <span className="text-[#001F60] dark:text-[#93c5fd]">Tech Sheba</span>
               </h2>
-              <p className="text-[#475569] max-w-2xl mx-auto text-lg">
+              <p className="text-[#475569] dark:text-[#94a3b8] max-w-2xl mx-auto text-lg">
                 We&apos;ve built a workplace where talent thrives, ideas flourish, and every team member
                 has the opportunity to make a real difference.
               </p>
@@ -297,13 +297,13 @@ export default function CareersPage() {
           <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {perks.map((perk) => (
               <StaggerItem key={perk.title}>
-                <Card className="h-full border-[#dbeafe]/60 hover:border-[#001F60]/30 hover:shadow-lg transition-all duration-300 group bg-white">
+                <Card className="h-full border-[#dbeafe]/60 dark:border-[#1e3a5f] hover:border-[#001F60]/30 hover:shadow-lg transition-all duration-300 group bg-white dark:bg-[#1e293b]">
                   <CardContent className="p-6">
-                    <div className="h-12 w-12 rounded-xl bg-[#eff6ff] flex items-center justify-center mb-4 group-hover:bg-[#001F60] transition-colors duration-300">
-                      <perk.icon className="h-6 w-6 text-[#001F60] group-hover:text-white transition-colors duration-300" />
+                    <div className="h-12 w-12 rounded-xl bg-[#eff6ff] dark:bg-[#0f172a] flex items-center justify-center mb-4 group-hover:bg-[#001F60] transition-colors duration-300">
+                      <perk.icon className="h-6 w-6 text-[#001F60] dark:text-[#93c5fd] group-hover:text-white transition-colors duration-300" />
                     </div>
-                    <h3 className="text-lg font-semibold text-[#1e293b] mb-2">{perk.title}</h3>
-                    <p className="text-[#475569] text-sm leading-relaxed">{perk.description}</p>
+                    <h3 className="text-lg font-semibold text-[#1e293b] dark:text-[#e2e8f0] mb-2">{perk.title}</h3>
+                    <p className="text-[#475569] dark:text-[#94a3b8] text-sm leading-relaxed">{perk.description}</p>
                   </CardContent>
                 </Card>
               </StaggerItem>
@@ -313,18 +313,18 @@ export default function CareersPage() {
       </section>
 
       {/* ==================== SECTION 3: OPEN POSITIONS ==================== */}
-      <section className="py-20 lg:py-24 bg-[#f0f4ff]">
+      <section className="py-20 lg:py-24 bg-[#f0f4ff] dark:bg-[#1e293b]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <div className="text-center mb-16">
-              <Badge className="bg-[#eff6ff] text-[#001F60] border-[#dbeafe] mb-4">
+              <Badge className="bg-[#eff6ff] dark:bg-[#0f172a] text-[#001F60] dark:text-[#93c5fd] border-[#dbeafe] dark:border-[#1e3a5f] mb-4">
                 <Briefcase className="h-3.5 w-3.5 mr-1.5" />
                 Open Positions
               </Badge>
-              <h2 className="text-3xl sm:text-4xl font-bold text-[#1e293b] mb-4">
-                Current <span className="text-[#001F60]">Openings</span>
+              <h2 className="text-3xl sm:text-4xl font-bold text-[#1e293b] dark:text-[#e2e8f0] mb-4">
+                Current <span className="text-[#001F60] dark:text-[#93c5fd]">Openings</span>
               </h2>
-              <p className="text-[#475569] max-w-2xl mx-auto text-lg">
+              <p className="text-[#475569] dark:text-[#94a3b8] max-w-2xl mx-auto text-lg">
                 Explore our open roles and find the perfect opportunity to grow your career with us.
               </p>
             </div>
@@ -332,17 +332,17 @@ export default function CareersPage() {
           <StaggerContainer className="space-y-6">
             {positions.map((job) => (
               <StaggerItem key={job.title}>
-                <Card className="border-[#dbeafe]/60 hover:border-[#001F60]/30 hover:shadow-lg transition-all duration-300 bg-white overflow-hidden">
+                <Card className="border-[#dbeafe]/60 dark:border-[#1e3a5f] hover:border-[#001F60]/30 hover:shadow-lg transition-all duration-300 bg-white dark:bg-[#1e293b] overflow-hidden">
                   <CardContent className="p-6 sm:p-8">
                     <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4 mb-4">
                       <div>
-                        <h3 className="text-xl font-bold text-[#1e293b] mb-2">{job.title}</h3>
+                        <h3 className="text-xl font-bold text-[#1e293b] dark:text-[#e2e8f0] mb-2">{job.title}</h3>
                         <div className="flex flex-wrap gap-2">
-                          <Badge variant="outline" className="border-[#dbeafe] text-[#001F60] bg-[#eff6ff]">
+                          <Badge variant="outline" className="border-[#dbeafe] dark:border-[#1e3a5f] text-[#001F60] dark:text-[#93c5fd] bg-[#eff6ff] dark:bg-[#0f172a]">
                             <MapPin className="h-3 w-3 mr-1" />
                             {job.location}
                           </Badge>
-                          <Badge variant="outline" className="border-[#dbeafe] text-[#001440] bg-[#f0f4ff]">
+                          <Badge variant="outline" className="border-[#dbeafe] dark:border-[#1e3a5f] text-[#001440] dark:text-[#93c5fd] bg-[#f0f4ff] dark:bg-[#0f172a]">
                             <Clock className="h-3 w-3 mr-1" />
                             {job.type}
                           </Badge>
@@ -359,12 +359,12 @@ export default function CareersPage() {
                         <ArrowRight className="h-4 w-4 ml-2" />
                       </Button>
                     </div>
-                    <p className="text-[#475569] text-sm leading-relaxed mb-4">{job.description}</p>
-                    <div className="border-t border-[#dbeafe] pt-4">
-                      <h4 className="text-sm font-semibold text-[#1e293b] mb-2">Key Requirements</h4>
+                    <p className="text-[#475569] dark:text-[#94a3b8] text-sm leading-relaxed mb-4">{job.description}</p>
+                    <div className="border-t border-[#dbeafe] dark:border-[#1e3a5f] pt-4">
+                      <h4 className="text-sm font-semibold text-[#1e293b] dark:text-[#e2e8f0] mb-2">Key Requirements</h4>
                       <ul className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
                         {job.requirements.map((req) => (
-                          <li key={req} className="flex items-start gap-2 text-sm text-[#475569]">
+                          <li key={req} className="flex items-start gap-2 text-sm text-[#475569] dark:text-[#94a3b8]">
                             <CheckCircle2 className="h-4 w-4 text-[#4DA3FF] shrink-0 mt-0.5" />
                             <span>{req}</span>
                           </li>
@@ -380,47 +380,47 @@ export default function CareersPage() {
       </section>
 
       {/* ==================== SECTION 4: APPLICATION FORM ==================== */}
-      <section id="application-form" className="py-20 lg:py-24 bg-white">
+      <section id="application-form" className="py-20 lg:py-24 bg-white dark:bg-[#0f172a]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
             <FadeIn>
-              <Badge className="bg-[#eff6ff] text-[#001F60] border-[#dbeafe] mb-4">
+              <Badge className="bg-[#eff6ff] dark:bg-[#0f172a] text-[#001F60] dark:text-[#93c5fd] border-[#dbeafe] dark:border-[#1e3a5f] mb-4">
                 <Send className="h-3.5 w-3.5 mr-1.5" />
                 Apply Now
               </Badge>
-              <h2 className="text-3xl sm:text-4xl font-bold text-[#1e293b] mb-4">
+              <h2 className="text-3xl sm:text-4xl font-bold text-[#1e293b] dark:text-[#e2e8f0] mb-4">
                 Interested in{' '}
-                <span className="text-[#001F60]">joining us?</span>
+                <span className="text-[#001F60] dark:text-[#93c5fd]">joining us?</span>
               </h2>
-              <p className="text-[#475569] text-lg leading-relaxed mb-8">
+              <p className="text-[#475569] dark:text-[#94a3b8] text-lg leading-relaxed mb-8">
                 Fill out the form below and our HR team will review your application within 3-5
                 business days. We look forward to learning more about you!
               </p>
               <div className="space-y-4">
-                <div className="flex items-center gap-3 text-[#475569]">
-                  <div className="h-8 w-8 rounded-full bg-[#eff6ff] flex items-center justify-center shrink-0">
-                    <CheckCircle2 className="h-4 w-4 text-[#001F60]" />
+                <div className="flex items-center gap-3 text-[#475569] dark:text-[#94a3b8]">
+                  <div className="h-8 w-8 rounded-full bg-[#eff6ff] dark:bg-[#0f172a] flex items-center justify-center shrink-0">
+                    <CheckCircle2 className="h-4 w-4 text-[#001F60] dark:text-[#93c5fd]" />
                   </div>
                   <span className="text-sm">Equal opportunity employer â€” all backgrounds welcome</span>
                 </div>
-                <div className="flex items-center gap-3 text-[#475569]">
-                  <div className="h-8 w-8 rounded-full bg-[#eff6ff] flex items-center justify-center shrink-0">
-                    <CheckCircle2 className="h-4 w-4 text-[#001F60]" />
+                <div className="flex items-center gap-3 text-[#475569] dark:text-[#94a3b8]">
+                  <div className="h-8 w-8 rounded-full bg-[#eff6ff] dark:bg-[#0f172a] flex items-center justify-center shrink-0">
+                    <CheckCircle2 className="h-4 w-4 text-[#001F60] dark:text-[#93c5fd]" />
                   </div>
                   <span className="text-sm">Response within 3-5 business days</span>
                 </div>
-                <div className="flex items-center gap-3 text-[#475569]">
-                  <div className="h-8 w-8 rounded-full bg-[#eff6ff] flex items-center justify-center shrink-0">
-                    <CheckCircle2 className="h-4 w-4 text-[#001F60]" />
+                <div className="flex items-center gap-3 text-[#475569] dark:text-[#94a3b8]">
+                  <div className="h-8 w-8 rounded-full bg-[#eff6ff] dark:bg-[#0f172a] flex items-center justify-center shrink-0">
+                    <CheckCircle2 className="h-4 w-4 text-[#001F60] dark:text-[#93c5fd]" />
                   </div>
                   <span className="text-sm">Confidential application process</span>
                 </div>
               </div>
             </FadeIn>
             <FadeIn delay={0.2}>
-              <Card className="border-[#dbeafe]/60 shadow-lg">
+              <Card className="border-[#dbeafe]/60 dark:border-[#1e3a5f] dark:bg-[#1e293b] shadow-lg">
                 <CardHeader>
-                  <CardTitle className="text-xl text-[#1e293b]">Application Form</CardTitle>
+                  <CardTitle className="text-xl text-[#1e293b] dark:text-[#e2e8f0]">Application Form</CardTitle>
                 </CardHeader>
                 <CardContent className="p-6">
                   {formSubmitted ? (
@@ -429,30 +429,30 @@ export default function CareersPage() {
                       animate={{ opacity: 1, scale: 1 }}
                       className="text-center py-12"
                     >
-                      <div className="h-16 w-16 rounded-full bg-[#eff6ff] flex items-center justify-center mx-auto mb-4">
-                        <CheckCircle2 className="h-8 w-8 text-[#001F60]" />
+                      <div className="h-16 w-16 rounded-full bg-[#eff6ff] dark:bg-[#0f172a] flex items-center justify-center mx-auto mb-4">
+                        <CheckCircle2 className="h-8 w-8 text-[#001F60] dark:text-[#93c5fd]" />
                       </div>
-                      <h3 className="text-xl font-bold text-[#1e293b] mb-2">Application Submitted!</h3>
-                      <p className="text-[#475569]">
+                      <h3 className="text-xl font-bold text-[#1e293b] dark:text-[#e2e8f0] mb-2">Application Submitted!</h3>
+                      <p className="text-[#475569] dark:text-[#94a3b8]">
                         Thank you for your interest. We&apos;ll be in touch soon.
                       </p>
                     </motion.div>
                   ) : (
                     <form onSubmit={handleSubmit} className="space-y-4">
                       <div className="space-y-2">
-                        <Label htmlFor="name" className="text-[#1e293b]">Full Name</Label>
+                        <Label htmlFor="name" className="text-[#1e293b] dark:text-[#e2e8f0]">Full Name</Label>
                         <Input
                           id="name"
                           placeholder="Enter your full name"
                           value={formData.name}
                           onChange={(e) => setFormData((prev) => ({ ...prev, name: e.target.value }))}
                           required
-                          className="border-[#dbeafe] focus:border-[#001F60]"
+                          className="border-[#dbeafe] dark:border-[#334155] focus:border-[#001F60] dark:focus:border-[#93c5fd] dark:bg-[#0f172a] dark:text-[#e2e8f0]"
                         />
                       </div>
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div className="space-y-2">
-                          <Label htmlFor="email" className="text-[#1e293b]">Email Address</Label>
+                          <Label htmlFor="email" className="text-[#1e293b] dark:text-[#e2e8f0]">Email Address</Label>
                           <Input
                             id="email"
                             type="email"
@@ -460,11 +460,11 @@ export default function CareersPage() {
                             value={formData.email}
                             onChange={(e) => setFormData((prev) => ({ ...prev, email: e.target.value }))}
                             required
-                            className="border-[#dbeafe] focus:border-[#001F60]"
+                            className="border-[#dbeafe] dark:border-[#334155] focus:border-[#001F60] dark:focus:border-[#93c5fd] dark:bg-[#0f172a] dark:text-[#e2e8f0]"
                           />
                         </div>
                         <div className="space-y-2">
-                          <Label htmlFor="phone" className="text-[#1e293b]">Phone Number</Label>
+                          <Label htmlFor="phone" className="text-[#1e293b] dark:text-[#e2e8f0]">Phone Number</Label>
                           <Input
                             id="phone"
                             type="tel"
@@ -472,17 +472,17 @@ export default function CareersPage() {
                             value={formData.phone}
                             onChange={(e) => setFormData((prev) => ({ ...prev, phone: e.target.value }))}
                             required
-                            className="border-[#dbeafe] focus:border-[#001F60]"
+                            className="border-[#dbeafe] dark:border-[#334155] focus:border-[#001F60] dark:focus:border-[#93c5fd] dark:bg-[#0f172a] dark:text-[#e2e8f0]"
                           />
                         </div>
                       </div>
                       <div className="space-y-2">
-                        <Label htmlFor="position" className="text-[#1e293b]">Position</Label>
+                        <Label htmlFor="position" className="text-[#1e293b] dark:text-[#e2e8f0]">Position</Label>
                         <Select
                           value={formData.position}
                           onValueChange={(value) => setFormData((prev) => ({ ...prev, position: value }))}
                         >
-                          <SelectTrigger className="border-[#dbeafe] focus:border-[#001F60]">
+                          <SelectTrigger className="border-[#dbeafe] dark:border-[#334155] focus:border-[#001F60] dark:focus:border-[#93c5fd] dark:bg-[#0f172a] dark:text-[#e2e8f0]">
                             <SelectValue placeholder="Select a position" />
                           </SelectTrigger>
                           <SelectContent>
@@ -496,24 +496,24 @@ export default function CareersPage() {
                         </Select>
                       </div>
                       <div className="space-y-2">
-                        <Label htmlFor="portfolio" className="text-[#1e293b]">Portfolio / LinkedIn URL</Label>
+                        <Label htmlFor="portfolio" className="text-[#1e293b] dark:text-[#e2e8f0]">Portfolio / LinkedIn URL</Label>
                         <Input
                           id="portfolio"
                           placeholder="https://linkedin.com/in/yourname"
                           value={formData.portfolio}
                           onChange={(e) => setFormData((prev) => ({ ...prev, portfolio: e.target.value }))}
-                          className="border-[#dbeafe] focus:border-[#001F60]"
+                          className="border-[#dbeafe] dark:border-[#334155] focus:border-[#001F60] dark:focus:border-[#93c5fd] dark:bg-[#0f172a] dark:text-[#e2e8f0]"
                         />
                       </div>
                       <div className="space-y-2">
-                        <Label htmlFor="message" className="text-[#1e293b]">Message / Resume Note</Label>
+                        <Label htmlFor="message" className="text-[#1e293b] dark:text-[#e2e8f0]">Message / Resume Note</Label>
                         <Textarea
                           id="message"
                           placeholder="Tell us about yourself, your experience, and why you'd like to join Tech Sheba..."
                           rows={4}
                           value={formData.message}
                           onChange={(e) => setFormData((prev) => ({ ...prev, message: e.target.value }))}
-                          className="border-[#dbeafe] focus:border-[#001F60] resize-none"
+                          className="border-[#dbeafe] dark:border-[#334155] focus:border-[#001F60] dark:focus:border-[#93c5fd] dark:bg-[#0f172a] dark:text-[#e2e8f0] resize-none"
                         />
                       </div>
                       <Button
@@ -533,18 +533,18 @@ export default function CareersPage() {
       </section>
 
       {/* ==================== SECTION 5: COMPANY CULTURE ==================== */}
-      <section className="py-20 lg:py-24 bg-[#f0f4ff]">
+      <section className="py-20 lg:py-24 bg-[#f0f4ff] dark:bg-[#1e293b]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <div className="text-center mb-16">
-              <Badge className="bg-[#eff6ff] text-[#001F60] border-[#dbeafe] mb-4">
+              <Badge className="bg-[#eff6ff] dark:bg-[#0f172a] text-[#001F60] dark:text-[#93c5fd] border-[#dbeafe] dark:border-[#1e3a5f] mb-4">
                 <Users className="h-3.5 w-3.5 mr-1.5" />
                 Our Culture
               </Badge>
-              <h2 className="text-3xl sm:text-4xl font-bold text-[#1e293b] mb-4">
-                Life at <span className="text-[#001F60]">Tech Sheba</span>
+              <h2 className="text-3xl sm:text-4xl font-bold text-[#1e293b] dark:text-[#e2e8f0] mb-4">
+                Life at <span className="text-[#001F60] dark:text-[#93c5fd]">Tech Sheba</span>
               </h2>
-              <p className="text-[#475569] max-w-2xl mx-auto text-lg">
+              <p className="text-[#475569] dark:text-[#94a3b8] max-w-2xl mx-auto text-lg">
                 We believe a great workplace culture is the foundation of great work. At Tech Sheba,
                 we&apos;ve cultivated an environment where people come first, ideas flow freely, and
                 everyone has a voice.
@@ -554,13 +554,13 @@ export default function CareersPage() {
           <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {cultureValues.map((value) => (
               <StaggerItem key={value.title}>
-                <Card className="h-full border-[#dbeafe]/60 hover:border-[#001F60]/30 hover:shadow-lg transition-all duration-300 group bg-white">
+                <Card className="h-full border-[#dbeafe]/60 dark:border-[#1e3a5f] hover:border-[#001F60]/30 hover:shadow-lg transition-all duration-300 group bg-white dark:bg-[#1e293b]">
                   <CardContent className="p-6">
-                    <div className="h-12 w-12 rounded-xl bg-[#eff6ff] flex items-center justify-center mb-4 group-hover:bg-[#001F60] transition-colors duration-300">
-                      <value.icon className="h-6 w-6 text-[#001F60] group-hover:text-white transition-colors duration-300" />
+                    <div className="h-12 w-12 rounded-xl bg-[#eff6ff] dark:bg-[#0f172a] flex items-center justify-center mb-4 group-hover:bg-[#001F60] transition-colors duration-300">
+                      <value.icon className="h-6 w-6 text-[#001F60] dark:text-[#93c5fd] group-hover:text-white transition-colors duration-300" />
                     </div>
-                    <h3 className="text-lg font-semibold text-[#1e293b] mb-2">{value.title}</h3>
-                    <p className="text-[#475569] text-sm leading-relaxed">{value.description}</p>
+                    <h3 className="text-lg font-semibold text-[#1e293b] dark:text-[#e2e8f0] mb-2">{value.title}</h3>
+                    <p className="text-[#475569] dark:text-[#94a3b8] text-sm leading-relaxed">{value.description}</p>
                   </CardContent>
                 </Card>
               </StaggerItem>
@@ -570,7 +570,7 @@ export default function CareersPage() {
       </section>
 
       {/* ==================== SECTION 6: CTA ==================== */}
-      <section className="py-20 lg:py-24 bg-white">
+      <section className="py-20 lg:py-24 bg-white dark:bg-[#0f172a]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <Card className="bg-gradient-to-r from-[#001F60] to-[#0775FF] border-0 shadow-xl overflow-hidden">

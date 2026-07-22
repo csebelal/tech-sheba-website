@@ -186,7 +186,7 @@ export default function FaqPage() {
   return (
     <div className="overflow-hidden">
       {/* ==================== SECTION 1: PAGE HEADER ==================== */}
-      <section className="relative pt-32 pb-20 bg-gradient-to-br from-[#eff6ff] via-white to-[#f0f4ff] overflow-hidden">
+      <section className="relative pt-32 pb-20 bg-gradient-to-br from-[#eff6ff] via-white to-[#f0f4ff] dark:from-[#0f172a] dark:via-[#0f172a] dark:to-[#1e293b] overflow-hidden">
         <div
           className="absolute inset-0 opacity-[0.03]"
           style={{
@@ -203,33 +203,33 @@ export default function FaqPage() {
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
-            <nav className="flex items-center gap-2 text-sm text-[#64748b] mb-6">
+            <nav className="flex items-center gap-2 text-sm text-[#64748b] dark:text-[#94a3b8] mb-6">
               <button
                 onClick={() => navigate('home')}
-                className="hover:text-[#001F60] transition-colors"
+                className="hover:text-[#001F60] dark:hover:text-[#93c5fd] transition-colors"
               >
                 Home
               </button>
               <ChevronRight className="w-4 h-4" />
-              <span className="text-[#001F60] font-medium">FAQ</span>
+              <span className="text-[#001F60] dark:text-[#93c5fd] font-medium">FAQ</span>
             </nav>
           </FadeIn>
 
           <FadeIn delay={0.1}>
-            <Badge className="mb-4 bg-[#001F60]/10 text-[#001F60] hover:bg-[#001F60]/20 border-0 text-sm px-4 py-1">
+            <Badge className="mb-4 bg-[#001F60]/10 text-[#001F60] hover:bg-[#001F60]/20 border-0 text-sm px-4 py-1 dark:bg-[#93c5fd]/10 dark:text-[#93c5fd] dark:hover:bg-[#93c5fd]/20">
               Help Center
             </Badge>
           </FadeIn>
 
           <FadeIn delay={0.2}>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#1e293b] mb-4 tracking-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#1e293b] dark:text-[#e2e8f0] mb-4 tracking-tight">
               Frequently Asked{' '}
-              <span className="text-[#001F60]">Questions</span>
+              <span className="text-[#001F60] dark:text-[#93c5fd]">Questions</span>
             </h1>
           </FadeIn>
 
           <FadeIn delay={0.3}>
-            <p className="text-lg md:text-xl text-[#475569] max-w-2xl leading-relaxed">
+            <p className="text-lg md:text-xl text-[#475569] dark:text-[#94a3b8] max-w-2xl leading-relaxed">
               Find answers to the most common questions about our services,
               pricing, support, and how to get started with Tech Sheba.
             </p>
@@ -238,14 +238,14 @@ export default function FaqPage() {
       </section>
 
       {/* ==================== SECTION 2: FAQ CATEGORIES + ACCORDION ==================== */}
-      <section className="py-20 lg:py-24 bg-white">
+      <section className="py-20 lg:py-24 bg-white dark:bg-[#0f172a]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-4 gap-8 lg:gap-12">
             {/* Sidebar: Category Navigation */}
             <div className="lg:col-span-1">
               <FadeIn direction="right">
                 <div className="lg:sticky lg:top-28">
-                  <p className="text-xs font-semibold text-[#64748b] uppercase tracking-wider mb-4">
+                  <p className="text-xs font-semibold text-[#64748b] dark:text-[#94a3b8] uppercase tracking-wider mb-4">
                     Categories
                   </p>
                   <nav className="flex lg:flex-col gap-2 overflow-x-auto pb-2 lg:pb-0 -mx-1 px-1">
@@ -259,7 +259,7 @@ export default function FaqPage() {
                           className={`flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition-all duration-300 whitespace-nowrap text-left min-w-max lg:min-w-0 lg:w-full ${
                             isActive
                               ? 'bg-[#001F60] text-white shadow-lg shadow-[#001F60]/20'
-                              : 'text-[#475569] hover:bg-[#eff6ff] hover:text-[#001F60]'
+                              : 'text-[#475569] dark:text-[#94a3b8] hover:bg-[#eff6ff] dark:hover:bg-[#1e293b] hover:text-[#001F60] dark:hover:text-[#93c5fd]'
                           }`}
                         >
                           <Icon className="w-4 h-4 shrink-0" />
@@ -268,7 +268,7 @@ export default function FaqPage() {
                             className={`ml-auto text-xs px-1.5 py-0.5 rounded-full ${
                               isActive
                                 ? 'bg-white/20 text-white'
-                                : 'bg-[#f1f5f9] text-[#64748b]'
+                                : 'bg-[#f1f5f9] dark:bg-[#334155] text-[#64748b] dark:text-[#94a3b8]'
                             }`}
                           >
                             {cat.faqs.length}
@@ -279,8 +279,8 @@ export default function FaqPage() {
                   </nav>
 
                   {/* Category Description */}
-                  <div className="hidden lg:block mt-6 p-4 rounded-xl bg-[#f8fafc] border border-[#e2e8f0]">
-                    <p className="text-sm text-[#64748b] leading-relaxed">
+                  <div className="hidden lg:block mt-6 p-4 rounded-xl bg-[#f8fafc] dark:bg-[#0f172a] border border-[#e2e8f0] dark:border-[#334155]">
+                    <p className="text-sm text-[#64748b] dark:text-[#94a3b8] leading-relaxed">
                       {activeData.description}
                     </p>
                   </div>
@@ -296,16 +296,16 @@ export default function FaqPage() {
                     {(() => {
                       const Icon = activeData.icon;
                       return (
-                        <div className="w-10 h-10 rounded-xl bg-[#001F60]/10 flex items-center justify-center">
-                          <Icon className="w-5 h-5 text-[#001F60]" />
+                        <div className="w-10 h-10 rounded-xl bg-[#001F60]/10 dark:bg-[#93c5fd]/10 flex items-center justify-center">
+                          <Icon className="w-5 h-5 text-[#001F60] dark:text-[#93c5fd]" />
                         </div>
                       );
                     })()}
-                    <h2 className="text-2xl md:text-3xl font-bold text-[#1e293b]">
+                    <h2 className="text-2xl md:text-3xl font-bold text-[#1e293b] dark:text-[#e2e8f0]">
                       {activeData.label} Questions
                     </h2>
                   </div>
-                  <p className="text-[#475569] lg:hidden text-sm">
+                  <p className="text-[#475569] dark:text-[#94a3b8] lg:hidden text-sm">
                     {activeData.description}
                   </p>
                 </div>
@@ -321,12 +321,12 @@ export default function FaqPage() {
                     <AccordionItem
                       key={`${activeCategory}-${idx}`}
                       value={`${activeCategory}-${idx}`}
-                      className="border border-[#e2e8f0] rounded-xl px-6 data-[state=open]:border-[#001F60]/30 data-[state=open]:bg-[#eff6ff]/30 data-[state=open]:shadow-sm transition-all duration-300"
+                      className="border border-[#e2e8f0] dark:border-[#334155] rounded-xl px-6 data-[state=open]:border-[#001F60]/30 dark:data-[state=open]:border-[#93c5fd]/30 data-[state=open]:bg-[#eff6ff]/30 dark:data-[state=open]:bg-[#1e293b] data-[state=open]:shadow-sm transition-all duration-300"
                     >
-                      <AccordionTrigger className="text-left text-[#1e293b] font-semibold hover:text-[#001F60] hover:no-underline py-5 text-base leading-snug">
+                      <AccordionTrigger className="text-left text-[#1e293b] dark:text-[#e2e8f0] font-semibold hover:text-[#001F60] dark:hover:text-[#93c5fd] hover:no-underline py-5 text-base leading-snug">
                         {faq.question}
                       </AccordionTrigger>
-                      <AccordionContent className="text-[#475569] leading-relaxed pb-5 text-[15px]">
+                      <AccordionContent className="text-[#475569] dark:text-[#94a3b8] leading-relaxed pb-5 text-[15px]">
                         {faq.answer}
                       </AccordionContent>
                     </AccordionItem>
@@ -336,7 +336,7 @@ export default function FaqPage() {
 
               {/* Total FAQ Count */}
               <FadeIn delay={0.2}>
-                <p className="text-center text-sm text-[#64748b] mt-10">
+                <p className="text-center text-sm text-[#64748b] dark:text-[#94a3b8] mt-10">
                   Showing {activeData.faqs.length} questions in &ldquo;{activeData.label}&rdquo; â€¢{' '}
                   {faqCategories.reduce((sum, c) => sum + c.faqs.length, 0)} total FAQs
                 </p>
@@ -347,7 +347,7 @@ export default function FaqPage() {
       </section>
 
       {/* ==================== SECTION 3: STILL HAVE QUESTIONS CTA ==================== */}
-      <section className="py-20 lg:py-24 bg-[#f8fafc]">
+      <section className="py-20 lg:py-24 bg-[#f8fafc] dark:bg-[#0f172a]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <div className="relative rounded-3xl overflow-hidden bg-gradient-to-r from-[#001F60] via-[#0775FF] to-[#4DA3FF] p-10 md:p-16 text-center">
@@ -388,14 +388,14 @@ export default function FaqPage() {
       </section>
 
       {/* ==================== SECTION 4: QUICK CONTACT CARDS ==================== */}
-      <section className="py-20 lg:py-24 bg-white">
+      <section className="py-20 lg:py-24 bg-white dark:bg-[#0f172a]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <div className="text-center mb-12">
-              <h2 className="text-2xl md:text-3xl font-bold text-[#1e293b] mb-3">
+              <h2 className="text-2xl md:text-3xl font-bold text-[#1e293b] dark:text-[#e2e8f0] mb-3">
                 Quick Contact Options
               </h2>
-              <p className="text-[#475569] max-w-lg mx-auto">
+              <p className="text-[#475569] dark:text-[#94a3b8] max-w-lg mx-auto">
                 Reach out through your preferred channel â€” we are here to help
               </p>
             </div>
@@ -404,20 +404,20 @@ export default function FaqPage() {
           <StaggerContainer className="grid sm:grid-cols-3 gap-6 lg:gap-8 max-w-4xl mx-auto">
             {/* Phone */}
             <StaggerItem>
-              <Card className="group h-full border-[#e2e8f0] hover:border-[#001F60]/30 hover:shadow-lg hover:shadow-[#001F60]/5 transition-all duration-300 bg-white text-center">
+              <Card className="group h-full border-[#e2e8f0] dark:border-[#334155] hover:border-[#001F60]/30 hover:shadow-lg hover:shadow-[#001F60]/5 transition-all duration-300 bg-white dark:bg-[#1e293b] text-center">
                 <CardContent className="p-8 flex flex-col items-center">
                   <div className="w-16 h-16 rounded-2xl bg-[#001F60] flex items-center justify-center mb-5 shadow-lg shadow-[#001F60]/20 group-hover:scale-110 transition-transform duration-300">
                     <Phone className="w-7 h-7 text-white" />
                   </div>
-                  <h3 className="font-bold text-[#1e293b] text-lg mb-2">
+                  <h3 className="font-bold text-[#1e293b] dark:text-[#e2e8f0] text-lg mb-2">
                     Call Us
                   </h3>
-                  <p className="text-[#475569] text-sm mb-4">
+                  <p className="text-[#475569] dark:text-[#94a3b8] text-sm mb-4">
                     Speak directly with our team
                   </p>
                   <a
                     href="tel:01980884541"
-                    className="text-[#001F60] font-semibold text-sm hover:underline"
+                    className="text-[#001F60] dark:text-[#93c5fd] font-semibold text-sm hover:underline"
                   >
                     01980884541
                   </a>
@@ -427,20 +427,20 @@ export default function FaqPage() {
 
             {/* Email */}
             <StaggerItem>
-              <Card className="group h-full border-[#e2e8f0] hover:border-[#001F60]/30 hover:shadow-lg hover:shadow-[#001F60]/5 transition-all duration-300 bg-white text-center">
+              <Card className="group h-full border-[#e2e8f0] dark:border-[#334155] hover:border-[#001F60]/30 hover:shadow-lg hover:shadow-[#001F60]/5 transition-all duration-300 bg-white dark:bg-[#1e293b] text-center">
                 <CardContent className="p-8 flex flex-col items-center">
                   <div className="w-16 h-16 rounded-2xl bg-[#0775FF] flex items-center justify-center mb-5 shadow-lg shadow-[#0775FF]/20 group-hover:scale-110 transition-transform duration-300">
                     <Mail className="w-7 h-7 text-white" />
                   </div>
-                  <h3 className="font-bold text-[#1e293b] text-lg mb-2">
+                  <h3 className="font-bold text-[#1e293b] dark:text-[#e2e8f0] text-lg mb-2">
                     Email Us
                   </h3>
-                  <p className="text-[#475569] text-sm mb-4">
+                  <p className="text-[#475569] dark:text-[#94a3b8] text-sm mb-4">
                     We reply within 24 hours
                   </p>
                   <a
                     href="mailto:hello@techsheba.net"
-                    className="text-[#001F60] font-semibold text-sm hover:underline"
+                    className="text-[#001F60] dark:text-[#93c5fd] font-semibold text-sm hover:underline"
                   >
                     hello@techsheba.net
                   </a>
@@ -450,22 +450,22 @@ export default function FaqPage() {
 
             {/* WhatsApp */}
             <StaggerItem>
-              <Card className="group h-full border-[#e2e8f0] hover:border-[#001F60]/30 hover:shadow-lg hover:shadow-[#001F60]/5 transition-all duration-300 bg-white text-center">
+              <Card className="group h-full border-[#e2e8f0] dark:border-[#334155] hover:border-[#001F60]/30 hover:shadow-lg hover:shadow-[#001F60]/5 transition-all duration-300 bg-white dark:bg-[#1e293b] text-center">
                 <CardContent className="p-8 flex flex-col items-center">
                   <div className="w-16 h-16 rounded-2xl bg-[#4DA3FF] flex items-center justify-center mb-5 shadow-lg shadow-[#4DA3FF]/20 group-hover:scale-110 transition-transform duration-300">
                     <MessageCircle className="w-7 h-7 text-white" />
                   </div>
-                  <h3 className="font-bold text-[#1e293b] text-lg mb-2">
+                  <h3 className="font-bold text-[#1e293b] dark:text-[#e2e8f0] text-lg mb-2">
                     WhatsApp
                   </h3>
-                  <p className="text-[#475569] text-sm mb-4">
+                  <p className="text-[#475569] dark:text-[#94a3b8] text-sm mb-4">
                     Quick chat support
                   </p>
                   <a
                     href="https://wa.me/8801980884541"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[#001F60] font-semibold text-sm hover:underline"
+                    className="text-[#001F60] dark:text-[#93c5fd] font-semibold text-sm hover:underline"
                   >
                     Message Us
                   </a>

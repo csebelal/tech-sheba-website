@@ -61,7 +61,7 @@ export default function AboutPage() {
   return (
     <div className="overflow-hidden">
       {/* ==================== SECTION 1: PAGE HEADER ==================== */}
-      <section className="relative pt-32 pb-20 bg-gradient-to-br from-[#eff6ff] via-white to-[#f0f4ff] overflow-hidden">
+      <section className="relative pt-32 pb-20 bg-gradient-to-br from-[#eff6ff] via-white to-[#f0f4ff] dark:from-[#0f172a] dark:via-[#0f172a] dark:to-[#1e293b] overflow-hidden">
         <div
           className="absolute inset-0 opacity-[0.03]"
           style={{
@@ -75,21 +75,21 @@ export default function AboutPage() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
             {/* Breadcrumb */}
-            <nav className="flex items-center gap-2 text-sm text-[#64748b] mb-6">
+            <nav className="flex items-center gap-2 text-sm text-[#64748b] dark:text-[#94a3b8] mb-6">
               <button
                 onClick={() => navigate('home')}
-                className="hover:text-[#001F60] transition-colors duration-200"
+                className="hover:text-[#001F60] dark:hover:text-[#93c5fd] transition-colors duration-200"
               >
                 Home
               </button>
               <ChevronRight className="w-4 h-4" />
-              <span className="text-[#001F60] font-medium">About Us</span>
+              <span className="text-[#001F60] dark:text-[#93c5fd] font-medium">About Us</span>
             </nav>
 
-            <h1 className="text-4xl sm:text-5xl font-bold text-[#1e293b] mb-5">
+            <h1 className="text-4xl sm:text-5xl font-bold text-[#1e293b] dark:text-[#e2e8f0] mb-5">
               About <span className="text-gradient-green">Tech Sheba</span>
             </h1>
-            <p className="text-lg text-[#475569] leading-relaxed max-w-3xl">
+            <p className="text-lg text-[#475569] dark:text-[#94a3b8] leading-relaxed max-w-3xl">
               We are a team of passionate IT professionals dedicated to making enterprise-grade
               technology accessible to businesses of every size in Bangladesh. Learn about our
               journey, our values, and the people who make it all happen.
@@ -99,36 +99,36 @@ export default function AboutPage() {
       </section>
 
       {/* ==================== SECTION 2: COMPANY STORY ==================== */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-white dark:bg-[#0f172a]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             <FadeIn direction="left">
               <div className="sticky top-32">
-                <span className="inline-block text-sm font-semibold text-[#001F60] tracking-wide uppercase mb-3">
+                <span className="inline-block text-sm font-semibold text-[#001F60] dark:text-[#93c5fd] tracking-wide uppercase mb-3">
                   Our Story
                 </span>
-                <h2 className="text-3xl sm:text-4xl font-bold text-[#1e293b] mb-6">
+                <h2 className="text-3xl sm:text-4xl font-bold text-[#1e293b] dark:text-[#e2e8f0] mb-6">
                   Built from Real Problems, Solved with Real Expertise
                 </h2>
                 <div className="w-20 h-1 rounded-full bg-gradient-to-r from-[#001F60] to-[#4DA3FF] mb-8" />
                 {/* Decorative image placeholder */}
-                <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-[#eff6ff] to-[#f0f4ff] aspect-[4/3] flex items-center justify-center border border-[#dbeafe]/60">
+                <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-[#eff6ff] to-[#f0f4ff] dark:from-[#1e293b] dark:to-[#0f172a] aspect-[4/3] flex items-center justify-center border border-[#dbeafe]/60 dark:border-[#1e3a5f]">
                   <div className="text-center p-8">
                     <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-[#001F60] to-[#4DA3FF] flex items-center justify-center mx-auto mb-4 shadow-lg shadow-blue-500/20">
                       <Building2 className="w-10 h-10 text-white" />
                     </div>
-                    <p className="text-[#001F60] font-semibold text-lg">Tech Sheba</p>
-                    <p className="text-[#64748b] text-sm mt-1">IT Solutions Since Day One</p>
+                    <p className="text-[#001F60] dark:text-[#93c5fd] font-semibold text-lg">Tech Sheba</p>
+                    <p className="text-[#64748b] dark:text-[#94a3b8] text-sm mt-1">IT Solutions Since Day One</p>
                   </div>
-                  <div className="absolute bottom-4 right-4 w-16 h-16 rounded-xl bg-white/60 border border-[#dbeafe] animate-float" />
-                  <div className="absolute top-4 left-4 w-10 h-10 rounded-lg bg-white/60 border border-[#dbeafe] animate-float" style={{ animationDelay: '1s' }} />
+                  <div className="absolute bottom-4 right-4 w-16 h-16 rounded-xl bg-white/60 border border-[#dbeafe] dark:bg-[#1e293b]/60 dark:border-[#334155] animate-float" />
+                  <div className="absolute top-4 left-4 w-10 h-10 rounded-lg bg-white/60 border border-[#dbeafe] dark:bg-[#1e293b]/60 dark:border-[#334155] animate-float" style={{ animationDelay: '1s' }} />
                 </div>
               </div>
             </FadeIn>
 
             <div className="space-y-6">
               <FadeIn direction="right" delay={0.1}>
-                <p className="text-[#475569] leading-relaxed text-lg">
+                <p className="text-[#475569] dark:text-[#94a3b8] leading-relaxed text-lg">
                   Tech Sheba was born from a simple observation: too many businesses in Bangladesh
                   were struggling with unreliable IT infrastructure, and the available solutions were
                   either prohibitively expensive or frustratingly inadequate. Small and medium
@@ -139,7 +139,7 @@ export default function AboutPage() {
               </FadeIn>
 
               <FadeIn direction="right" delay={0.2}>
-                <p className="text-[#475569] leading-relaxed text-lg">
+                <p className="text-[#475569] dark:text-[#94a3b8] leading-relaxed text-lg">
                   What started as a small team of passionate engineers with a mission to democratize
                   professional IT services has grown into a comprehensive technology solutions provider
                   serving businesses across Dhaka, Chittagong, and beyond. Our early days were spent
@@ -152,7 +152,7 @@ export default function AboutPage() {
               </FadeIn>
 
               <FadeIn direction="right" delay={0.3}>
-                <p className="text-[#475569] leading-relaxed text-lg">
+                <p className="text-[#475569] dark:text-[#94a3b8] leading-relaxed text-lg">
                   Over the years, we have expanded our capabilities to cover the full spectrum of
                   business IT needs â€” from structured cabling and enterprise Wi-Fi to CCTV surveillance,
                   access control systems, and modern web development. But growth never meant losing
@@ -164,7 +164,7 @@ export default function AboutPage() {
               </FadeIn>
 
               <FadeIn direction="right" delay={0.4}>
-                <p className="text-[#475569] leading-relaxed text-lg">
+                <p className="text-[#475569] dark:text-[#94a3b8] leading-relaxed text-lg">
                   Today, as Bangladesh accelerates its digital transformation, Tech Sheba stands
                   ready as the trusted IT partner that businesses can rely on. We are not just
                   service providers â€” we are problem solvers, strategic advisors, and long-term
@@ -180,17 +180,17 @@ export default function AboutPage() {
       </section>
 
       {/* ==================== SECTION 3: MISSION & VISION ==================== */}
-      <section className="py-24 bg-[#f8fafc]">
+      <section className="py-24 bg-[#f8fafc] dark:bg-[#1e293b]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <span className="inline-block text-sm font-semibold text-[#001F60] tracking-wide uppercase mb-3">
+              <span className="inline-block text-sm font-semibold text-[#001F60] dark:text-[#93c5fd] tracking-wide uppercase mb-3">
                 Our Guiding Principles
               </span>
-              <h2 className="text-3xl sm:text-4xl font-bold text-[#1e293b] mb-5">
+              <h2 className="text-3xl sm:text-4xl font-bold text-[#1e293b] dark:text-[#e2e8f0] mb-5">
                 Mission & Vision
               </h2>
-              <p className="text-lg text-[#475569] leading-relaxed">
+              <p className="text-lg text-[#475569] dark:text-[#94a3b8] leading-relaxed">
                 These two statements define everything we do, every decision we make, and every
                 relationship we build with our clients. They are the compass that guides our team
                 forward each day.
@@ -200,20 +200,20 @@ export default function AboutPage() {
 
           <div className="grid md:grid-cols-2 gap-10">
             <FadeIn direction="left" delay={0.1}>
-              <div className="relative bg-white rounded-3xl p-10 lg:p-12 border border-[#e2e8f0]/60 shadow-sm h-full overflow-hidden">
+              <div className="relative bg-white dark:bg-[#1e293b] rounded-3xl p-10 lg:p-12 border border-[#e2e8f0]/60 dark:border-[#334155] shadow-sm h-full overflow-hidden">
                 {/* Decorative corner accent */}
-                <div className="absolute top-0 left-0 w-40 h-40 bg-gradient-to-br from-[#001F60]/5 to-transparent rounded-br-full" />
-                <div className="absolute -bottom-6 -right-6 w-32 h-32 rounded-full border-2 border-[#001F60]/10" />
+                <div className="absolute top-0 left-0 w-40 h-40 bg-gradient-to-br from-[#001F60]/5 to-transparent dark:from-[#93c5fd]/10 rounded-br-full" />
+                <div className="absolute -bottom-6 -right-6 w-32 h-32 rounded-full border-2 border-[#001F60]/10 dark:border-[#93c5fd]/20" />
                 <div className="relative">
                   <div className="w-16 h-16 rounded-2xl bg-[#001F60] flex items-center justify-center mb-8 shadow-lg shadow-blue-500/20">
                     <Target className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-2xl lg:text-3xl font-bold text-[#1e293b] mb-6">Our Mission</h3>
-                  <p className="text-[#475569] leading-relaxed text-lg mb-6">
+                  <h3 className="text-2xl lg:text-3xl font-bold text-[#1e293b] dark:text-[#e2e8f0] mb-6">Our Mission</h3>
+                  <p className="text-[#475569] dark:text-[#94a3b8] leading-relaxed text-lg mb-6">
                     To deliver simple, secure, and smart IT solutions that allow businesses to
                     focus on their growth.
                   </p>
-                  <p className="text-[#475569] leading-relaxed">
+                  <p className="text-[#475569] dark:text-[#94a3b8] leading-relaxed">
                     We believe that technology should be an enabler, not a barrier. Our mission
                     drives us to simplify complex IT challenges, implement robust security
                     measures, and design intelligent systems that work seamlessly in the background.
@@ -226,18 +226,18 @@ export default function AboutPage() {
             </FadeIn>
 
             <FadeIn direction="right" delay={0.2}>
-              <div className="relative bg-white rounded-3xl p-10 lg:p-12 border border-[#e2e8f0]/60 shadow-sm h-full overflow-hidden">
-                <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-bl from-[#4DA3FF]/5 to-transparent rounded-bl-full" />
-                <div className="absolute -top-6 -left-6 w-32 h-32 rounded-full border-2 border-[#4DA3FF]/10" />
+              <div className="relative bg-white dark:bg-[#1e293b] rounded-3xl p-10 lg:p-12 border border-[#e2e8f0]/60 dark:border-[#334155] shadow-sm h-full overflow-hidden">
+                <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-bl from-[#4DA3FF]/5 to-transparent dark:from-[#60a5fa]/10 rounded-bl-full" />
+                <div className="absolute -top-6 -left-6 w-32 h-32 rounded-full border-2 border-[#4DA3FF]/10 dark:border-[#60a5fa]/20" />
                 <div className="relative">
                   <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#001F60] to-[#4DA3FF] flex items-center justify-center mb-8 shadow-lg shadow-blue-500/20">
                     <Eye className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-2xl lg:text-3xl font-bold text-[#1e293b] mb-6">Our Vision</h3>
-                  <p className="text-[#475569] leading-relaxed text-lg mb-6">
+                  <h3 className="text-2xl lg:text-3xl font-bold text-[#1e293b] dark:text-[#e2e8f0] mb-6">Our Vision</h3>
+                  <p className="text-[#475569] dark:text-[#94a3b8] leading-relaxed text-lg mb-6">
                     To become the most trusted IT partner in Bangladesh for modern enterprises.
                   </p>
-                  <p className="text-[#475569] leading-relaxed">
+                  <p className="text-[#475569] dark:text-[#94a3b8] leading-relaxed">
                     We envision a Bangladesh where every business â€” from a small garment factory
                     in Gazipur to a growing tech startup in Banani â€” has access to world-class
                     IT services. Our vision is to raise the standard of IT service delivery
@@ -254,17 +254,17 @@ export default function AboutPage() {
       </section>
 
       {/* ==================== SECTION 4: OUR VALUES ==================== */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-white dark:bg-[#0f172a]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <span className="inline-block text-sm font-semibold text-[#001F60] tracking-wide uppercase mb-3">
+              <span className="inline-block text-sm font-semibold text-[#001F60] dark:text-[#93c5fd] tracking-wide uppercase mb-3">
                 What We Stand For
               </span>
-              <h2 className="text-3xl sm:text-4xl font-bold text-[#1e293b] mb-5">
+              <h2 className="text-3xl sm:text-4xl font-bold text-[#1e293b] dark:text-[#e2e8f0] mb-5">
                 Our Core Values
               </h2>
-              <p className="text-lg text-[#475569] leading-relaxed">
+              <p className="text-lg text-[#475569] dark:text-[#94a3b8] leading-relaxed">
                 These five values are the foundation of our company culture. They shape how we
                 interact with clients, how we approach problems, and how we build our team.
                 Every member of Tech Sheba embodies these principles daily.
@@ -309,13 +309,13 @@ export default function AboutPage() {
                 <motion.div
                   whileHover={{ y: -6, scale: 1.02 }}
                   transition={{ duration: 0.3 }}
-                  className="bg-white rounded-2xl p-8 green-glow border border-[#e2e8f0]/60 h-full"
+                  className="bg-white dark:bg-[#1e293b] rounded-2xl p-8 green-glow border border-[#e2e8f0]/60 dark:border-[#334155] h-full"
                 >
-                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#001F60]/10 to-[#4DA3FF]/10 flex items-center justify-center mb-6">
-                    <value.icon className="w-7 h-7 text-[#001F60]" />
+                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#001F60]/10 to-[#4DA3FF]/10 dark:from-[#93c5fd]/15 dark:to-[#60a5fa]/15 flex items-center justify-center mb-6">
+                    <value.icon className="w-7 h-7 text-[#001F60] dark:text-[#93c5fd]" />
                   </div>
-                  <h3 className="text-xl font-bold text-[#1e293b] mb-3">{value.title}</h3>
-                  <p className="text-[#475569] leading-relaxed">{value.desc}</p>
+                    <h3 className="text-xl font-bold text-[#1e293b] dark:text-[#e2e8f0] mb-3">{value.title}</h3>
+                    <p className="text-[#475569] dark:text-[#94a3b8] leading-relaxed">{value.desc}</p>
                 </motion.div>
               </StaggerItem>
             ))}
@@ -324,17 +324,17 @@ export default function AboutPage() {
       </section>
 
       {/* ==================== SECTION 5: TEAM SECTION ==================== */}
-      <section className="py-24 bg-[#f8fafc]">
+      <section className="py-24 bg-[#f8fafc] dark:bg-[#1e293b]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <span className="inline-block text-sm font-semibold text-[#001F60] tracking-wide uppercase mb-3">
+              <span className="inline-block text-sm font-semibold text-[#001F60] dark:text-[#93c5fd] tracking-wide uppercase mb-3">
                 The People Behind Tech Sheba
               </span>
-              <h2 className="text-3xl sm:text-4xl font-bold text-[#1e293b] mb-5">
+              <h2 className="text-3xl sm:text-4xl font-bold text-[#1e293b] dark:text-[#e2e8f0] mb-5">
                 Meet Our Team
               </h2>
-              <p className="text-lg text-[#475569] leading-relaxed">
+              <p className="text-lg text-[#475569] dark:text-[#94a3b8] leading-relaxed">
                 Our strength lies in our people. Each member of the Tech Sheba team brings
                 unique expertise, genuine passion for technology, and a shared commitment
                 to delivering exceptional results for every client we serve.
@@ -348,16 +348,16 @@ export default function AboutPage() {
                 <motion.div
                   whileHover={{ y: -6 }}
                   transition={{ duration: 0.3 }}
-                  className="bg-white rounded-2xl p-8 green-glow border border-[#e2e8f0]/60 text-center h-full"
+                  className="bg-white dark:bg-[#1e293b] rounded-2xl p-8 green-glow border border-[#e2e8f0]/60 dark:border-[#334155] text-center h-full"
                 >
                   <div className="w-24 h-24 rounded-full bg-gradient-to-br from-[#001F60] to-[#4DA3FF] flex items-center justify-center mx-auto mb-5 shadow-lg shadow-blue-500/20">
                     <span className="text-2xl font-bold text-white">
                       {member.name.split(' ').map(n => n[0]).join('')}
                     </span>
                   </div>
-                  <h3 className="text-lg font-bold text-[#1e293b] mb-1">{member.name}</h3>
-                  <p className="text-sm font-medium text-[#001F60] mb-4">{member.title}</p>
-                  <p className="text-sm text-[#475569] leading-relaxed">{member.bio}</p>
+                  <h3 className="text-lg font-bold text-[#1e293b] dark:text-[#e2e8f0] mb-1">{member.name}</h3>
+                  <p className="text-sm font-medium text-[#001F60] dark:text-[#93c5fd] mb-4">{member.title}</p>
+                  <p className="text-sm text-[#475569] dark:text-[#94a3b8] leading-relaxed">{member.bio}</p>
                 </motion.div>
               </StaggerItem>
             ))}
@@ -412,17 +412,17 @@ export default function AboutPage() {
       </section>
 
       {/* ==================== SECTION 7: CERTIFICATIONS & PARTNERSHIPS ==================== */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-white dark:bg-[#0f172a]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <span className="inline-block text-sm font-semibold text-[#001F60] tracking-wide uppercase mb-3">
+              <span className="inline-block text-sm font-semibold text-[#001F60] dark:text-[#93c5fd] tracking-wide uppercase mb-3">
                 Trusted & Certified
               </span>
-              <h2 className="text-3xl sm:text-4xl font-bold text-[#1e293b] mb-5">
+              <h2 className="text-3xl sm:text-4xl font-bold text-[#1e293b] dark:text-[#e2e8f0] mb-5">
                 Certifications & Partnerships
               </h2>
-              <p className="text-lg text-[#475569] leading-relaxed">
+              <p className="text-lg text-[#475569] dark:text-[#94a3b8] leading-relaxed">
                 Our team holds certifications from leading technology vendors, and our
                 partnerships ensure we deliver best-in-class solutions backed by
                 manufacturer support and expertise.
@@ -436,12 +436,12 @@ export default function AboutPage() {
                 <motion.div
                   whileHover={{ y: -4, scale: 1.03 }}
                   transition={{ duration: 0.3 }}
-                  className="bg-[#f8fafc] rounded-2xl p-6 border border-[#e2e8f0]/60 hover:border-[#dbeafe] hover:bg-[#f0f4ff] transition-all duration-300 text-center group"
+                  className="bg-[#f8fafc] dark:bg-[#1e293b] rounded-2xl p-6 border border-[#e2e8f0]/60 dark:border-[#334155] hover:border-[#dbeafe] hover:bg-[#f0f4ff] dark:hover:bg-[#1e293b] transition-all duration-300 text-center group"
                 >
-                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#001F60]/10 to-[#4DA3FF]/10 flex items-center justify-center mx-auto mb-4 group-hover:from-[#001F60]/20 group-hover:to-[#4DA3FF]/20 transition-all duration-300">
-                    <Award className="w-7 h-7 text-[#001F60]" />
+                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#001F60]/10 to-[#4DA3FF]/10 dark:from-[#93c5fd]/15 dark:to-[#60a5fa]/15 flex items-center justify-center mx-auto mb-4 group-hover:from-[#001F60]/20 group-hover:to-[#4DA3FF]/20 transition-all duration-300">
+                    <Award className="w-7 h-7 text-[#001F60] dark:text-[#93c5fd]" />
                   </div>
-                  <p className="font-semibold text-[#1e293b] text-sm">{cert}</p>
+                  <p className="font-semibold text-[#1e293b] dark:text-[#e2e8f0] text-sm">{cert}</p>
                 </motion.div>
               </StaggerItem>
             ))}
@@ -450,17 +450,17 @@ export default function AboutPage() {
       </section>
 
       {/* ==================== SECTION 8: WHY CHOOSE US ==================== */}
-      <section className="py-24 bg-[#f8fafc]">
+      <section className="py-24 bg-[#f8fafc] dark:bg-[#1e293b]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <span className="inline-block text-sm font-semibold text-[#001F60] tracking-wide uppercase mb-3">
+              <span className="inline-block text-sm font-semibold text-[#001F60] dark:text-[#93c5fd] tracking-wide uppercase mb-3">
                 The Tech Sheba Advantage
               </span>
-              <h2 className="text-3xl sm:text-4xl font-bold text-[#1e293b] mb-5">
+              <h2 className="text-3xl sm:text-4xl font-bold text-[#1e293b] dark:text-[#e2e8f0] mb-5">
                 Why Businesses Choose Us
               </h2>
-              <p className="text-lg text-[#475569] leading-relaxed">
+              <p className="text-lg text-[#475569] dark:text-[#94a3b8] leading-relaxed">
                 In a competitive market, here is what makes Tech Sheba the preferred IT
                 partner for growing businesses across Bangladesh.
               </p>
@@ -505,14 +505,14 @@ export default function AboutPage() {
                   <motion.div
                     whileHover={{ x: 4 }}
                     transition={{ duration: 0.2 }}
-                    className="flex gap-5 p-6 rounded-2xl bg-white border border-[#e2e8f0]/60 hover:bg-[#f0f4ff] hover:border-[#dbeafe] green-glow transition-all duration-300"
+                    className="flex gap-5 p-6 rounded-2xl bg-white dark:bg-[#1e293b] border border-[#e2e8f0]/60 dark:border-[#334155] hover:bg-[#f0f4ff] hover:border-[#dbeafe] green-glow transition-all duration-300"
                   >
-                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#001F60]/10 to-[#4DA3FF]/10 flex items-center justify-center flex-shrink-0">
-                      <item.icon className="w-6 h-6 text-[#001F60]" />
+                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#001F60]/10 to-[#4DA3FF]/10 dark:from-[#93c5fd]/15 dark:to-[#60a5fa]/15 flex items-center justify-center flex-shrink-0">
+                      <item.icon className="w-6 h-6 text-[#001F60] dark:text-[#93c5fd]" />
                     </div>
                     <div>
-                      <h4 className="text-lg font-semibold text-[#1e293b] mb-2">{item.title}</h4>
-                      <p className="text-[#475569] leading-relaxed">{item.desc}</p>
+                      <h4 className="text-lg font-semibold text-[#1e293b] dark:text-[#e2e8f0] mb-2">{item.title}</h4>
+                      <p className="text-[#475569] dark:text-[#94a3b8] leading-relaxed">{item.desc}</p>
                     </div>
                   </motion.div>
                 </StaggerItem>

@@ -118,7 +118,7 @@ export default function CaseStudiesPage() {
   return (
     <div className="overflow-hidden">
       {/* ==================== SECTION 1: PAGE HEADER ==================== */}
-      <section className="relative pt-32 pb-20 bg-gradient-to-br from-[#eff6ff] via-white to-[#f0f4ff] overflow-hidden">
+      <section className="relative pt-32 pb-20 bg-gradient-to-br from-[#eff6ff] via-white to-[#f0f4ff] dark:from-[#0f172a] dark:via-[#0f172a] dark:to-[#1e293b] overflow-hidden">
         <div
           className="absolute inset-0 opacity-[0.03]"
           style={{
@@ -131,21 +131,21 @@ export default function CaseStudiesPage() {
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
-            <nav className="flex items-center gap-2 text-sm text-[#64748b] mb-6">
+            <nav className="flex items-center gap-2 text-sm text-[#64748b] dark:text-[#94a3b8] mb-6">
               <button
                 onClick={() => navigate('home')}
-                className="hover:text-[#001F60] transition-colors duration-200"
+                className="hover:text-[#001F60] dark:hover:text-[#93c5fd] transition-colors duration-200"
               >
                 Home
               </button>
               <ChevronRight className="w-4 h-4" />
-              <span className="text-[#001F60] font-medium">Case Studies</span>
+              <span className="text-[#001F60] dark:text-[#93c5fd] font-medium">Case Studies</span>
             </nav>
 
-            <h1 className="text-4xl sm:text-5xl font-bold text-[#1e293b] mb-5">
+            <h1 className="text-4xl sm:text-5xl font-bold text-[#1e293b] dark:text-[#e2e8f0] mb-5">
               Case Studies & <span className="text-gradient-green">Success Stories</span>
             </h1>
-            <p className="text-lg text-[#475569] leading-relaxed max-w-3xl">
+            <p className="text-lg text-[#475569] dark:text-[#94a3b8] leading-relaxed max-w-3xl">
               Real results for real businesses. See how Tech Sheba has helped organizations across
               Bangladesh transform their IT infrastructure, boost productivity, and reduce costs.
             </p>
@@ -154,90 +154,90 @@ export default function CaseStudiesPage() {
       </section>
 
       {/* ==================== SECTION 2: FEATURED CASE STUDY ==================== */}
-      <section className="py-20 lg:py-24 bg-white">
+      <section className="py-20 lg:py-24 bg-white dark:bg-[#0f172a]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
-            <Badge className="mb-6 bg-[#eff6ff] text-[#001F60] border-[#dbeafe] hover:bg-[#dbeafe]">
+            <Badge className="mb-6 bg-[#eff6ff] dark:bg-[#1e293b] text-[#001F60] dark:text-[#93c5fd] border-[#dbeafe] dark:border-[#1e3a5f] hover:bg-[#dbeafe] dark:hover:bg-[#1e3a5f]">
               Featured Case Study
             </Badge>
           </FadeIn>
 
-          <Card className="border border-[#dbeafe] overflow-hidden shadow-sm">
+          <Card className="border border-[#dbeafe] dark:border-[#1e3a5f] dark:bg-[#1e293b] overflow-hidden shadow-sm">
             <div className="grid lg:grid-cols-5">
               {/* Left: Content */}
               <div className="lg:col-span-3 p-6 sm:p-10">
                 <FadeIn>
                   <div className="flex items-center gap-2 mb-5">
-                    <Badge variant="outline" className="text-xs font-medium border-[#dbeafe] text-[#001F60] bg-[#eff6ff]">
+                    <Badge variant="outline" className="text-xs font-medium border-[#dbeafe] dark:border-[#1e3a5f] text-[#001F60] dark:text-[#93c5fd] bg-[#eff6ff] dark:bg-[#1e293b]">
                       {featuredStudy.industry}
                     </Badge>
                   </div>
 
-                  <h2 className="text-2xl sm:text-3xl font-bold text-[#1e293b] mb-6 leading-tight">
+                  <h2 className="text-2xl sm:text-3xl font-bold text-[#1e293b] dark:text-[#e2e8f0] mb-6 leading-tight">
                     {featuredStudy.title}
                   </h2>
 
                   <Tabs defaultValue="challenge" className="mb-8">
-                    <TabsList className="bg-[#f0f4ff] border border-[#dbeafe]">
+                    <TabsList className="bg-[#f0f4ff] dark:bg-[#1e293b] border border-[#dbeafe] dark:border-[#1e3a5f]">
                       <TabsTrigger
                         value="challenge"
-                        className="data-[state=active]:bg-[#001F60] data-[state=active]:text-white text-[#475569]"
+                        className="data-[state=active]:bg-[#001F60] data-[state=active]:text-white text-[#475569] dark:text-[#94a3b8]"
                       >
                         Challenge
                       </TabsTrigger>
                       <TabsTrigger
                         value="solution"
-                        className="data-[state=active]:bg-[#001F60] data-[state=active]:text-white text-[#475569]"
+                        className="data-[state=active]:bg-[#001F60] data-[state=active]:text-white text-[#475569] dark:text-[#94a3b8]"
                       >
                         Solution
                       </TabsTrigger>
                       <TabsTrigger
                         value="testimonial"
-                        className="data-[state=active]:bg-[#001F60] data-[state=active]:text-white text-[#475569]"
+                        className="data-[state=active]:bg-[#001F60] data-[state=active]:text-white text-[#475569] dark:text-[#94a3b8]"
                       >
                         Testimonial
                       </TabsTrigger>
                     </TabsList>
 
                     <TabsContent value="challenge" className="mt-5">
-                      <div className="p-5 rounded-xl bg-red-50 border border-red-100">
+                      <div className="p-5 rounded-xl bg-red-50 dark:bg-red-950/50 border border-red-100 dark:border-red-900/50">
                         <div className="flex items-center gap-2 mb-3">
-                          <div className="w-7 h-7 rounded-lg bg-red-100 flex items-center justify-center">
-                            <BarChart3 className="w-4 h-4 text-red-600" />
+                          <div className="w-7 h-7 rounded-lg bg-red-100 dark:bg-red-900 flex items-center justify-center">
+                            <BarChart3 className="w-4 h-4 text-red-600 dark:text-red-400" />
                           </div>
-                          <h4 className="font-semibold text-red-800 text-sm">The Challenge</h4>
+                          <h4 className="font-semibold text-red-800 dark:text-red-200 text-sm">The Challenge</h4>
                         </div>
-                        <p className="text-[#475569] text-sm leading-relaxed">
+                        <p className="text-[#475569] dark:text-[#94a3b8] text-sm leading-relaxed">
                           {featuredStudy.challenge}
                         </p>
                       </div>
                     </TabsContent>
 
                     <TabsContent value="solution" className="mt-5">
-                      <div className="p-5 rounded-xl bg-[#eff6ff] border border-[#dbeafe]">
+                      <div className="p-5 rounded-xl bg-[#eff6ff] dark:bg-[#1e293b] border border-[#dbeafe] dark:border-[#1e3a5f]">
                         <div className="flex items-center gap-2 mb-3">
-                          <div className="w-7 h-7 rounded-lg bg-[#dbeafe] flex items-center justify-center">
-                            <CheckCircle2 className="w-4 h-4 text-[#001F60]" />
+                          <div className="w-7 h-7 rounded-lg bg-[#dbeafe] dark:bg-[#1e3a5f] flex items-center justify-center">
+                            <CheckCircle2 className="w-4 h-4 text-[#001F60] dark:text-[#93c5fd]" />
                           </div>
-                          <h4 className="font-semibold text-[#001F60] text-sm">Our Solution</h4>
+                          <h4 className="font-semibold text-[#001F60] dark:text-[#93c5fd] text-sm">Our Solution</h4>
                         </div>
-                        <p className="text-[#475569] text-sm leading-relaxed">
+                        <p className="text-[#475569] dark:text-[#94a3b8] text-sm leading-relaxed">
                           {featuredStudy.solution}
                         </p>
                       </div>
                     </TabsContent>
 
                     <TabsContent value="testimonial" className="mt-5">
-                      <div className="p-5 rounded-xl bg-[#f0f4ff] border border-[#dbeafe]">
-                        <Quote className="w-8 h-8 text-[#001F60]/20 mb-3" />
-                        <p className="text-[#475569] text-sm leading-relaxed italic mb-4">
+                      <div className="p-5 rounded-xl bg-[#f0f4ff] dark:bg-[#1e293b] border border-[#dbeafe] dark:border-[#1e3a5f]">
+                        <Quote className="w-8 h-8 text-[#001F60]/20 dark:text-[#93c5fd]/20 mb-3" />
+                        <p className="text-[#475569] dark:text-[#94a3b8] text-sm leading-relaxed italic mb-4">
                           &ldquo;{featuredStudy.testimonial.quote}&rdquo;
                         </p>
                         <div>
-                          <p className="font-semibold text-[#1e293b] text-sm">
+                          <p className="font-semibold text-[#1e293b] dark:text-[#e2e8f0] text-sm">
                             {featuredStudy.testimonial.author}
                           </p>
-                          <p className="text-xs text-[#64748b]">
+                          <p className="text-xs text-[#64748b] dark:text-[#94a3b8]">
                             {featuredStudy.testimonial.role}
                           </p>
                         </div>
@@ -278,17 +278,17 @@ export default function CaseStudiesPage() {
       </section>
 
       {/* ==================== SECTION 3: CASE STUDY GRID ==================== */}
-      <section className="py-20 lg:py-24 bg-[#f0f4ff]">
+      <section className="py-20 lg:py-24 bg-[#f0f4ff] dark:bg-[#1e293b]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <div className="text-center max-w-3xl mx-auto mb-14">
-              <Badge className="mb-4 bg-white text-[#001F60] border-[#dbeafe] hover:bg-[#eff6ff]">
+              <Badge className="mb-4 bg-white dark:bg-[#0f172a] text-[#001F60] dark:text-[#93c5fd] border-[#dbeafe] dark:border-[#1e3a5f] hover:bg-[#eff6ff] dark:hover:bg-[#1e293b]">
                 More Success Stories
               </Badge>
-              <h2 className="text-3xl sm:text-4xl font-bold text-[#1e293b] mb-4">
+              <h2 className="text-3xl sm:text-4xl font-bold text-[#1e293b] dark:text-[#e2e8f0] mb-4">
                 Client <span className="text-gradient-green">Transformations</span>
               </h2>
-              <p className="text-[#475569] leading-relaxed">
+              <p className="text-[#475569] dark:text-[#94a3b8] leading-relaxed">
                 Every project tells a story of transformation. Here are more examples of how
                 Tech Sheba delivers real, measurable impact.
               </p>
@@ -300,23 +300,23 @@ export default function CaseStudiesPage() {
               const StudyIcon = study.industryIcon;
               return (
                 <StaggerItem key={study.title}>
-                  <Card className="h-full border border-white bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl flex flex-col">
+                  <Card className="h-full border border-white dark:border-[#334155] bg-white dark:bg-[#1e293b] shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl flex flex-col">
                     <CardHeader className="pb-3">
                       <div className="flex items-center justify-between mb-3">
                         <Badge
                           variant="outline"
-                          className="text-xs font-medium border-[#dbeafe] text-[#001F60] bg-[#eff6ff]"
+                          className="text-xs font-medium border-[#dbeafe] dark:border-[#1e3a5f] text-[#001F60] dark:text-[#93c5fd] bg-[#eff6ff] dark:bg-[#0f172a]"
                         >
                           <StudyIcon className="w-3 h-3 mr-1" />
                           {study.industry}
                         </Badge>
                       </div>
-                      <CardTitle className="text-base font-semibold text-[#1e293b] leading-snug">
+                      <CardTitle className="text-base font-semibold text-[#1e293b] dark:text-[#e2e8f0] leading-snug">
                         {study.title}
                       </CardTitle>
                     </CardHeader>
                     <CardContent className="flex flex-col flex-1">
-                      <p className="text-sm text-[#64748b] leading-relaxed mb-5 flex-1">
+                      <p className="text-sm text-[#64748b] dark:text-[#94a3b8] leading-relaxed mb-5 flex-1">
                         {study.summary}
                       </p>
 
@@ -325,10 +325,10 @@ export default function CaseStudiesPage() {
                         {study.metrics.map((metric) => (
                           <div
                             key={metric.label}
-                            className="flex-1 text-center p-3 rounded-xl bg-[#f0f4ff] border border-[#eff6ff]"
+                            className="flex-1 text-center p-3 rounded-xl bg-[#f0f4ff] dark:bg-[#0f172a] border border-[#eff6ff] dark:border-[#334155]"
                           >
-                            <p className="text-xl font-bold text-[#001F60]">{metric.value}</p>
-                            <p className="text-[10px] text-[#64748b] font-medium mt-0.5">
+                            <p className="text-xl font-bold text-[#001F60] dark:text-[#93c5fd]">{metric.value}</p>
+                            <p className="text-[10px] text-[#64748b] dark:text-[#94a3b8] font-medium mt-0.5">
                               {metric.label}
                             </p>
                           </div>
@@ -338,7 +338,7 @@ export default function CaseStudiesPage() {
                       <Button
                         variant="outline"
                         onClick={() => navigate('contact')}
-                        className="w-full border-[#dbeafe] text-[#001F60] hover:bg-[#eff6ff] hover:text-[#001440] font-medium text-sm"
+                        className="w-full border-[#dbeafe] dark:border-[#1e3a5f] text-[#001F60] dark:text-[#93c5fd] hover:bg-[#eff6ff] dark:hover:bg-[#0f172a] hover:text-[#001440] font-medium text-sm"
                       >
                         Read Full Study
                         <ArrowRight className="w-3.5 h-3.5 ml-2" />
@@ -353,17 +353,17 @@ export default function CaseStudiesPage() {
       </section>
 
       {/* ==================== SECTION 4: RESULTS SUMMARY / TRACK RECORD ==================== */}
-      <section className="py-20 lg:py-24 bg-white">
+      <section className="py-20 lg:py-24 bg-white dark:bg-[#0f172a]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <div className="text-center max-w-3xl mx-auto mb-14">
-              <Badge className="mb-4 bg-[#eff6ff] text-[#001F60] border-[#dbeafe] hover:bg-[#dbeafe]">
+              <Badge className="mb-4 bg-[#eff6ff] dark:bg-[#1e293b] text-[#001F60] dark:text-[#93c5fd] border-[#dbeafe] dark:border-[#1e3a5f] hover:bg-[#dbeafe] dark:hover:bg-[#1e3a5f]">
                 Proven Track Record
               </Badge>
-              <h2 className="text-3xl sm:text-4xl font-bold text-[#1e293b] mb-4">
+              <h2 className="text-3xl sm:text-4xl font-bold text-[#1e293b] dark:text-[#e2e8f0] mb-4">
                 Our <span className="text-gradient-green">Track Record</span>
               </h2>
-              <p className="text-[#475569] leading-relaxed">
+              <p className="text-[#475569] dark:text-[#94a3b8] leading-relaxed">
                 Numbers don&apos;t lie. Here&apos;s a snapshot of what Tech Sheba has achieved
                 for businesses across Bangladesh.
               </p>
@@ -375,14 +375,14 @@ export default function CaseStudiesPage() {
               const StatIcon = stat.icon;
               return (
                 <StaggerItem key={stat.label}>
-                  <div className="text-center p-5 rounded-2xl bg-[#f0f4ff] border border-[#eff6ff] transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
-                    <div className="w-10 h-10 rounded-xl bg-[#eff6ff] border border-[#dbeafe] flex items-center justify-center mx-auto mb-3">
-                      <StatIcon className="w-5 h-5 text-[#001F60]" />
+                  <div className="text-center p-5 rounded-2xl bg-[#f0f4ff] dark:bg-[#1e293b] border border-[#eff6ff] dark:border-[#334155] transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+                    <div className="w-10 h-10 rounded-xl bg-[#eff6ff] dark:bg-[#0f172a] border border-[#dbeafe] dark:border-[#334155] flex items-center justify-center mx-auto mb-3">
+                      <StatIcon className="w-5 h-5 text-[#001F60] dark:text-[#93c5fd]" />
                     </div>
-                    <p className="text-2xl sm:text-3xl font-bold text-[#001F60] mb-1">
+                    <p className="text-2xl sm:text-3xl font-bold text-[#001F60] dark:text-[#93c5fd] mb-1">
                       <CountUp end={stat.value} suffix={stat.suffix} />
                     </p>
-                    <p className="text-xs text-[#64748b] font-medium">{stat.label}</p>
+                    <p className="text-xs text-[#64748b] dark:text-[#94a3b8] font-medium">{stat.label}</p>
                   </div>
                 </StaggerItem>
               );
@@ -392,7 +392,7 @@ export default function CaseStudiesPage() {
       </section>
 
       {/* ==================== SECTION 5: CTA ==================== */}
-      <section className="py-20 lg:py-24 bg-[#f0f4ff]">
+      <section className="py-20 lg:py-24 bg-[#f0f4ff] dark:bg-[#1e293b]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#001F60] to-[#001440] p-10 sm:p-16 text-center">

@@ -2,16 +2,22 @@
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, ChevronDown, Phone, Mail, Clock } from 'lucide-react';
+import { Menu, X, ChevronDown, Phone, Mail, Clock, Sun, Moon } from 'lucide-react';
 import { useNavigation, NAV_ITEMS, type PageKey } from '@/lib/store';
-import logo from '@/Media/Logo/Tech Sheba Logo Trans 1.png';
+import { useTheme } from 'next-themes';
+import darkLogo from '@/Media/Logo/Tech Sheba Logo Trans 1.png';
+import lightLogo from '@/Media/Logo/Tech Sheba logo light.png';
 import Image from 'next/image';
 
 export function Navbar() {
   const { currentPage, navigate, isMobileMenuOpen, setMobileMenuOpen } = useNavigation();
+  const { theme, setTheme } = useTheme();
   const [scrolled, setScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [mobileDropdown, setMobileDropdown] = useState<string | null>(null);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => setMounted(true), []);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -67,8 +73,8 @@ export function Navbar() {
       <header
         className={`sticky top-0 z-50 transition-all duration-300 ${
           scrolled
-            ? 'bg-white/95 backdrop-blur-md shadow-[0_1px_20px_rgba(0,31,96,0.08)]'
-            : 'bg-white'
+            ? 'bg-white/95 dark:bg-[#0f172a]/95 backdrop-blur-md shadow-[0_1px_20px_rgba(0,31,96,0.08)]'
+            : 'bg-white dark:bg-[#0f172a]'
         }`}
       >
         <nav className="max-w-7xl mx-auto px-4 sm:px-6">
@@ -79,7 +85,7 @@ export function Navbar() {
               className="flex items-center gap-2.5 group"
             >
               <Image
-                src={logo}
+                src={mounted && theme === 'dark' ? lightLogo : darkLogo}
                 alt="Tech Sheba Logo"
                 width={200}
                 height={50}
@@ -123,7 +129,7 @@ export function Navbar() {
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         exit={{ opacity: 0, y: 8, scale: 0.96 }}
                         transition={{ duration: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
-                        className="absolute top-full left-0 mt-1 w-64 bg-white rounded-xl shadow-[0_8px_40px_rgba(0,0,0,0.1)] border border-border/50 py-2 overflow-hidden"
+                        className="absolute top-full left-0 mt-1 w-64 bg-white dark:bg-[#1e293b] rounded-xl shadow-[0_8px_40px_rgba(0,0,0,0.1)] border border-border/50 py-2 overflow-hidden"
                       >
                         {item.children.map((child) => (
                           <button
@@ -143,6 +149,13 @@ export function Navbar() {
 
             {/* Desktop CTA */}
             <div className="hidden lg:flex items-center gap-3">
+              <button
+                onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+                className="p-2 rounded-lg hover:bg-muted transition-colors text-muted-foreground hover:text-foreground"
+                aria-label="Toggle theme"
+              >
+                {mounted && theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+              </button>
               <button
                 onClick={() => handleNav('faq')}
                 className="px-3.5 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
@@ -176,7 +189,7 @@ export function Navbar() {
               animate={{ height: 'auto', opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
               transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
-              className="lg:hidden overflow-hidden bg-white border-t border-border/50"
+              className="lg:hidden overflow-hidden bg-white dark:bg-[#0f172a] border-t border-border/50"
             >
               <div className="px-4 py-3 space-y-1 max-h-[80vh] overflow-y-auto">
                 {NAV_ITEMS.map((item) => (
@@ -234,6 +247,13 @@ export function Navbar() {
                   </div>
                 ))}
                 <div className="pt-3 border-t border-border/50 space-y-2">
+                  <button
+                    onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+                    className="w-full flex items-center gap-2 px-3 py-2.5 rounded-lg text-sm font-medium text-foreground hover:bg-muted transition-colors"
+                  >
+                    {mounted && theme === 'dark' ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
+                    {mounted && theme === 'dark' ? 'Light Mode' : 'Dark Mode'}
+                  </button>
                   <button
                     onClick={() => handleNav('faq')}
                     className="w-full text-left px-3 py-2.5 rounded-lg text-sm font-medium text-foreground hover:bg-muted transition-colors"

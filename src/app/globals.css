@@ -85,8 +85,44 @@
   --sidebar-ring: #0775FF;
 }
 
+.dark {
+  --background: #0f172a;
+  --foreground: #e2e8f0;
+  --card: #1e293b;
+  --card-foreground: #e2e8f0;
+  --popover: #1e293b;
+  --popover-foreground: #e2e8f0;
+  --primary: #3391FF;
+  --primary-foreground: #ffffff;
+  --secondary: #1e3a5f;
+  --secondary-foreground: #93c5fd;
+  --muted: #1e293b;
+  --muted-foreground: #94a3b8;
+  --accent: #1e3a5f;
+  --accent-foreground: #93c5fd;
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: #334155;
+  --input: #334155;
+  --ring: #3391FF;
+  --chart-1: #93c5fd;
+  --chart-2: #4DA3FF;
+  --chart-3: #3391FF;
+  --chart-4: #0775FF;
+  --chart-5: #001F60;
+  --sidebar: #1e293b;
+  --sidebar-foreground: #e2e8f0;
+  --sidebar-primary: #3391FF;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #1e3a5f;
+  --sidebar-accent-foreground: #93c5fd;
+  --sidebar-border: #334155;
+  --sidebar-ring: #3391FF;
+}
+
 @layer base {
-  * {
+  *,
+  *::before,
+  *::after {
     @apply border-border outline-ring/50;
   }
   body {
@@ -94,11 +130,32 @@
   }
 }
 
+/* Smooth theme transitions — deliberate, premium feel on toggle
+   Uses :where() to keep zero specificity, so elements with their own
+   transition-* classes (hover lift, button effects) keep those intact.
+   Elements without any transition class get the theme-safe defaults below. */
+@media (prefers-reduced-motion: no-preference) {
+  :where(html:not(.disable-transition)) *,
+  :where(html:not(.disable-transition)) *::before,
+  :where(html:not(.disable-transition)) *::after {
+    transition-property: background-color, border-color, color, box-shadow, fill, stroke;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+  }
+}
+
+/* Disable transitions during initial page load to avoid flash */
+html.disable-transition *,
+html.disable-transition *::before,
+html.disable-transition *::after {
+  transition: none !important;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
-/* Custom scrollbar */
+/* Custom scrollbar - light mode */
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -113,9 +170,27 @@ html {
   background: #64748b;
 }
 
+/* Custom scrollbar - dark mode */
+.dark ::-webkit-scrollbar-track {
+  background: #1e293b;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #475569;
+  border-radius: 4px;
+}
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
 /* Blue gradient text utility */
 .text-gradient-green {
   background: linear-gradient(135deg, #001F60, #0775FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.dark .text-gradient-green {
+  background: linear-gradient(135deg, #60A5FA, #3391FF);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -127,6 +202,12 @@ html {
 }
 .green-glow:hover {
   box-shadow: 0 0 0 1px rgba(7, 117, 255, 0.15), 0 8px 32px -8px rgba(7, 117, 255, 0.2);
+}
+.dark .green-glow {
+  box-shadow: 0 0 0 1px rgba(51, 145, 255, 0.1), 0 4px 16px -4px rgba(51, 145, 255, 0.15);
+}
+.dark .green-glow:hover {
+  box-shadow: 0 0 0 1px rgba(96, 165, 250, 0.2), 0 8px 32px -8px rgba(96, 165, 250, 0.25);
 }
 
 /* Animated gradient background */
@@ -166,4 +247,14 @@ html {
   background: linear-gradient(90deg, transparent, rgba(7, 117, 255, 0.08), transparent);
   background-size: 200% 100%;
   animation: shimmer 2s infinite;
+}
+
+/* Selection color */
+::selection {
+  background: rgba(7, 117, 255, 0.2);
+  color: inherit;
+}
+.dark ::selection {
+  background: rgba(51, 145, 255, 0.3);
+  color: inherit;
 }

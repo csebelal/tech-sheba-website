@@ -196,7 +196,7 @@ export default function IndustriesPage() {
   return (
     <div className="overflow-hidden">
       {/* ==================== SECTION 1: PAGE HEADER ==================== */}
-      <section className="relative pt-32 pb-20 bg-gradient-to-br from-[#eff6ff] via-white to-[#f0f4ff] overflow-hidden">
+      <section className="relative pt-32 pb-20 bg-gradient-to-br from-[#eff6ff] via-white to-[#f0f4ff] dark:from-[#0f172a] dark:via-[#0f172a] dark:to-[#1e293b] overflow-hidden">
         <div
           className="absolute inset-0 opacity-[0.03]"
           style={{
@@ -204,26 +204,26 @@ export default function IndustriesPage() {
             backgroundSize: '32px 32px',
           }}
         />
-        <div className="absolute top-20 right-[10%] w-32 h-32 rounded-full bg-[#001F60]/5 animate-float" />
-        <div className="absolute bottom-10 left-[15%] w-24 h-24 rounded-2xl bg-[#4DA3FF]/5 animate-float" style={{ animationDelay: '1.5s' }} />
+        <div className="absolute top-20 right-[10%] w-32 h-32 rounded-full bg-[#001F60]/5 dark:bg-[#93c5fd]/5 animate-float" />
+        <div className="absolute bottom-10 left-[15%] w-24 h-24 rounded-2xl bg-[#4DA3FF]/5 dark:bg-[#93c5fd]/5 animate-float" style={{ animationDelay: '1.5s' }} />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
-            <nav className="flex items-center gap-2 text-sm text-[#64748b] mb-6">
+            <nav className="flex items-center gap-2 text-sm text-[#64748b] dark:text-[#94a3b8] mb-6">
               <button
                 onClick={() => navigate('home')}
-                className="hover:text-[#001F60] transition-colors duration-200"
+                className="hover:text-[#001F60] dark:hover:text-[#93c5fd] transition-colors duration-200"
               >
                 Home
               </button>
               <ChevronRight className="w-4 h-4" />
-              <span className="text-[#001F60] font-medium">Industries</span>
+              <span className="text-[#001F60] dark:text-[#93c5fd] font-medium">Industries</span>
             </nav>
 
-            <h1 className="text-4xl sm:text-5xl font-bold text-[#1e293b] mb-5">
+            <h1 className="text-4xl sm:text-5xl font-bold text-[#1e293b] dark:text-[#e2e8f0] mb-5">
               Industries We <span className="text-gradient-green">Serve</span>
             </h1>
-            <p className="text-lg text-[#475569] leading-relaxed max-w-3xl">
+            <p className="text-lg text-[#475569] dark:text-[#94a3b8] leading-relaxed max-w-3xl">
               From small shops to large corporate offices, Tech Sheba delivers IT solutions
               tailored to the unique challenges of every sector in Bangladesh. Explore how we
               serve businesses like yours.
@@ -233,17 +233,17 @@ export default function IndustriesPage() {
       </section>
 
       {/* ==================== SECTION 2: INDUSTRY OVERVIEW ==================== */}
-      <section className="py-20 lg:py-24 bg-white">
+      <section className="py-20 lg:py-24 bg-white dark:bg-[#0f172a]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <Badge className="mb-4 bg-[#eff6ff] text-[#001F60] border-[#dbeafe] hover:bg-[#dbeafe]">
+              <Badge className="mb-4 bg-[#eff6ff] dark:bg-[#1e3a5f] text-[#001F60] dark:text-[#93c5fd] border-[#dbeafe] dark:border-[#1e3a5f] hover:bg-[#dbeafe] dark:hover:bg-[#1e3a5f]">
                 Tailored Solutions
               </Badge>
-              <h2 className="text-3xl sm:text-4xl font-bold text-[#1e293b] mb-4">
+              <h2 className="text-3xl sm:text-4xl font-bold text-[#1e293b] dark:text-[#e2e8f0] mb-4">
                 Tailored Solutions for <span className="text-gradient-green">Every Sector</span>
               </h2>
-              <p className="text-[#475569] leading-relaxed">
+              <p className="text-[#475569] dark:text-[#94a3b8] leading-relaxed">
                 Every industry has unique technology requirements. We don&apos;t believe in one-size-fits-all.
                 Instead, we take the time to understand your business, your pain points, and your goals
                 â€” then craft a solution that fits perfectly.
@@ -262,28 +262,25 @@ export default function IndustriesPage() {
                   <div className={`grid lg:grid-cols-2 gap-8 lg:gap-12 items-start ${!isEven ? 'lg:direction-rtl' : ''}`}>
                     {/* Left / Right Content */}
                     <div className={!isEven ? 'lg:order-2' : ''}>
-                      <div
-                        className="inline-flex items-center justify-center w-14 h-14 rounded-2xl mb-5"
-                        style={{ backgroundColor: industry.bgColor }}
-                      >
-                        <IconComp className="w-7 h-7" style={{ color: industry.color }} />
+                      <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl mb-5 bg-[#eff6ff] dark:bg-[#1e3a5f]">
+                        <IconComp className="w-7 h-7 text-[#001F60] dark:text-[#93c5fd]" />
                       </div>
 
-                      <h3 className="text-2xl sm:text-3xl font-bold text-[#1e293b] mb-3">
+                      <h3 className="text-2xl sm:text-3xl font-bold text-[#1e293b] dark:text-[#e2e8f0] mb-3">
                         {industry.title}
                       </h3>
-                      <p className="text-[#475569] leading-relaxed mb-8">
+                      <p className="text-[#475569] dark:text-[#94a3b8] leading-relaxed mb-8">
                         {industry.description}
                       </p>
 
                       {/* Pain Points */}
                       <div className="mb-6">
-                        <h4 className="text-sm font-semibold text-[#64748b] uppercase tracking-wider mb-3">
+                        <h4 className="text-sm font-semibold text-[#64748b] dark:text-[#94a3b8] uppercase tracking-wider mb-3">
                           Common Pain Points
                         </h4>
                         <ul className="space-y-2">
                           {industry.painPoints.map((point) => (
-                            <li key={point} className="flex items-start gap-3 text-[#475569] text-sm">
+                            <li key={point} className="flex items-start gap-3 text-[#475569] dark:text-[#94a3b8] text-sm">
                               <span className="w-1.5 h-1.5 rounded-full bg-red-400 mt-2 shrink-0" />
                               {point}
                             </li>
@@ -293,13 +290,13 @@ export default function IndustriesPage() {
 
                       {/* How We Help */}
                       <div>
-                        <h4 className="text-sm font-semibold text-[#001F60] uppercase tracking-wider mb-3">
+                        <h4 className="text-sm font-semibold text-[#001F60] dark:text-[#93c5fd] uppercase tracking-wider mb-3">
                           How Tech Sheba Helps
                         </h4>
                         <ul className="space-y-2">
                           {industry.howWeHelp.map((item) => (
-                            <li key={item} className="flex items-start gap-3 text-[#475569] text-sm">
-                              <CheckCircle2 className="w-4 h-4 text-[#001F60] mt-0.5 shrink-0" />
+                            <li key={item} className="flex items-start gap-3 text-[#475569] dark:text-[#94a3b8] text-sm">
+                              <CheckCircle2 className="w-4 h-4 text-[#001F60] dark:text-[#93c5fd] mt-0.5 shrink-0" />
                               {item}
                             </li>
                           ))}
@@ -310,10 +307,10 @@ export default function IndustriesPage() {
                     {/* Services Card */}
                     <div className={!isEven ? 'lg:order-1' : ''}>
                       <Card
-                        className="border border-[#dbeafe] bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+                        className="border border-[#dbeafe] dark:border-[#1e3a5f] bg-white dark:bg-[#1e293b] shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
                       >
                         <CardHeader className="pb-3">
-                          <CardTitle className="text-lg text-[#1e293b]">
+                          <CardTitle className="text-lg text-[#1e293b] dark:text-[#e2e8f0]">
                             Relevant Services
                           </CardTitle>
                         </CardHeader>
@@ -324,19 +321,19 @@ export default function IndustriesPage() {
                               return (
                                 <div
                                   key={service.label}
-                                  className="flex items-center gap-3 p-3 rounded-xl bg-[#f0f4ff] border border-[#eff6ff] hover:bg-[#dbeafe] transition-colors duration-200"
+                                   className="flex items-center gap-3 p-3 rounded-xl bg-[#f0f4ff] dark:bg-[#1e3a5f] border border-[#eff6ff] dark:border-[#1e3a5f] hover:bg-[#dbeafe] dark:hover:bg-[#1e3a5f] transition-colors duration-200"
                                 >
-                                  <div className="w-9 h-9 rounded-lg bg-white border border-[#dbeafe] flex items-center justify-center shrink-0">
-                                    <ServiceIcon className="w-4 h-4 text-[#001F60]" />
+                                   <div className="w-9 h-9 rounded-lg bg-white dark:bg-[#1e293b] border border-[#dbeafe] dark:border-[#1e3a5f] flex items-center justify-center shrink-0">
+                                    <ServiceIcon className="w-4 h-4 text-[#001F60] dark:text-[#93c5fd]" />
                                   </div>
-                                  <span className="text-sm font-medium text-[#1e293b]">
+                                  <span className="text-sm font-medium text-[#1e293b] dark:text-[#e2e8f0]">
                                     {service.label}
                                   </span>
                                 </div>
                               );
                             })}
                           </div>
-                          <div className="mt-6 pt-5 border-t border-[#dbeafe]">
+                          <div className="mt-6 pt-5 border-t border-[#dbeafe] dark:border-[#1e3a5f]">
                             <Button
                               onClick={() => navigate('contact')}
                               className="w-full bg-[#001F60] hover:bg-[#001440] text-white"
@@ -352,7 +349,7 @@ export default function IndustriesPage() {
 
                   {/* Separator between industries (except last) */}
                   {index < industries.length - 1 && (
-                    <div className="mt-16 border-t border-[#e2e8f0]" />
+                    <div className="mt-16 border-t border-[#e2e8f0] dark:border-[#334155]" />
                   )}
                 </StaggerItem>
               );
@@ -362,17 +359,17 @@ export default function IndustriesPage() {
       </section>
 
       {/* ==================== SECTION 4: USE CASES GRID ==================== */}
-      <section className="py-20 lg:py-24 bg-[#f0f4ff]">
+      <section className="py-20 lg:py-24 bg-[#f0f4ff] dark:bg-[#1e293b]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <div className="text-center max-w-3xl mx-auto mb-14">
-              <Badge className="mb-4 bg-white text-[#001F60] border-[#dbeafe] hover:bg-[#eff6ff]">
+              <Badge className="mb-4 bg-white dark:bg-[#0f172a] text-[#001F60] dark:text-[#93c5fd] border-[#dbeafe] dark:border-[#334155] hover:bg-[#eff6ff] dark:hover:bg-[#1e3a5f]">
                 Real-World Scenarios
               </Badge>
-              <h2 className="text-3xl sm:text-4xl font-bold text-[#1e293b] mb-4">
+              <h2 className="text-3xl sm:text-4xl font-bold text-[#1e293b] dark:text-[#e2e8f0] mb-4">
                 Use Cases Across <span className="text-gradient-green">Industries</span>
               </h2>
-              <p className="text-[#475569] leading-relaxed">
+              <p className="text-[#475569] dark:text-[#94a3b8] leading-relaxed">
                 Here are some of the specific scenarios where Tech Sheba has delivered measurable
                 results for our clients.
               </p>
@@ -384,21 +381,21 @@ export default function IndustriesPage() {
               const UseCaseIcon = useCase.icon;
               return (
                 <StaggerItem key={useCase.title}>
-                  <Card className="h-full border border-white bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+                  <Card className="h-full border border-white dark:border-[#334155] bg-white dark:bg-[#0f172a] shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
                     <CardContent className="p-6">
-                      <div className="w-11 h-11 rounded-xl bg-[#eff6ff] border border-[#dbeafe] flex items-center justify-center mb-4">
-                        <UseCaseIcon className="w-5 h-5 text-[#001F60]" />
+                      <div className="w-11 h-11 rounded-xl bg-[#eff6ff] dark:bg-[#1e3a5f] border border-[#dbeafe] dark:border-[#334155] flex items-center justify-center mb-4">
+                        <UseCaseIcon className="w-5 h-5 text-[#001F60] dark:text-[#93c5fd]" />
                       </div>
                       <Badge
                         variant="outline"
-                        className="mb-3 text-[10px] font-medium border-[#dbeafe] text-[#001440] bg-[#eff6ff]"
+                        className="mb-3 text-[10px] font-medium border-[#dbeafe] dark:border-[#334155] text-[#001440] dark:text-[#93c5fd] bg-[#eff6ff] dark:bg-[#1e3a5f]"
                       >
                         {useCase.industry}
                       </Badge>
-                      <h3 className="text-base font-semibold text-[#1e293b] mb-2">
+                      <h3 className="text-base font-semibold text-[#1e293b] dark:text-[#e2e8f0] mb-2">
                         {useCase.title}
                       </h3>
-                      <p className="text-sm text-[#64748b] leading-relaxed">
+                      <p className="text-sm text-[#64748b] dark:text-[#94a3b8] leading-relaxed">
                         {useCase.description}
                       </p>
                     </CardContent>
@@ -411,7 +408,7 @@ export default function IndustriesPage() {
       </section>
 
       {/* ==================== SECTION 5: CTA ==================== */}
-      <section className="py-20 lg:py-24 bg-white">
+      <section className="py-20 lg:py-24 bg-white dark:bg-[#0f172a]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#001F60] to-[#001440] p-10 sm:p-16 text-center">
@@ -435,7 +432,7 @@ export default function IndustriesPage() {
                   <Button
                     size="lg"
                     onClick={() => navigate('contact')}
-                    className="bg-white text-[#001F60] hover:bg-[#eff6ff] font-semibold px-8"
+                    className="bg-white text-[#001F60] dark:text-[#93c5fd] hover:bg-[#eff6ff] font-semibold px-8"
                   >
                     Talk to Our Team
                     <ArrowRight className="w-4 h-4 ml-2" />

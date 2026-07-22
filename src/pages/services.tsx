@@ -18,8 +18,8 @@ const categories = [
     title: 'Infrastructure & Connectivity',
     description: 'Build a solid IT foundation with enterprise-grade networking, structured cabling, PBX phone systems, and reliable Wi-Fi infrastructure â€” tailored for offices, warehouses, and multi-site operations across Bangladesh.',
     slug: 'network-connectivity' as const,
-    color: '#001F60',
-    bgColor: '#eff6ff',
+    bgClass: 'bg-[#eff6ff] dark:bg-[#1e3a5f]',
+    iconClass: 'text-[#001F60] dark:text-[#93c5fd]',
     services: ['Network Design & Wi-Fi', 'Structured Cabling', 'PBX & IP Phone Systems'],
   },
   {
@@ -27,8 +27,8 @@ const categories = [
     title: 'Security & Access',
     description: 'Protect your business from every angle â€” physical surveillance with HD CCTV, smart access control systems, and comprehensive data backup solutions to safeguard your critical business information.',
     slug: 'security-systems' as const,
-    color: '#001440',
-    bgColor: '#f0f4ff',
+    bgClass: 'bg-[#f0f4ff] dark:bg-[#1e3a5f]',
+    iconClass: 'text-[#001440] dark:text-[#93c5fd]',
     services: ['CCTV Surveillance', 'Access Control', 'Data Backup & Security'],
   },
   {
@@ -36,8 +36,8 @@ const categories = [
     title: 'Digital Presence & Strategy',
     description: 'Establish a powerful online presence with custom website design and development, and plan your technology roadmap with expert IT consultancy to stay ahead in Bangladesh\'s growing digital economy.',
     slug: 'digital-presence' as const,
-    color: '#0775FF',
-    bgColor: '#dbeafe',
+    bgClass: 'bg-[#dbeafe] dark:bg-[#1e3a5f]',
+    iconClass: 'text-[#0775FF] dark:text-[#93c5fd]',
     services: ['Website Design & Development', 'IT Consultancy & Planning'],
   },
 ];
@@ -133,7 +133,7 @@ export default function ServicesPage() {
     <div className="overflow-hidden">
       {/* ==================== SECTION 1: PAGE HEADER ==================== */}
       <section className="relative pt-32 pb-16 lg:pt-36 lg:pb-20">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#eff6ff] via-white to-[#f0f4ff]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#eff6ff] via-white to-[#f0f4ff] dark:from-[#1e293b] dark:via-[#0f172a] dark:to-[#0f172a]" />
         <div className="absolute inset-0 opacity-20" style={{
           backgroundImage: `radial-gradient(circle at 10% 20%, rgba(0,31,96,0.08) 0%, transparent 50%),
                            radial-gradient(circle at 90% 80%, rgba(7,117,255,0.06) 0%, transparent 50%)`,
@@ -141,26 +141,26 @@ export default function ServicesPage() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
             {/* Breadcrumb */}
-            <nav className="flex items-center gap-2 text-sm text-[#64748b] mb-8">
+            <nav className="flex items-center gap-2 text-sm text-[#64748b] dark:text-[#94a3b8] mb-8">
               <button
                 onClick={() => navigate('home')}
-                className="hover:text-[#001F60] transition-colors"
+                className="hover:text-[#001F60] dark:hover:text-[#93c5fd] transition-colors"
               >
                 Home
               </button>
               <ChevronRight className="h-4 w-4" />
-              <span className="text-[#1e293b] font-medium">Services</span>
+              <span className="text-[#1e293b] dark:text-[#e2e8f0] font-medium">Services</span>
             </nav>
 
             <div className="max-w-3xl">
-              <Badge className="mb-4 bg-[#eff6ff] text-[#001F60] border-[#dbeafe] hover:bg-[#dbeafe]">
+              <Badge className="mb-4 bg-[#eff6ff] text-[#001F60] border-[#dbeafe] hover:bg-[#dbeafe] dark:bg-[#1e293b] dark:text-[#93c5fd] dark:border-[#1e3a5f] dark:hover:bg-[#1e3a5f]">
                 Our Services
               </Badge>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#1e293b] tracking-tight mb-6">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#1e293b] dark:text-[#e2e8f0] tracking-tight mb-6">
                 Comprehensive IT Solutions
-                <span className="text-[#001F60]"> for Growing Businesses</span>
+                <span className="text-[#001F60] dark:text-[#93c5fd]"> for Growing Businesses</span>
               </h1>
-              <p className="text-lg sm:text-xl text-[#475569] leading-relaxed">
+              <p className="text-lg sm:text-xl text-[#475569] dark:text-[#94a3b8] leading-relaxed">
                 From network infrastructure and security systems to digital presence and ongoing IT support,
                 Tech Sheba delivers end-to-end technology solutions designed for Bangladesh&apos;s dynamic business
                 environment. We help you build, secure, and scale your IT operations with confidence.
@@ -171,17 +171,17 @@ export default function ServicesPage() {
       </section>
 
       {/* ==================== SECTION 2: SERVICE CATEGORIES ==================== */}
-      <section className="py-20 lg:py-24 bg-white">
+      <section className="py-20 lg:py-24 bg-white dark:bg-[#0f172a]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <div className="text-center max-w-2xl mx-auto mb-16">
-              <p className="text-sm font-semibold text-[#001F60] uppercase tracking-wider mb-3">
+              <p className="text-sm font-semibold text-[#001F60] dark:text-[#93c5fd] uppercase tracking-wider mb-3">
                 Service Categories
               </p>
-              <h2 className="text-3xl sm:text-4xl font-bold text-[#1e293b] mb-4">
+              <h2 className="text-3xl sm:text-4xl font-bold text-[#1e293b] dark:text-[#e2e8f0] mb-4">
                 Three Pillars of Your IT Success
               </h2>
-              <p className="text-[#475569] text-lg">
+              <p className="text-[#475569] dark:text-[#94a3b8] text-lg">
                 Our services are organized into three core categories, each addressing a critical aspect of your technology needs.
               </p>
             </div>
@@ -192,34 +192,33 @@ export default function ServicesPage() {
               const IconComponent = cat.icon;
               return (
                 <StaggerItem key={cat.slug}>
-                  <Card
-                    className="h-full border-0 shadow-lg cursor-pointer group transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+                    <Card
+                    className="h-full border-0 shadow-lg cursor-pointer group transition-all duration-300 hover:-translate-y-1 hover:shadow-xl dark:bg-[#1e293b]"
                     onClick={() => navigate('service-detail', { slug: cat.slug })}
                   >
                     <CardHeader className="pb-4">
                       <div
-                        className="w-14 h-14 rounded-xl flex items-center justify-center mb-4 transition-transform duration-300 group-hover:scale-110"
-                        style={{ backgroundColor: cat.bgColor }}
+                        className={`w-14 h-14 rounded-xl flex items-center justify-center mb-4 transition-transform duration-300 group-hover:scale-110 ${cat.bgClass}`}
                       >
-                        <IconComponent className="h-7 w-7" style={{ color: cat.color }} />
+                        <IconComponent className={`h-7 w-7 ${cat.iconClass}`} />
                       </div>
-                      <CardTitle className="text-xl font-bold text-[#1e293b] group-hover:text-[#001F60] transition-colors">
+                      <CardTitle className="text-xl font-bold text-[#1e293b] dark:text-[#e2e8f0] group-hover:text-[#001F60] dark:group-hover:text-[#93c5fd] transition-colors">
                         {cat.title}
                       </CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-[#475569] mb-5 leading-relaxed">
+                      <p className="text-[#475569] dark:text-[#94a3b8] mb-5 leading-relaxed">
                         {cat.description}
                       </p>
                       <div className="space-y-2 mb-5">
                         {cat.services.map((s) => (
-                          <div key={s} className="flex items-center gap-2 text-sm text-[#64748b]">
-                            <CheckCircle2 className="h-4 w-4 text-[#4DA3FF] shrink-0" />
+                          <div key={s} className="flex items-center gap-2 text-sm text-[#64748b] dark:text-[#94a3b8]">
+                            <CheckCircle2 className="h-4 w-4 text-[#4DA3FF] dark:text-[#60a5fa] shrink-0" />
                             <span>{s}</span>
                           </div>
                         ))}
                       </div>
-                      <div className="flex items-center gap-2 text-[#001F60] font-semibold text-sm group-hover:gap-3 transition-all">
+                      <div className="flex items-center gap-2 text-[#001F60] dark:text-[#93c5fd] font-semibold text-sm group-hover:gap-3 transition-all">
                         Explore Services
                         <ArrowRight className="h-4 w-4" />
                       </div>
@@ -233,18 +232,18 @@ export default function ServicesPage() {
       </section>
 
       {/* ==================== SECTION 3: ALL SERVICES GRID ==================== */}
-      <section className="py-20 lg:py-24 bg-[#f8fafc]">
+      <section className="py-20 lg:py-24 bg-[#f8fafc] dark:bg-[#1e293b]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <div className="text-center max-w-2xl mx-auto mb-16">
-              <p className="text-sm font-semibold text-[#001F60] uppercase tracking-wider mb-3">
+              <p className="text-sm font-semibold text-[#001F60] dark:text-[#93c5fd] uppercase tracking-wider mb-3">
                 What We Offer
               </p>
-              <h2 className="text-3xl sm:text-4xl font-bold text-[#1e293b] mb-4">
+              <h2 className="text-3xl sm:text-4xl font-bold text-[#1e293b] dark:text-[#e2e8f0] mb-4">
                 All Services at a Glance
               </h2>
-              <p className="text-[#475569] text-lg">
-                Explore our complete range of IT services â€” each designed to solve real challenges faced by businesses in Bangladesh.
+              <p className="text-[#475569] dark:text-[#94a3b8] text-lg">
+                Explore our complete range of IT services â€" each designed to solve real challenges faced by businesses in Bangladesh.
               </p>
             </div>
           </FadeIn>
@@ -254,15 +253,15 @@ export default function ServicesPage() {
               const IconComponent = service.icon;
               return (
                 <StaggerItem key={service.title}>
-                  <Card className="h-full border border-gray-100 bg-white cursor-pointer group transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+                  <Card className="h-full border border-gray-100 dark:border-[#334155] bg-white dark:bg-[#0f172a] cursor-pointer group transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
                     <CardContent className="p-6">
-                      <div className="w-12 h-12 rounded-lg bg-[#eff6ff] flex items-center justify-center mb-4 transition-transform duration-300 group-hover:scale-110">
-                        <IconComponent className="h-6 w-6 text-[#001F60]" />
+                      <div className="w-12 h-12 rounded-lg bg-[#eff6ff] dark:bg-[#1e3a5f] flex items-center justify-center mb-4 transition-transform duration-300 group-hover:scale-110">
+                        <IconComponent className="h-6 w-6 text-[#001F60] dark:text-[#93c5fd]" />
                       </div>
-                      <h3 className="text-lg font-bold text-[#1e293b] mb-2 group-hover:text-[#001F60] transition-colors">
+                      <h3 className="text-lg font-bold text-[#1e293b] dark:text-[#e2e8f0] mb-2 group-hover:text-[#001F60] dark:group-hover:text-[#93c5fd] transition-colors">
                         {service.title}
                       </h3>
-                      <p className="text-[#475569] text-sm leading-relaxed mb-4">
+                      <p className="text-[#475569] dark:text-[#94a3b8] text-sm leading-relaxed mb-4">
                         {service.description}
                       </p>
                       <button
@@ -270,7 +269,7 @@ export default function ServicesPage() {
                           e.stopPropagation();
                           navigate('service-detail', { slug: service.slug });
                         }}
-                        className="inline-flex items-center gap-1.5 text-[#001F60] font-semibold text-sm hover:gap-2.5 transition-all"
+                        className="inline-flex items-center gap-1.5 text-[#001F60] dark:text-[#93c5fd] font-semibold text-sm hover:gap-2.5 transition-all"
                       >
                         Learn More
                         <ArrowRight className="h-4 w-4" />
@@ -285,18 +284,18 @@ export default function ServicesPage() {
       </section>
 
       {/* ==================== SECTION 4: SERVICE PROCESS ==================== */}
-      <section className="py-20 lg:py-24 bg-white">
+      <section className="py-20 lg:py-24 bg-white dark:bg-[#0f172a]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <div className="text-center max-w-2xl mx-auto mb-16">
-              <p className="text-sm font-semibold text-[#001F60] uppercase tracking-wider mb-3">
+              <p className="text-sm font-semibold text-[#001F60] dark:text-[#93c5fd] uppercase tracking-wider mb-3">
                 How We Deliver
               </p>
-              <h2 className="text-3xl sm:text-4xl font-bold text-[#1e293b] mb-4">
+              <h2 className="text-3xl sm:text-4xl font-bold text-[#1e293b] dark:text-[#e2e8f0] mb-4">
                 Our Proven 4-Step Process
               </h2>
-              <p className="text-[#475569] text-lg">
-                Every successful project follows a structured methodology â€” from initial discovery to ongoing support.
+              <p className="text-[#475569] dark:text-[#94a3b8] text-lg">
+                Every successful project follows a structured methodology â€" from initial discovery to ongoing support.
               </p>
             </div>
           </FadeIn>
@@ -309,17 +308,17 @@ export default function ServicesPage() {
                   <div className="relative text-center">
                     {/* Connector line */}
                     {index < processSteps.length - 1 && (
-                      <div className="hidden lg:block absolute top-10 left-[60%] w-[80%] h-[2px] bg-gradient-to-r from-[#dbeafe] to-[#eff6ff]" />
+                      <div className="hidden lg:block absolute top-10 left-[60%] w-[80%] h-[2px] bg-gradient-to-r from-[#dbeafe] to-[#eff6ff] dark:from-[#1e3a5f] dark:to-[#1e3a5f]" />
                     )}
                     <div className="relative inline-flex flex-col items-center">
-                      <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-[#eff6ff] to-[#dbeafe] flex items-center justify-center mb-5 relative">
-                        <IconComponent className="h-8 w-8 text-[#001F60]" />
-                        <span className="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-[#001F60] text-white text-xs font-bold flex items-center justify-center">
+                      <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-[#eff6ff] to-[#dbeafe] dark:from-[#1e3a5f] dark:to-[#1e3a5f] flex items-center justify-center mb-5 relative">
+                        <IconComponent className="h-8 w-8 text-[#001F60] dark:text-[#93c5fd]" />
+                        <span className="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-[#001F60] text-white dark:bg-[#93c5fd] dark:text-[#0f172a] text-xs font-bold flex items-center justify-center">
                           {item.step}
                         </span>
                       </div>
-                      <h3 className="text-lg font-bold text-[#1e293b] mb-2">{item.title}</h3>
-                      <p className="text-[#475569] text-sm leading-relaxed max-w-xs">{item.description}</p>
+                      <h3 className="text-lg font-bold text-[#1e293b] dark:text-[#e2e8f0] mb-2">{item.title}</h3>
+                      <p className="text-[#475569] dark:text-[#94a3b8] text-sm leading-relaxed max-w-xs">{item.description}</p>
                     </div>
                   </div>
                 </StaggerItem>

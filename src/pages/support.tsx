@@ -171,36 +171,36 @@ const slaLevels = [
     priority: 'Critical',
     description: 'System down, security breach, complete service outage',
     responseTime: '2 hours',
-    color: 'bg-red-50 border-red-200',
-    textColor: 'text-red-700',
-    badgeColor: 'bg-red-100 text-red-700',
+    color: 'bg-red-50 border-red-200 dark:bg-red-950 dark:border-red-800',
+    textColor: 'text-red-700 dark:text-red-300',
+    badgeColor: 'bg-red-100 text-red-700 dark:bg-red-900 dark:text-red-300',
     icon: AlertTriangle,
   },
   {
     priority: 'High',
     description: 'Major functionality impaired, significant performance degradation',
     responseTime: '4 hours',
-    color: 'bg-amber-50 border-amber-200',
-    textColor: 'text-amber-700',
-    badgeColor: 'bg-amber-100 text-amber-700',
+    color: 'bg-amber-50 border-amber-200 dark:bg-amber-950 dark:border-amber-800',
+    textColor: 'text-amber-700 dark:text-amber-300',
+    badgeColor: 'bg-amber-100 text-amber-700 dark:bg-amber-900 dark:text-amber-300',
     icon: Zap,
   },
   {
     priority: 'Medium',
     description: 'Partial functionality affected, workaround available',
     responseTime: '8 hours',
-    color: 'bg-blue-50 border-blue-200',
-    textColor: 'text-blue-700',
-    badgeColor: 'bg-blue-100 text-blue-700',
+    color: 'bg-blue-50 border-blue-200 dark:bg-blue-950 dark:border-blue-800',
+    textColor: 'text-blue-700 dark:text-blue-300',
+    badgeColor: 'bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-300',
     icon: Timer,
   },
   {
     priority: 'Low',
     description: 'Minor issues, general inquiries, feature requests',
     responseTime: '24 hours',
-    color: 'bg-gray-50 border-gray-200',
-    textColor: 'text-gray-700',
-    badgeColor: 'bg-gray-100 text-gray-700',
+    color: 'bg-gray-50 border-gray-200 dark:bg-gray-800 dark:border-gray-600',
+    textColor: 'text-gray-700 dark:text-gray-300',
+    badgeColor: 'bg-gray-100 text-gray-700 dark:bg-gray-700 dark:text-gray-300',
     icon: Clock,
   },
 ];
@@ -240,7 +240,7 @@ export default function SupportPage() {
     <div className="overflow-hidden">
       {/* ==================== SECTION 1: PAGE HEADER ==================== */}
       <section className="relative pt-32 pb-16 lg:pt-40 lg:pb-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#eff6ff] via-white to-[#f0f4ff]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#eff6ff] via-white to-[#f0f4ff] dark:from-[#0f172a] dark:via-[#0f172a] dark:to-[#1e293b]" />
         <div
           className="absolute inset-0 opacity-20"
           style={{
@@ -251,34 +251,34 @@ export default function SupportPage() {
         />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
-            <div className="flex items-center gap-2 text-sm text-[#64748b] mb-6">
+            <div className="flex items-center gap-2 text-sm text-[#64748b] dark:text-[#94a3b8] mb-6">
               <button
                 onClick={() => navigate('home')}
-                className="hover:text-[#001F60] transition-colors"
+                className="hover:text-[#001F60] dark:hover:text-[#93c5fd] transition-colors"
               >
                 Home
               </button>
               <ChevronRight className="h-4 w-4" />
-              <span className="text-[#001F60] font-medium">Support</span>
+              <span className="text-[#001F60] dark:text-[#93c5fd] font-medium">Support</span>
             </div>
           </FadeIn>
           <FadeIn delay={0.1}>
             <div className="flex items-center gap-3 mb-4">
               <div className="h-1 w-12 bg-[#001F60] rounded-full" />
-              <Badge className="bg-[#eff6ff] text-[#001F60] border-[#dbeafe] hover:bg-[#dbeafe]">
+              <Badge className="bg-[#eff6ff] dark:bg-[#1e293b] text-[#001F60] dark:text-[#93c5fd] border-[#dbeafe] dark:border-[#1e3a5f] hover:bg-[#dbeafe] dark:hover:bg-[#1e3a5f]">
                 <Headphones className="h-3.5 w-3.5 mr-1.5" />
                 Helpdesk
               </Badge>
             </div>
           </FadeIn>
           <FadeIn delay={0.2}>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#1e293b] mb-6 tracking-tight">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#1e293b] dark:text-[#e2e8f0] mb-6 tracking-tight">
               Support &{' '}
-              <span className="text-[#001F60]">Helpdesk</span>
+              <span className="text-[#001F60] dark:text-[#93c5fd]">Helpdesk</span>
             </h1>
           </FadeIn>
           <FadeIn delay={0.3}>
-            <p className="text-lg sm:text-xl text-[#475569] max-w-3xl leading-relaxed">
+            <p className="text-lg sm:text-xl text-[#475569] dark:text-[#94a3b8] max-w-3xl leading-relaxed">
               We&apos;re here to help when you need it most. Our dedicated support team provides
               fast, reliable assistance through multiple channels to keep your systems running smoothly.
             </p>
@@ -287,17 +287,17 @@ export default function SupportPage() {
       </section>
 
       {/* ==================== SECTION 2: SUPPORT OPTIONS ==================== */}
-      <section className="py-20 lg:py-24 bg-white">
+      <section className="py-20 lg:py-24 bg-white dark:bg-[#0f172a]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <div className="text-center mb-16">
-              <Badge className="bg-[#eff6ff] text-[#001F60] border-[#dbeafe] mb-4">
+              <Badge className="bg-[#eff6ff] dark:bg-[#1e293b] text-[#001F60] dark:text-[#93c5fd] border-[#dbeafe] dark:border-[#1e3a5f] mb-4">
                 Get Help
               </Badge>
-              <h2 className="text-3xl sm:text-4xl font-bold text-[#1e293b] mb-4">
-                How to <span className="text-[#001F60]">Reach Us</span>
+              <h2 className="text-3xl sm:text-4xl font-bold text-[#1e293b] dark:text-[#e2e8f0] mb-4">
+                How to <span className="text-[#001F60] dark:text-[#93c5fd]">Reach Us</span>
               </h2>
-              <p className="text-[#475569] max-w-2xl mx-auto text-lg">
+              <p className="text-[#475569] dark:text-[#94a3b8] max-w-2xl mx-auto text-lg">
                 Choose the support channel that works best for you. We&apos;re available through
                 phone, email, and on-site visits.
               </p>
@@ -306,16 +306,16 @@ export default function SupportPage() {
           <StaggerContainer className="grid grid-cols-1 lg:grid-cols-3 gap-6">
             {supportOptions.map((option) => (
               <StaggerItem key={option.title}>
-                <Card className="h-full border-[#dbeafe]/60 hover:border-[#001F60]/30 hover:shadow-lg transition-all duration-300 group bg-white">
+                <Card className="h-full border-[#dbeafe]/60 dark:border-[#334155] hover:border-[#001F60]/30 hover:shadow-lg transition-all duration-300 group bg-white dark:bg-[#1e293b]">
                   <CardContent className="p-6 sm:p-8 flex flex-col h-full">
-                    <div className="h-14 w-14 rounded-2xl bg-[#eff6ff] flex items-center justify-center mb-5 group-hover:bg-[#001F60] transition-colors duration-300">
-                      <option.icon className="h-7 w-7 text-[#001F60] group-hover:text-white transition-colors duration-300" />
+                    <div className="h-14 w-14 rounded-2xl bg-[#eff6ff] dark:bg-[#0f172a] flex items-center justify-center mb-5 group-hover:bg-[#001F60] transition-colors duration-300">
+                      <option.icon className="h-7 w-7 text-[#001F60] dark:text-[#93c5fd] group-hover:text-white transition-colors duration-300" />
                     </div>
-                    <h3 className="text-xl font-bold text-[#1e293b] mb-3">{option.title}</h3>
-                    <p className="text-[#475569] text-sm leading-relaxed mb-5">{option.description}</p>
+                    <h3 className="text-xl font-bold text-[#1e293b] dark:text-[#e2e8f0] mb-3">{option.title}</h3>
+                    <p className="text-[#475569] dark:text-[#94a3b8] text-sm leading-relaxed mb-5">{option.description}</p>
                     <div className="space-y-2.5 mb-6 flex-1">
                       {option.details.map((detail) => (
-                        <div key={detail} className="flex items-start gap-2 text-sm text-[#475569]">
+                        <div key={detail} className="flex items-start gap-2 text-sm text-[#475569] dark:text-[#94a3b8]">
                           <CheckCircle2 className="h-4 w-4 text-[#4DA3FF] shrink-0 mt-0.5" />
                           <span>{detail}</span>
                         </div>
@@ -323,7 +323,7 @@ export default function SupportPage() {
                     </div>
                     <Button
                       variant="outline"
-                      className="w-full border-[#001F60] text-[#001F60] hover:bg-[#001F60] hover:text-white mt-auto"
+                      className="w-full border-[#001F60] text-[#001F60] hover:bg-[#001F60] hover:text-white dark:border-[#93c5fd] dark:text-[#93c5fd] dark:hover:bg-[#93c5fd] dark:hover:text-[#0f172a] mt-auto"
                     >
                       {option.cta}
                       <ArrowRight className="h-4 w-4 ml-2" />
@@ -337,17 +337,17 @@ export default function SupportPage() {
       </section>
 
       {/* ==================== SECTION 3: SUPPORT PROCESS ==================== */}
-      <section className="py-20 lg:py-24 bg-[#f0f4ff]">
+      <section className="py-20 lg:py-24 bg-[#f0f4ff] dark:bg-[#1e293b]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <div className="text-center mb-16">
-              <Badge className="bg-[#eff6ff] text-[#001F60] border-[#dbeafe] mb-4">
+              <Badge className="bg-[#eff6ff] dark:bg-[#1e293b] text-[#001F60] dark:text-[#93c5fd] border-[#dbeafe] dark:border-[#1e3a5f] mb-4">
                 Our Process
               </Badge>
-              <h2 className="text-3xl sm:text-4xl font-bold text-[#1e293b] mb-4">
-                How Support <span className="text-[#001F60]">Works</span>
+              <h2 className="text-3xl sm:text-4xl font-bold text-[#1e293b] dark:text-[#e2e8f0] mb-4">
+                How Support <span className="text-[#001F60] dark:text-[#93c5fd]">Works</span>
               </h2>
-              <p className="text-[#475569] max-w-2xl mx-auto text-lg">
+              <p className="text-[#475569] dark:text-[#94a3b8] max-w-2xl mx-auto text-lg">
                 Our structured support process ensures every issue is handled efficiently and resolved to your satisfaction.
               </p>
             </div>
@@ -357,20 +357,20 @@ export default function SupportPage() {
               <StaggerItem key={step.step}>
                 <div className="relative">
                   {index < supportSteps.length - 1 && (
-                    <div className="hidden lg:block absolute top-10 left-[calc(50%+2rem)] w-[calc(100%-4rem)] h-0.5 bg-[#dbeafe]" />
+                    <div className="hidden lg:block absolute top-10 left-[calc(50%+2rem)] w-[calc(100%-4rem)] h-0.5 bg-[#dbeafe] dark:bg-[#334155]" />
                   )}
-                  <Card className="h-full border-[#dbeafe]/60 bg-white hover:shadow-lg transition-all duration-300 text-center relative z-10">
+                  <Card className="h-full border-[#dbeafe]/60 dark:border-[#334155] bg-white dark:bg-[#1e293b] hover:shadow-lg transition-all duration-300 text-center relative z-10">
                     <CardContent className="p-6">
                       <div className="relative inline-flex items-center justify-center mb-4">
-                        <div className="h-16 w-16 rounded-2xl bg-[#eff6ff] flex items-center justify-center">
-                          <step.icon className="h-7 w-7 text-[#001F60]" />
+                        <div className="h-16 w-16 rounded-2xl bg-[#eff6ff] dark:bg-[#0f172a] flex items-center justify-center">
+                          <step.icon className="h-7 w-7 text-[#001F60] dark:text-[#93c5fd]" />
                         </div>
-                        <div className="absolute -top-2 -right-2 h-7 w-7 rounded-full bg-[#001F60] text-white text-xs font-bold flex items-center justify-center">
+                        <div className="absolute -top-2 -right-2 h-7 w-7 rounded-full bg-[#001F60] text-white dark:bg-[#93c5fd] dark:text-[#0f172a] text-xs font-bold flex items-center justify-center">
                           {step.step}
                         </div>
                       </div>
-                      <h3 className="text-lg font-bold text-[#1e293b] mb-2">{step.title}</h3>
-                      <p className="text-[#475569] text-sm leading-relaxed">{step.description}</p>
+                      <h3 className="text-lg font-bold text-[#1e293b] dark:text-[#e2e8f0] mb-2">{step.title}</h3>
+                      <p className="text-[#475569] dark:text-[#94a3b8] text-sm leading-relaxed">{step.description}</p>
                     </CardContent>
                   </Card>
                 </div>
@@ -381,18 +381,18 @@ export default function SupportPage() {
       </section>
 
       {/* ==================== SECTION 4: SELF-SERVICE RESOURCES ==================== */}
-      <section className="py-20 lg:py-24 bg-white">
+      <section className="py-20 lg:py-24 bg-white dark:bg-[#0f172a]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <div className="text-center mb-16">
-              <Badge className="bg-[#eff6ff] text-[#001F60] border-[#dbeafe] mb-4">
+              <Badge className="bg-[#eff6ff] dark:bg-[#1e293b] text-[#001F60] dark:text-[#93c5fd] border-[#dbeafe] dark:border-[#1e3a5f] mb-4">
                 <BookOpen className="h-3.5 w-3.5 mr-1.5" />
                 Resources
               </Badge>
-              <h2 className="text-3xl sm:text-4xl font-bold text-[#1e293b] mb-4">
-                Help Yourself <span className="text-[#001F60]">First</span>
+              <h2 className="text-3xl sm:text-4xl font-bold text-[#1e293b] dark:text-[#e2e8f0] mb-4">
+                Help Yourself <span className="text-[#001F60] dark:text-[#93c5fd]">First</span>
               </h2>
-              <p className="text-[#475569] max-w-2xl mx-auto text-lg">
+              <p className="text-[#475569] dark:text-[#94a3b8] max-w-2xl mx-auto text-lg">
                 Browse our self-service resources for quick answers and helpful guides. You might
                 find the solution faster than you think!
               </p>
@@ -401,17 +401,17 @@ export default function SupportPage() {
           <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {selfResources.map((resource) => (
               <StaggerItem key={resource.title}>
-                <Card className="h-full border-[#dbeafe]/60 hover:border-[#001F60]/30 hover:shadow-lg transition-all duration-300 group bg-white">
+                <Card className="h-full border-[#dbeafe]/60 dark:border-[#334155] hover:border-[#001F60]/30 hover:shadow-lg transition-all duration-300 group bg-white dark:bg-[#1e293b]">
                   <CardContent className="p-6 flex flex-col h-full">
-                    <div className="h-12 w-12 rounded-xl bg-[#eff6ff] flex items-center justify-center mb-4 group-hover:bg-[#001F60] transition-colors duration-300">
-                      <resource.icon className="h-6 w-6 text-[#001F60] group-hover:text-white transition-colors duration-300" />
+                    <div className="h-12 w-12 rounded-xl bg-[#eff6ff] dark:bg-[#0f172a] flex items-center justify-center mb-4 group-hover:bg-[#001F60] transition-colors duration-300">
+                      <resource.icon className="h-6 w-6 text-[#001F60] dark:text-[#93c5fd] group-hover:text-white transition-colors duration-300" />
                     </div>
-                    <h3 className="text-lg font-semibold text-[#1e293b] mb-2">{resource.title}</h3>
-                    <p className="text-[#475569] text-sm leading-relaxed mb-4 flex-1">{resource.description}</p>
+                    <h3 className="text-lg font-semibold text-[#1e293b] dark:text-[#e2e8f0] mb-2">{resource.title}</h3>
+                    <p className="text-[#475569] dark:text-[#94a3b8] text-sm leading-relaxed mb-4 flex-1">{resource.description}</p>
                     <Button
                       variant="outline"
                       size="sm"
-                      className="w-fit border-[#001F60] text-[#001F60] hover:bg-[#001F60] hover:text-white mt-auto"
+                      className="w-fit border-[#001F60] text-[#001F60] hover:bg-[#001F60] hover:text-white dark:border-[#93c5fd] dark:text-[#93c5fd] dark:hover:bg-[#93c5fd] dark:hover:text-[#0f172a] mt-auto"
                       disabled={!resource.actionPage}
                       onClick={() => {
                         if (resource.actionPage) {
@@ -431,36 +431,36 @@ export default function SupportPage() {
       </section>
 
       {/* ==================== SECTION 5: SLA ==================== */}
-      <section className="py-20 lg:py-24 bg-[#f0f4ff]">
+      <section className="py-20 lg:py-24 bg-[#f0f4ff] dark:bg-[#1e293b]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <div className="text-center mb-16">
-              <Badge className="bg-[#eff6ff] text-[#001F60] border-[#dbeafe] mb-4">
+              <Badge className="bg-[#eff6ff] dark:bg-[#1e293b] text-[#001F60] dark:text-[#93c5fd] border-[#dbeafe] dark:border-[#1e3a5f] mb-4">
                 <Shield className="h-3.5 w-3.5 mr-1.5" />
                 SLA
               </Badge>
-              <h2 className="text-3xl sm:text-4xl font-bold text-[#1e293b] mb-4">
-                Our SLA <span className="text-[#001F60]">Promise</span>
+              <h2 className="text-3xl sm:text-4xl font-bold text-[#1e293b] dark:text-[#e2e8f0] mb-4">
+                Our SLA <span className="text-[#001F60] dark:text-[#93c5fd]">Promise</span>
               </h2>
-              <p className="text-[#475569] max-w-2xl mx-auto text-lg">
+              <p className="text-[#475569] dark:text-[#94a3b8] max-w-2xl mx-auto text-lg">
                 We stand behind our service commitments with clear, measurable response time guarantees.
               </p>
             </div>
           </FadeIn>
 
           <FadeIn delay={0.1}>
-            <Card className="mb-8 border-[#dbeafe]/60 bg-white">
+            <Card className="mb-8 border-[#dbeafe]/60 dark:border-[#334155] bg-white dark:bg-[#1e293b]">
               <CardContent className="p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
                 <div className="flex items-center gap-3">
-                  <div className="h-12 w-12 rounded-xl bg-[#eff6ff] flex items-center justify-center">
-                    <Clock className="h-6 w-6 text-[#001F60]" />
+                  <div className="h-12 w-12 rounded-xl bg-[#eff6ff] dark:bg-[#0f172a] flex items-center justify-center">
+                    <Clock className="h-6 w-6 text-[#001F60] dark:text-[#93c5fd]" />
                   </div>
                   <div>
-                    <div className="font-semibold text-[#1e293b]">Business Hours</div>
-                    <div className="text-sm text-[#475569]">Saturday â€“ Thursday, 9:00 AM â€“ 6:00 PM</div>
+                    <div className="font-semibold text-[#1e293b] dark:text-[#e2e8f0]">Business Hours</div>
+                    <div className="text-sm text-[#475569] dark:text-[#94a3b8]">Saturday â€“ Thursday, 9:00 AM â€“ 6:00 PM</div>
                   </div>
                 </div>
-                <Badge className="bg-[#eff6ff] text-[#001F60] border-[#dbeafe] text-sm px-4 py-1.5">
+                <Badge className="bg-[#eff6ff] dark:bg-[#0f172a] text-[#001F60] dark:text-[#93c5fd] border-[#dbeafe] dark:border-[#1e3a5f] text-sm px-4 py-1.5">
                   Friday: Closed (Emergency only)
                 </Badge>
               </CardContent>
@@ -479,12 +479,12 @@ export default function SupportPage() {
                         </div>
                         <div>
                           <h3 className={`font-bold ${level.textColor}`}>{level.priority} Priority</h3>
-                          <p className="text-xs text-[#64748b]">{level.description}</p>
+                          <p className="text-xs text-[#64748b] dark:text-[#cbd5e1]">{level.description}</p>
                         </div>
                       </div>
                       <div className="text-right">
                         <div className={`text-2xl font-bold ${level.textColor}`}>{level.responseTime}</div>
-                        <div className="text-xs text-[#64748b]">response</div>
+                        <div className="text-xs text-[#64748b] dark:text-[#cbd5e1]">response</div>
                       </div>
                     </div>
                     <div className={`h-1.5 rounded-full ${level.badgeColor} opacity-50`} />
@@ -497,7 +497,7 @@ export default function SupportPage() {
       </section>
 
       {/* ==================== SECTION 6: EMERGENCY SUPPORT ==================== */}
-      <section className="py-20 lg:py-24 bg-white">
+      <section className="py-20 lg:py-24 bg-white dark:bg-[#0f172a]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <Card className="bg-gradient-to-r from-red-600 to-red-700 border-0 shadow-xl overflow-hidden">
@@ -539,19 +539,19 @@ export default function SupportPage() {
       </section>
 
       {/* ==================== SECTION 7: SUPPORT REQUEST FORM ==================== */}
-      <section className="py-20 lg:py-24 bg-[#f0f4ff]">
+      <section className="py-20 lg:py-24 bg-[#f0f4ff] dark:bg-[#1e293b]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
             <FadeIn>
-              <Badge className="bg-[#eff6ff] text-[#001F60] border-[#dbeafe] mb-4">
+              <Badge className="bg-[#eff6ff] dark:bg-[#1e293b] text-[#001F60] dark:text-[#93c5fd] border-[#dbeafe] dark:border-[#1e3a5f] mb-4">
                 <Send className="h-3.5 w-3.5 mr-1.5" />
                 Support Ticket
               </Badge>
-              <h2 className="text-3xl sm:text-4xl font-bold text-[#1e293b] mb-4">
+              <h2 className="text-3xl sm:text-4xl font-bold text-[#1e293b] dark:text-[#e2e8f0] mb-4">
                 Submit a{' '}
-                <span className="text-[#001F60]">Support Ticket</span>
+                <span className="text-[#001F60] dark:text-[#93c5fd]">Support Ticket</span>
               </h2>
-              <p className="text-[#475569] text-lg leading-relaxed mb-8">
+              <p className="text-[#475569] dark:text-[#94a3b8] text-lg leading-relaxed mb-8">
                 Fill out the form with details about your issue and our support team will get back to
                 you within the SLA timeframe. The more detail you provide, the faster we can help.
               </p>
@@ -562,9 +562,9 @@ export default function SupportPage() {
                   { icon: CheckCircle2, text: 'Real-time status updates via email' },
                   { icon: CheckCircle2, text: 'Resolution summary provided after every ticket' },
                 ].map((item) => (
-                  <div key={item.text} className="flex items-center gap-3 text-[#475569]">
-                    <div className="h-8 w-8 rounded-full bg-[#eff6ff] flex items-center justify-center shrink-0">
-                      <item.icon className="h-4 w-4 text-[#001F60]" />
+                  <div key={item.text} className="flex items-center gap-3 text-[#475569] dark:text-[#94a3b8]">
+                    <div className="h-8 w-8 rounded-full bg-[#eff6ff] dark:bg-[#1e293b] flex items-center justify-center shrink-0">
+                      <item.icon className="h-4 w-4 text-[#001F60] dark:text-[#93c5fd]" />
                     </div>
                     <span className="text-sm">{item.text}</span>
                   </div>
@@ -572,9 +572,9 @@ export default function SupportPage() {
               </div>
             </FadeIn>
             <FadeIn delay={0.2}>
-              <Card className="border-[#dbeafe]/60 shadow-lg">
+              <Card className="border-[#dbeafe]/60 dark:border-[#334155] dark:bg-[#1e293b] shadow-lg">
                 <CardHeader>
-                  <CardTitle className="text-xl text-[#1e293b]">Support Request Form</CardTitle>
+                  <CardTitle className="text-xl text-[#1e293b] dark:text-[#e2e8f0]">Support Request Form</CardTitle>
                 </CardHeader>
                 <CardContent className="p-6">
                   {formSubmitted ? (
@@ -583,11 +583,11 @@ export default function SupportPage() {
                       animate={{ opacity: 1, scale: 1 }}
                       className="text-center py-12"
                     >
-                      <div className="h-16 w-16 rounded-full bg-[#eff6ff] flex items-center justify-center mx-auto mb-4">
-                        <CheckCircle2 className="h-8 w-8 text-[#001F60]" />
+                      <div className="h-16 w-16 rounded-full bg-[#eff6ff] dark:bg-[#0f172a] flex items-center justify-center mx-auto mb-4">
+                        <CheckCircle2 className="h-8 w-8 text-[#001F60] dark:text-[#93c5fd]" />
                       </div>
-                      <h3 className="text-xl font-bold text-[#1e293b] mb-2">Ticket Submitted!</h3>
-                      <p className="text-[#475569]">
+                      <h3 className="text-xl font-bold text-[#1e293b] dark:text-[#e2e8f0] mb-2">Ticket Submitted!</h3>
+                      <p className="text-[#475569] dark:text-[#94a3b8]">
                         You&apos;ll receive a confirmation email shortly. Our team will respond within the SLA timeframe.
                       </p>
                     </motion.div>
@@ -595,31 +595,31 @@ export default function SupportPage() {
                     <form onSubmit={handleSubmit} className="space-y-4">
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div className="space-y-2">
-                          <Label htmlFor="supportName" className="text-[#1e293b]">Full Name</Label>
+                          <Label htmlFor="supportName" className="text-[#1e293b] dark:text-[#e2e8f0]">Full Name</Label>
                           <Input
                             id="supportName"
                             placeholder="Your name"
                             value={formData.name}
                             onChange={(e) => setFormData((prev) => ({ ...prev, name: e.target.value }))}
                             required
-                            className="border-[#dbeafe] focus:border-[#001F60]"
+                            className="border-[#dbeafe] dark:border-[#334155] dark:bg-[#0f172a] dark:text-[#e2e8f0] focus:border-[#001F60] dark:focus:border-[#93c5fd]"
                           />
                         </div>
                         <div className="space-y-2">
-                          <Label htmlFor="supportCompany" className="text-[#1e293b]">Company</Label>
+                          <Label htmlFor="supportCompany" className="text-[#1e293b] dark:text-[#e2e8f0]">Company</Label>
                           <Input
                             id="supportCompany"
                             placeholder="Company name"
                             value={formData.company}
                             onChange={(e) => setFormData((prev) => ({ ...prev, company: e.target.value }))}
                             required
-                            className="border-[#dbeafe] focus:border-[#001F60]"
+                            className="border-[#dbeafe] dark:border-[#334155] dark:bg-[#0f172a] dark:text-[#e2e8f0] focus:border-[#001F60] dark:focus:border-[#93c5fd]"
                           />
                         </div>
                       </div>
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div className="space-y-2">
-                          <Label htmlFor="supportEmail" className="text-[#1e293b]">Email Address</Label>
+                          <Label htmlFor="supportEmail" className="text-[#1e293b] dark:text-[#e2e8f0]">Email Address</Label>
                           <Input
                             id="supportEmail"
                             type="email"
@@ -627,11 +627,11 @@ export default function SupportPage() {
                             value={formData.email}
                             onChange={(e) => setFormData((prev) => ({ ...prev, email: e.target.value }))}
                             required
-                            className="border-[#dbeafe] focus:border-[#001F60]"
+                            className="border-[#dbeafe] dark:border-[#334155] dark:bg-[#0f172a] dark:text-[#e2e8f0] focus:border-[#001F60] dark:focus:border-[#93c5fd]"
                           />
                         </div>
                         <div className="space-y-2">
-                          <Label htmlFor="supportPhone" className="text-[#1e293b]">Phone Number</Label>
+                          <Label htmlFor="supportPhone" className="text-[#1e293b] dark:text-[#e2e8f0]">Phone Number</Label>
                           <Input
                             id="supportPhone"
                             type="tel"
@@ -639,18 +639,18 @@ export default function SupportPage() {
                             value={formData.phone}
                             onChange={(e) => setFormData((prev) => ({ ...prev, phone: e.target.value }))}
                             required
-                            className="border-[#dbeafe] focus:border-[#001F60]"
+                            className="border-[#dbeafe] dark:border-[#334155] dark:bg-[#0f172a] dark:text-[#e2e8f0] focus:border-[#001F60] dark:focus:border-[#93c5fd]"
                           />
                         </div>
                       </div>
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div className="space-y-2">
-                          <Label htmlFor="serviceType" className="text-[#1e293b]">Service Type</Label>
+                          <Label htmlFor="serviceType" className="text-[#1e293b] dark:text-[#e2e8f0]">Service Type</Label>
                           <Select
                             value={formData.serviceType}
                             onValueChange={(value) => setFormData((prev) => ({ ...prev, serviceType: value }))}
                           >
-                            <SelectTrigger className="border-[#dbeafe] focus:border-[#001F60]">
+                            <SelectTrigger className="border-[#dbeafe] dark:border-[#334155] dark:bg-[#0f172a] dark:text-[#e2e8f0] focus:border-[#001F60] dark:focus:border-[#93c5fd]">
                               <SelectValue placeholder="Select service type" />
                             </SelectTrigger>
                             <SelectContent>
@@ -663,12 +663,12 @@ export default function SupportPage() {
                           </Select>
                         </div>
                         <div className="space-y-2">
-                          <Label htmlFor="priority" className="text-[#1e293b]">Priority</Label>
+                          <Label htmlFor="priority" className="text-[#1e293b] dark:text-[#e2e8f0]">Priority</Label>
                           <Select
                             value={formData.priority}
                             onValueChange={(value) => setFormData((prev) => ({ ...prev, priority: value }))}
                           >
-                            <SelectTrigger className="border-[#dbeafe] focus:border-[#001F60]">
+                            <SelectTrigger className="border-[#dbeafe] dark:border-[#334155] dark:bg-[#0f172a] dark:text-[#e2e8f0] focus:border-[#001F60] dark:focus:border-[#93c5fd]">
                               <SelectValue placeholder="Select priority" />
                             </SelectTrigger>
                             <SelectContent>
@@ -681,7 +681,7 @@ export default function SupportPage() {
                         </div>
                       </div>
                       <div className="space-y-2">
-                        <Label htmlFor="issueDescription" className="text-[#1e293b]">Issue Description</Label>
+                        <Label htmlFor="issueDescription" className="text-[#1e293b] dark:text-[#e2e8f0]">Issue Description</Label>
                         <Textarea
                           id="issueDescription"
                           placeholder="Please describe your issue in detail. Include any error messages, steps to reproduce, and what you've already tried..."
@@ -689,7 +689,7 @@ export default function SupportPage() {
                           value={formData.description}
                           onChange={(e) => setFormData((prev) => ({ ...prev, description: e.target.value }))}
                           required
-                          className="border-[#dbeafe] focus:border-[#001F60] resize-none"
+                          className="border-[#dbeafe] dark:border-[#334155] dark:bg-[#0f172a] dark:text-[#e2e8f0] focus:border-[#001F60] dark:focus:border-[#93c5fd] resize-none"
                         />
                       </div>
                       <Button
@@ -709,7 +709,7 @@ export default function SupportPage() {
       </section>
 
       {/* ==================== SECTION 8: CTA ==================== */}
-      <section className="py-20 lg:py-24 bg-white">
+      <section className="py-20 lg:py-24 bg-white dark:bg-[#0f172a]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <Card className="bg-gradient-to-r from-[#001F60] to-[#0775FF] border-0 shadow-xl overflow-hidden">

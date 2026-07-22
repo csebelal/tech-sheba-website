@@ -46,7 +46,7 @@ type BlogPost = {
 const featuredPost: BlogPost = {
   slug: 'office-network-guide',
   category: 'Networking',
-  categoryColor: 'bg-[#001F60]/10 text-[#001F60]',
+  categoryColor: 'bg-[#001F60]/10 text-[#001F60] dark:bg-[#93c5fd]/10 dark:text-[#93c5fd]',
   accentColor: 'from-[#001F60] to-[#0775FF]',
   imageSrc: featuredImg,
   title: 'The Complete Guide to Office Network Setup for Bangladeshi Businesses',
@@ -61,7 +61,7 @@ const blogPosts: BlogPost[] = [
   {
     slug: 'cctv-installation-dhaka',
     category: 'Security',
-    categoryColor: 'bg-amber-500/10 text-amber-700',
+    categoryColor: 'bg-amber-500/10 text-amber-700 dark:bg-amber-400/10 dark:text-amber-300',
     accentColor: 'from-amber-500 to-amber-600',
     imageSrc: postImg1,
     title: '5 Reasons Your Dhaka Office Needs Professional CCTV Installation',
@@ -74,7 +74,7 @@ const blogPosts: BlogPost[] = [
   {
     slug: 'pbx-vs-voip',
     category: 'Business IT',
-    categoryColor: 'bg-blue-500/10 text-blue-700',
+    categoryColor: 'bg-blue-500/10 text-blue-700 dark:bg-blue-400/10 dark:text-blue-300',
     accentColor: 'from-[#0775FF] to-[#4DA3FF]',
     imageSrc: postImg2,
     title: 'PBX vs VoIP: Which Phone System is Right for Your Business?',
@@ -87,7 +87,7 @@ const blogPosts: BlogPost[] = [
   {
     slug: 'choosing-it-support-partner',
     category: 'Tips & Guides',
-    categoryColor: 'bg-purple-500/10 text-purple-700',
+    categoryColor: 'bg-purple-500/10 text-purple-700 dark:bg-purple-400/10 dark:text-purple-300',
     accentColor: 'from-[#001440] to-[#001F60]',
     imageSrc: postImg3,
     title: 'How to Choose the Right IT Support Partner in Bangladesh',
@@ -100,7 +100,7 @@ const blogPosts: BlogPost[] = [
   {
     slug: 'data-backup-best-practices',
     category: 'Tips & Guides',
-    categoryColor: 'bg-purple-500/10 text-purple-700',
+    categoryColor: 'bg-purple-500/10 text-purple-700 dark:bg-purple-400/10 dark:text-purple-300',
     accentColor: 'from-[#4DA3FF] to-[#7DB8FF]',
     imageSrc: postImg4,
     title: 'Data Backup Best Practices for Small and Medium Businesses',
@@ -113,7 +113,7 @@ const blogPosts: BlogPost[] = [
   {
     slug: 'structured-cabling-importance',
     category: 'Networking',
-    categoryColor: 'bg-[#001F60]/10 text-[#001F60]',
+    categoryColor: 'bg-[#001F60]/10 text-[#001F60] dark:bg-[#93c5fd]/10 dark:text-[#93c5fd]',
     accentColor: 'from-[#001F60] to-[#001440]',
     imageSrc: postImg5,
     title: 'Why Structured Cabling Matters More Than You Think',
@@ -126,7 +126,7 @@ const blogPosts: BlogPost[] = [
   {
     slug: 'cybersecurity-basics-bangladesh',
     category: 'Security',
-    categoryColor: 'bg-amber-500/10 text-amber-700',
+    categoryColor: 'bg-amber-500/10 text-amber-700 dark:bg-amber-400/10 dark:text-amber-300',
     accentColor: 'from-[#001440] to-[#4DA3FF]',
     imageSrc: postImg6,
     title: 'Cybersecurity Basics Every Bangladeshi Business Should Know',
@@ -165,7 +165,7 @@ export default function BlogPage() {
   return (
     <div className="overflow-hidden">
       {/* ==================== SECTION 1: PAGE HEADER ==================== */}
-      <section className="relative pt-32 pb-20 bg-gradient-to-br from-[#eff6ff] via-white to-[#f0f4ff] overflow-hidden">
+      <section className="relative pt-32 pb-20 bg-gradient-to-br from-[#eff6ff] via-white to-[#f0f4ff] dark:from-[#0f172a] dark:via-[#0f172a] dark:to-[#1e293b] overflow-hidden">
         <div
           className="absolute inset-0 opacity-[0.03]"
           style={{
@@ -174,41 +174,41 @@ export default function BlogPage() {
             backgroundSize: '32px 32px',
           }}
         />
-        <div className="absolute top-20 right-[10%] w-32 h-32 rounded-full bg-[#001F60]/5 animate-float" />
+        <div className="absolute top-20 right-[10%] w-32 h-32 rounded-full bg-[#001F60]/5 dark:bg-[#93c5fd]/5 animate-float" />
         <div
-          className="absolute bottom-10 left-[15%] w-24 h-24 rounded-2xl bg-[#4DA3FF]/5 animate-float"
+          className="absolute bottom-10 left-[15%] w-24 h-24 rounded-2xl bg-[#4DA3FF]/5 dark:bg-[#93c5fd]/5 animate-float"
           style={{ animationDelay: '1.5s' }}
         />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
-            <nav className="flex items-center gap-2 text-sm text-[#64748b] mb-6">
+            <nav className="flex items-center gap-2 text-sm text-[#64748b] dark:text-[#94a3b8] mb-6">
               <button
                 onClick={() => navigate('home')}
-                className="hover:text-[#001F60] transition-colors"
+                className="hover:text-[#001F60] dark:hover:text-[#93c5fd] transition-colors"
               >
                 Home
               </button>
               <ChevronRight className="w-4 h-4" />
-              <span className="text-[#001F60] font-medium">Blog</span>
+              <span className="text-[#001F60] dark:text-[#93c5fd] font-medium">Blog</span>
             </nav>
           </FadeIn>
 
           <FadeIn delay={0.1}>
-            <Badge className="mb-4 bg-[#001F60]/10 text-[#001F60] hover:bg-[#001F60]/20 border-0 text-sm px-4 py-1">
+            <Badge className="mb-4 bg-[#001F60]/10 text-[#001F60] dark:bg-[#93c5fd]/10 dark:text-[#93c5fd] hover:bg-[#001F60]/20 dark:hover:bg-[#93c5fd]/20 border-0 text-sm px-4 py-1">
               Blog & Insights
             </Badge>
           </FadeIn>
 
           <FadeIn delay={0.2}>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#1e293b] mb-4 tracking-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#1e293b] dark:text-[#e2e8f0] mb-4 tracking-tight">
               IT Knowledge{' '}
-              <span className="text-[#001F60]">Hub</span>
+              <span className="text-[#001F60] dark:text-[#93c5fd]">Hub</span>
             </h1>
           </FadeIn>
 
           <FadeIn delay={0.3}>
-            <p className="text-lg md:text-xl text-[#475569] max-w-2xl leading-relaxed">
+            <p className="text-lg md:text-xl text-[#475569] dark:text-[#94a3b8] max-w-2xl leading-relaxed">
               Practical guides, expert insights, and industry updates to help
               Bangladeshi businesses make smarter technology decisions. Stay
               informed, stay ahead.
@@ -218,24 +218,24 @@ export default function BlogPage() {
       </section>
 
       {/* ==================== SECTION 2: FEATURED POST ==================== */}
-      <section className="py-20 lg:py-24 bg-white">
+      <section className="py-20 lg:py-24 bg-white dark:bg-[#0f172a]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <div className="text-center mb-12">
-              <h2 className="text-sm font-semibold text-[#001F60] uppercase tracking-wider mb-2">
+              <h2 className="text-sm font-semibold text-[#001F60] dark:text-[#93c5fd] uppercase tracking-wider mb-2">
                 Featured Article
               </h2>
             </div>
           </FadeIn>
 
           <FadeIn delay={0.1}>
-            <Card className="group border-[#e2e8f0] hover:border-[#001F60]/20 hover:shadow-xl hover:shadow-[#001F60]/5 transition-all duration-500 overflow-hidden cursor-pointer bg-white"
+            <Card className="group border-[#e2e8f0] dark:border-[#334155] hover:border-[#001F60]/20 hover:shadow-xl hover:shadow-[#001F60]/5 transition-all duration-500 overflow-hidden cursor-pointer bg-white dark:bg-[#1e293b]"
               onClick={() => navigate('blog-detail', { slug: featuredPost.slug })}
             >
               <CardContent className="p-0">
                 <div className="grid md:grid-cols-2 gap-0">
                   {/* Featured Image */}
-                  <div className="relative h-64 md:h-auto min-h-[280px] overflow-hidden bg-[#f1f5f9]">
+                  <div className="relative h-64 md:h-auto min-h-[280px] overflow-hidden bg-[#f1f5f9] dark:bg-[#334155]">
                     <Image
                       src={featuredPost.imageSrc}
                       alt={featuredPost.title}
@@ -253,30 +253,30 @@ export default function BlogPage() {
 
                   {/* Content */}
                   <div className="p-8 md:p-10 flex flex-col justify-center">
-                    <div className="flex items-center gap-4 text-sm text-[#64748b] mb-4">
+                    <div className="flex items-center gap-4 text-sm text-[#64748b] dark:text-[#94a3b8] mb-4">
                       <span className="flex items-center gap-1.5">
                         <User className="w-3.5 h-3.5" />
                         {featuredPost.author}
                       </span>
-                      <span className="text-[#e2e8f0]">â€¢</span>
+                      <span className="text-[#e2e8f0] dark:text-[#475569]">â€¢</span>
                       <span>{featuredPost.date}</span>
-                      <span className="text-[#e2e8f0]">â€¢</span>
+                      <span className="text-[#e2e8f0] dark:text-[#475569]">â€¢</span>
                       <span className="flex items-center gap-1.5">
                         <Clock className="w-3.5 h-3.5" />
                         {featuredPost.readTime}
                       </span>
                     </div>
 
-                    <h3 className="text-2xl md:text-3xl font-bold text-[#1e293b] mb-4 group-hover:text-[#001F60] transition-colors duration-300 leading-tight">
+                    <h3 className="text-2xl md:text-3xl font-bold text-[#1e293b] dark:text-[#e2e8f0] mb-4 group-hover:text-[#001F60] dark:group-hover:text-[#93c5fd] transition-colors duration-300 leading-tight">
                       {featuredPost.title}
                     </h3>
 
-                    <p className="text-[#475569] leading-relaxed mb-6">
+                    <p className="text-[#475569] dark:text-[#94a3b8] leading-relaxed mb-6">
                       {featuredPost.excerpt}
                     </p>
 
                     <div>
-                      <span className="inline-flex items-center gap-2 text-[#001F60] font-semibold group-hover:gap-3 transition-all duration-300">
+                      <span className="inline-flex items-center gap-2 text-[#001F60] dark:text-[#93c5fd] font-semibold group-hover:gap-3 transition-all duration-300">
                         Read More
                         <ArrowRight className="w-4 h-4" />
                       </span>
@@ -290,15 +290,15 @@ export default function BlogPage() {
       </section>
 
       {/* ==================== SECTION 3: BLOG GRID ==================== */}
-      <section className="pb-20 lg:pb-24 bg-white">
+      <section className="pb-20 lg:pb-24 bg-white dark:bg-[#0f172a]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-10 gap-4">
               <div>
-                <h2 className="text-2xl md:text-3xl font-bold text-[#1e293b]">
+                <h2 className="text-2xl md:text-3xl font-bold text-[#1e293b] dark:text-[#e2e8f0]">
                   Latest Articles
                 </h2>
-                <p className="text-[#475569] mt-1">
+                <p className="text-[#475569] dark:text-[#94a3b8] mt-1">
                   Stay updated with the latest in IT solutions and best practices
                 </p>
               </div>
@@ -309,12 +309,12 @@ export default function BlogPage() {
             {filteredPosts.map((post) => (
               <StaggerItem key={post.slug}>
                 <Card
-                  className="group h-full border-[#e2e8f0] hover:border-[#001F60]/20 hover:shadow-lg hover:shadow-[#001F60]/5 transition-all duration-500 overflow-hidden cursor-pointer bg-white"
+                  className="group h-full border-[#e2e8f0] dark:border-[#334155] hover:border-[#001F60]/20 hover:shadow-lg hover:shadow-[#001F60]/5 transition-all duration-500 overflow-hidden cursor-pointer bg-white dark:bg-[#1e293b]"
                   onClick={() => navigate('blog-detail', { slug: post.slug })}
                 >
                   <CardContent className="p-0">
                     {/* Image */}
-                    <div className="relative h-48 overflow-hidden bg-[#f8fafc]">
+                    <div className="relative h-48 overflow-hidden bg-[#f8fafc] dark:bg-[#334155]">
                       <Image
                         src={post.imageSrc}
                         alt={post.title}
@@ -333,25 +333,25 @@ export default function BlogPage() {
 
                     <div className="p-6">
                       {/* Title */}
-                      <h3 className="text-lg font-bold text-[#1e293b] mb-3 group-hover:text-[#001F60] transition-colors duration-300 leading-snug line-clamp-2">
+                      <h3 className="text-lg font-bold text-[#1e293b] dark:text-[#e2e8f0] mb-3 group-hover:text-[#001F60] dark:group-hover:text-[#93c5fd] transition-colors duration-300 leading-snug line-clamp-2">
                         {post.title}
                       </h3>
 
                       {/* Excerpt */}
-                      <p className="text-[#475569] text-sm leading-relaxed mb-4 line-clamp-3">
+                      <p className="text-[#475569] dark:text-[#94a3b8] text-sm leading-relaxed mb-4 line-clamp-3">
                         {post.excerpt}
                       </p>
 
                       {/* Meta */}
-                      <div className="flex items-center justify-between pt-4 border-t border-[#f1f5f9]">
-                        <div className="flex items-center gap-3 text-xs text-[#64748b]">
+                      <div className="flex items-center justify-between pt-4 border-t border-[#f1f5f9] dark:border-[#334155]">
+                        <div className="flex items-center gap-3 text-xs text-[#64748b] dark:text-[#94a3b8]">
                           <span className="flex items-center gap-1">
                             <User className="w-3 h-3" />
                             {post.author}
                           </span>
                           <span>{post.date}</span>
                         </div>
-                        <span className="inline-flex items-center gap-1 text-[#001F60] text-sm font-medium group-hover:gap-2 transition-all duration-300">
+                        <span className="inline-flex items-center gap-1 text-[#001F60] dark:text-[#93c5fd] text-sm font-medium group-hover:gap-2 transition-all duration-300">
                           Read
                           <ArrowRight className="w-3.5 h-3.5" />
                         </span>
@@ -365,13 +365,13 @@ export default function BlogPage() {
 
           {filteredPosts.length === 0 && (
             <div className="text-center py-16">
-              <BookOpen className="w-12 h-12 text-[#94a3b8] mx-auto mb-4" />
-              <p className="text-[#64748b] text-lg">
+              <BookOpen className="w-12 h-12 text-[#94a3b8] dark:text-[#64748b] mx-auto mb-4" />
+              <p className="text-[#64748b] dark:text-[#94a3b8] text-lg">
                 No articles found in this category yet.
               </p>
               <Button
                 variant="outline"
-                className="mt-4 border-[#001F60]/20 text-[#001F60] hover:bg-[#eff6ff]"
+                className="mt-4 border-[#001F60]/20 text-[#001F60] hover:bg-[#eff6ff] dark:hover:bg-[#1e3a5f]"
                 onClick={() => setActiveCategory('All Posts')}
               >
                 View All Posts
@@ -382,14 +382,14 @@ export default function BlogPage() {
       </section>
 
       {/* ==================== SECTION 4: CATEGORIES ==================== */}
-      <section className="py-20 lg:py-24 bg-[#f8fafc]">
+      <section className="py-20 lg:py-24 bg-[#f8fafc] dark:bg-[#1e293b]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <div className="text-center mb-10">
-              <h2 className="text-2xl md:text-3xl font-bold text-[#1e293b] mb-3">
+              <h2 className="text-2xl md:text-3xl font-bold text-[#1e293b] dark:text-[#e2e8f0] mb-3">
                 Browse by Topic
               </h2>
-              <p className="text-[#475569] max-w-lg mx-auto">
+              <p className="text-[#475569] dark:text-[#94a3b8] max-w-lg mx-auto">
                 Find articles relevant to your interests and business needs
               </p>
             </div>
@@ -407,7 +407,7 @@ export default function BlogPage() {
                     className={`inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 border ${
                       isActive
                         ? 'bg-[#001F60] text-white border-[#001F60] shadow-md shadow-[#001F60]/20'
-                        : 'bg-white text-[#475569] border-[#e2e8f0] hover:border-[#001F60]/30 hover:text-[#001F60] hover:shadow-sm'
+                        : 'bg-white dark:bg-[#0f172a] text-[#475569] dark:text-[#94a3b8] border-[#e2e8f0] dark:border-[#334155] hover:border-[#001F60]/30 hover:text-[#001F60] dark:hover:text-[#93c5fd] dark:hover:border-[#93c5fd]/30 hover:shadow-sm'
                     }`}
                   >
                     <Icon className="w-4 h-4" />
@@ -416,7 +416,7 @@ export default function BlogPage() {
                       className={`text-xs px-1.5 py-0.5 rounded-full ${
                         isActive
                           ? 'bg-white/20 text-white'
-                          : 'bg-[#f1f5f9] text-[#64748b]'
+                          : 'bg-[#f1f5f9] dark:bg-[#334155] text-[#64748b] dark:text-[#94a3b8]'
                       }`}
                     >
                       {cat.count}
@@ -430,7 +430,7 @@ export default function BlogPage() {
       </section>
 
       {/* ==================== SECTION 5: NEWSLETTER SIGNUP ==================== */}
-      <section className="py-20 lg:py-24 bg-white">
+      <section className="py-20 lg:py-24 bg-white dark:bg-[#0f172a]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <div className="relative rounded-3xl overflow-hidden bg-gradient-to-r from-[#001F60] via-[#0775FF] to-[#4DA3FF] p-10 md:p-16">
