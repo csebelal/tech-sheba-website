@@ -172,8 +172,9 @@ export function Navbar() {
 
             {/* Mobile Menu Toggle */}
             <button
+              type="button"
               onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
-              className="lg:hidden p-2 rounded-lg hover:bg-muted transition-colors"
+              className="lg:hidden p-2.5 rounded-lg hover:bg-muted transition-colors active:bg-muted/80 touch-manipulation"
               aria-label="Toggle menu"
             >
               {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -185,17 +186,19 @@ export function Navbar() {
         <AnimatePresence>
           {isMobileMenuOpen && (
             <motion.div
+              key="mobile-menu"
               initial={{ height: 0, opacity: 0 }}
               animate={{ height: 'auto', opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
               transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
-              className="lg:hidden overflow-hidden bg-white dark:bg-[#0f172a] border-t border-border/50"
+              className="lg:hidden bg-white dark:bg-[#0f172a] border-t border-border/50"
             >
               <div className="px-4 py-3 space-y-1 max-h-[80vh] overflow-y-auto">
                 {NAV_ITEMS.map((item) => (
                   <div key={item.page}>
                     <div className="flex items-center justify-between">
                       <button
+                        type="button"
                         onClick={(e) => {
                           e.stopPropagation();
                           item.children
@@ -210,11 +213,12 @@ export function Navbar() {
                       </button>
                       {item.children && (
                         <button
+                          type="button"
                           onClick={(e) => {
                             e.stopPropagation();
                             setMobileDropdown(mobileDropdown === item.page ? null : item.page);
                           }}
-                          className="p-2"
+                          className="p-2.5 touch-manipulation"
                         >
                           <ChevronDown
                             className={`w-4 h-4 text-muted-foreground transition-transform ${
@@ -227,16 +231,19 @@ export function Navbar() {
                     <AnimatePresence>
                       {item.children && mobileDropdown === item.page && (
                         <motion.div
+                          key="dropdown"
                           initial={{ height: 0, opacity: 0 }}
                           animate={{ height: 'auto', opacity: 1 }}
                           exit={{ height: 0, opacity: 0 }}
-                          className="overflow-hidden ml-3 border-l-2 border-brand-100 pl-3"
+                          transition={{ duration: 0.25, ease: [0.25, 0.1, 0.25, 1] }}
+                          className="overflow-hidden ml-3 border-l-2 border-brand-100 dark:border-brand-200/30 pl-3"
                         >
                           {item.children.map((child) => (
                             <button
+                              type="button"
                               key={child.params?.slug}
                               onClick={() => handleNav(child.page, child.params)}
-                              className="w-full text-left px-3 py-2 text-sm text-muted-foreground hover:text-brand transition-colors"
+                              className="w-full text-left px-3 py-2.5 text-sm text-muted-foreground hover:text-brand transition-colors"
                             >
                               {child.label}
                             </button>
@@ -248,6 +255,7 @@ export function Navbar() {
                 ))}
                 <div className="pt-3 border-t border-border/50 space-y-2">
                   <button
+                    type="button"
                     onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
                     className="w-full flex items-center gap-2 px-3 py-2.5 rounded-lg text-sm font-medium text-foreground hover:bg-muted transition-colors"
                   >
@@ -255,24 +263,28 @@ export function Navbar() {
                     {mounted && theme === 'dark' ? 'Light Mode' : 'Dark Mode'}
                   </button>
                   <button
+                    type="button"
                     onClick={() => handleNav('faq')}
                     className="w-full text-left px-3 py-2.5 rounded-lg text-sm font-medium text-foreground hover:bg-muted transition-colors"
                   >
                     FAQ
                   </button>
                   <button
+                    type="button"
                     onClick={() => handleNav('careers')}
                     className="w-full text-left px-3 py-2.5 rounded-lg text-sm font-medium text-foreground hover:bg-muted transition-colors"
                   >
                     Careers
                   </button>
                   <button
+                    type="button"
                     onClick={() => handleNav('support')}
                     className="w-full text-left px-3 py-2.5 rounded-lg text-sm font-medium text-foreground hover:bg-muted transition-colors"
                   >
                     Support
                   </button>
                   <button
+                    type="button"
                     onClick={() => handleNav('contact')}
                     className="w-full mt-2 px-5 py-3 bg-gradient-to-r from-brand to-brand-light text-white text-sm font-semibold rounded-lg text-center"
                   >
