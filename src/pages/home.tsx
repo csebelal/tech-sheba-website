@@ -24,7 +24,7 @@ export default function HomePage() {
   return (
     <div className="overflow-hidden">
       {/* ==================== SECTION 1: HERO ==================== */}
-      <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
+      <section className="relative min-h-screen flex items-start pt-28 lg:pt-36 overflow-hidden">
         {/* Animated gradient background */}
         <div className="absolute inset-0 bg-gradient-to-br from-[#eff6ff] via-white to-[#f0f4ff] dark:from-[#0f172a] dark:via-[#0f172a] dark:to-[#1e293b]" />
         <div
@@ -52,7 +52,7 @@ export default function HomePage() {
         <div className="absolute top-64 left-[40%] w-8 h-8 rounded-lg bg-[#4DA3FF]/8 border border-[#4DA3FF]/10 dark:bg-[#60a5fa]/15 dark:border-[#60a5fa]/15 animate-float" style={{ animationDelay: '1.5s' }} />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
             {/* Left content */}
             <div>
               <FadeIn direction="up" delay={0}>
